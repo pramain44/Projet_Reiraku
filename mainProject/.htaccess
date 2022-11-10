@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteRule ^404$ controllers/404Controller.php
+RewriteRule ^connexion$ controllers/connectionController.php
+RewriteRule ^home$ controllers/homeControllers.php
+RewriteRule ^fiche_oeuvre$ controllers/ficheControllers.php
+RewriteRule ^inscription$ controllers/inscriptionControllers.php
+RewriteRule ^profile$ controllers/profileControllers.php
+

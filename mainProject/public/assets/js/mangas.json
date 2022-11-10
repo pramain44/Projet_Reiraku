@@ -1,0 +1,400 @@
+{
+    "mangas":[
+        {
+            "id":1,
+            "title":"Berserk",
+            "author":"Kentaro Miura",
+            "description":"Une des plus grandes oeuvres parmis les mangas, le manga préféré de beaucoup et a juste titre. Berzerk propose un univers de darkfantasy prenant et violent, un héro complexe, perdu, guidé par la vengeance un etre humain avant tout mais sa veangeance le déshumanise petit à petit mais évidemment malgrès le fait qu'il est toujours seul ou se sent toujours seul il va évoluer aussi a ce niveau. Bref un personnage perdu qui subit le pire dans un monde(société) qui le dégoute et qu'il a abandonné mais avec un objectif que l'on veut suivre. c'est simple l'intrigue est tellement bonne que la partie retrospective pour nous apprendre comment le héro et le monde ont basculé dure plus d'une dizaine de tome tellement elle est riche et on est pris dans l'histoire et le personnage intésement. A coté de ça le dessin est incroyable hyper détaillé des planches magnifique des double page en veux-tu en voilà rarement vu un manga aussi bien dessiné et pour cause l'auteur a choisis de prendre son temps pour dessiner. ce qui amène le seul défaut c'est pas fini ! (et ça ne le sera jamais malheuresement)",
+            "img":"/mainProject/public/assets/img/Berserk.jpeg",
+            "category":"banger",
+            "anime":"oui"
+        },
+        {
+            "id":2,
+            "title":"DragonBall",
+            "author":"Akira Toriyama",
+            "description":"Un incontournable qui a lancé un genre je dirais même LE genre du neketsu ou on suis le héro partir du bas pour monter vers son objectif. Personnellement j'apprécie beaucoup le fait que le début soit un peu different et que le manga ce cherchais encore ou le dessin et les personnages sont encore un peu plus dans un esprit humouristique qui correspond plus aux anciennes oeuvres de toriyama.Ce qui est fort c'est que cette premiere partie arrive quand même a installé l'univers en plus de faire des combats prenant nottamment avec les premiers tournois du fameux Budokai tenkaichi. Ensuite le manga prend un air plus serieux surtout au niveau du dessin et l'ampleur des ennemis a affronter et le danger qu'il represente va avec et nous donne des combats de plus en plus dantesque, cependant on perd un peu le coté tactique des combats que les anciens combats avaient du à l'écart de puissance et des attaques qui détruisent tout et repose sur juste de 'l'énergie'. Après cet aspect ne disparais pas totalement nottamment dans le combat contre freeze qui est très dense on voit pas ce genre de chose. Mention spéciale a l'arc Namek qui est selon moi le meilleur, j'aime énormement le fait qu'ils y aillent sans goku et se doivent de ruser car les ennemis sont plus fort n'empechant pas des gros combats et rendant l'arrivé de goku encore plus forte. C'est aussi l'arc ou on apprend sur les saiyan et sur vegeta et le fait qu'on le suive à coté rajoute une intrigue interessant. L'arc finis en apothéose avec le sacro saint super saiyan qui apparait pour le première fois bref juste génial sachant que tout le reste est aussi très bon arriver a faire un arc execellent parmis de l'excellent quel talent et quel plaisir pour nous lecteurs.",
+            "img":"/mainProject/public/assets/img/dragonball.webp",
+            "category":"banger",
+            "anime":"oui"
+        },
+        {
+            "id":3,
+            "title":"One piece",
+            "author":"Eiichiro Oda",
+            "description":"Super, j'aime énormement le fait que notre héro recrute tout son équipage ça nous implique beaucoup dans son histoire et dans leur cohésion de groupe on en fait partie aussi. J'adore particulierement le recrutement de nami qui est tres touchant je trouve, du au fait que nami vole luffy que lui continue a rester positif envers elle sans savoir son passé ça renvois deja un beau message, même si ça joue sur le personnage simplet qui va juste a son objectif, et la conclusion contre arlong ou luffy retrouve nami et qu'il l'aide quand même alors que de son point de vue elle l'a volé roulé contre baggy bref tout pour au moins rester distant et là nami en pleure car elle se fait manipuler par arlong et se retrouve face à son impuissance luffy qui pose son emblématique chapeau de paille sur la tete de nami en mode tkt je gere juste incroyable. A coté de ça obliger de reconnaitre le tour de force d'arriver a faire un neketsu aussi long avec un fil rouge qui continue d'avancer de maniere pertinente (on pense a bleach et naruto qui s'effondre apres les tomes 50). Bémol les arc se ressemble pas mal(arriver dans la nouvelle zone le groupe finis par se séparer plus ou moins chacun affronte ses difficulté souvent sous forme de comabt individuelle tout le monde se retrouve plus ou moins luffy bat le boss tout le monde est content).Cepandant malgres cette redondance de fond une fois que l'arc est lancé c'est frénétique on est dedans on veut lire la suite on est pris dans un rush qui est hyper grisant. Un seul gros défaut selon moi: les gens ne meurent pas, en effet tout les adversaires rencontré sont simplement 'battus' les morts sont très rare et je trouve que sur certains moment ça casse vraiment la coherence du monde et notre implication du coup.",
+            "img":"/mainProject/public/assets/img/one_piece.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":4,
+            "title":"Naruto",
+            "author":"Masashi Kishimoto",
+            "description":"Un grand manga même si il se perd sur la fin car il a surement été étiré pour l'argent. Cependant ça n'enleve rien de sa qualité les premiers sont tous incroyables non seulement ils sont très prenant ont lis sans s'en rendre compte mais aussi l'oeuvre nous passent des beaux messages grâce à les conditions de son héro et de ses protagonistes, je pense nottamment a zabuza et haku qui ont toujours vécu dans la guerre qui se retrouve comme assasin de nos héro pour le compte d'un grand patron qui veut racheter les terres de paysans (ce qui fait évidemment echo aux grandes multinationles ou même a la periode de la conquete de l'ouest quand on rachetais de maniere parfois forcer a des paysans leur terre pour faire passer le chemin de fer) et apres des supers comnbats ou on découvre dans l'oeuvre les premiers vrai combat ninja la conclusion avec zabuza qui se retourne contre le grand patron et ses mercenaires est juste magnifique. Et ce n'est que le premier arc ceux d'apres sont aussi bon autant en terme d'émotion de reflexion que d'action/combats. Petit bémol sur le debut la partie dite shippuden qui ne fait aucun sens selon moi car on vient d'avoir un final magnifique avec une pousuite de sasuke contre les hommes de orichimaru et un combat final dans un lieu emblématique, le nouvelle arc commence en nous montrant naruto qui veut aller chercher sasuke ??? cependant l'arc qui se lance juste apres l'arc pain est comme qui dirais un retour aux sources et donc tres apparéciables, malheuresement c'est le dernier vrai bon arc mais on pardonne vu la qualité des autres.",
+            "img":"/mainProject/public/assets/img/Naruto.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":5,
+            "title":"Bleach",
+            "author":"Tite Kubo",
+            "description":"Très bon manga, je dois admettre que je suis un peu moins fan de bleach que de ses compere du big three (naruto/one piece) car je trouve l'histoire moins forte émotionnellement, en général, et comme naruto il se perd sur la fin et on ne lis plus que pour voir des beau combats (au moins ya le benkai de zaraki). Bon qu'est-ce qui fait que j'aime quand même beaucoup ce manga et que je le trouve vraiment bon parmis les mangas du même genre? tout d'abord les personnnages avec le systeme de capitaine on a le droit a plein de super personnages avec des style et des personnalité marqués et intéressantes(mes petits protégé étant Zaraki et Mayuri Kurotsuchi.) Sachant que cette diversité dans les personnage est bien accompagné par l'univers et la découverte des 'nouvelles zones' est très agréable et nous transmet une atmosphere a chaque fois. Cela contribue a mon deuxieme point, on est pris dans les arcs quand les héros se lance dedans nous aussi on est dedans et on enchaine on veut les voir aller jusqu'au bout, je pense a deux arc particulierement d'abord le tout premier quand ichigo part sauver rukia au seireitei et enfin le ueco mundo. Pour finir évidemment les combats sont très bon on prend un grand plaisir à découvrire les multitudes de techniques des personnages présent bref un grand manga dans son genre.",
+            "img":"/mainProject/public/assets/img/Bleach.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":6,
+            "title":"Fairy tail",
+            "author":"Hiro Mashima",
+            "description":"Alors ça va relativement cours, je pense que fairytail est manga tres correct dans son le genre du nekketsu mais personnellement je le met en dessous des autres grands manga de son genre. Au niveau des points positif quand meme en plus de combat très sympa c'est l'aspect 'famille' très explicite mais qui marche bien on sens le plaisir et la cohésion de nos héros et le manga nous invite dans cette famille. Cependant je trouve l'histoire plutot faible (même au début) elle traine un peu longueur aussi bref je trouve que globalement l'histoire manque un peu force.",
+            "img":"/mainProject/public/assets/img/fairytail.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":7,
+            "title":"My Hero Academia",
+            "author":"Köhei Horikoshi",
+            "description":"Un manga plutot bon (bien que pas encore finis) j'ai un peu de mal avec le personnage principal je trouve qu'il manque beaucoup de charisme même si c'est probablement voulu ça me dérange malgrès tout, même dans ses moments fort il manque un truc pour moi. Heuresement à coté de ça on a une histoire plutot interessante qui a son propre univers et qui nous fait évoluer dedans de maniere asser terre terre on beaucoup dans un point de sociétal et une vrai reflexion sur la société est presente. Deplus la myriade de personnage proposé avec leur pouvoir unique (plus ou moins bien vu) et leur chara design plutot bon en général, offrent beaucoup de combat très sympa(je pense nottamment a overhaul) ainsi qu'un attachement aux personnages, qui ont souvent droit a un certain developpement si ce n'est un minimum de background.",
+            "img":"/mainProject/public/assets/img/myHeroAcademia.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":8,
+            "title":"Kingdom",
+            "author":"Yasuhisa Hara",
+            "description":"Vraiment exceptionnel, on part d'un nekketsu classique ou l'on suit un jeune héro qui va au travers d'épreuves avancer vers un objectif extrement dur sauf qu'on y ajoute deux aspect très important qui rende ce manga si bon. Premièrement l'unviers, on plonger dans la chine antique avec les 7 royaumes combattants les grands généraux les grandes batailles évidemment cela est très romancé mais les grands évenements sont basé sur l'histoire (du moins ce qu'on en sait) et personnellement je trouve que ça donne un cachet incroyable et hyper interessant qui peux même pousser ça se renseigner sur la dite période. Deuxiement le coté politique sous forme d'une dualité au niveau du personnage principale. Car pour que notre héro puisse poursuivre son rêve/objectif d'etre un grand général sous les cieux il faut géré la géopolitique qui va avec, et pour se faire on a le personnage du jeune roi qui fait office de second personnage principal qui lui aussi a un rêve lié a celui de notre perso principal et qui va traversé toute les épreuves politiques, les conflits intérieus, le faite de cotoyer ses ennemis en permanence sans pouvoir agir par manque preuves. Voilà pour le coté 'cadre' de l'oeuvre qui est ,je trouve incroyable, mais a coté on a des personnages hyper charismatique: Les grands généraux qui offrent different style de combat et nous donne souvent leur vision de la guerre et de l'homme renforçant le coté grandiloquant. niveau personnage on a aussi l'évolution du personnage principale au fur et à mesure des batailles des guerres, il de devient de plus fort mais surtout il aggrandit son entourage son équipe son armée.",
+            "img":"/mainProject/public/assets/img/Kingdom.jpg",
+            "category":"banger",
+            "anime":"oui"
+        },
+        {
+            "id":9,
+            "title":"Fullmetal Alchemist",
+            "author":"Arakawa Hiromu",
+            "description":"Si je devais dire ce qui fait de FMA une oeuvre particulièrement bonne ça serait surement à cause des thèmes abordés et de l'émotion vehiculé. En effet on commence tout de suite avec des héros qui ont perdu leur membre/corps pour essayer de retrouver leur mère décédé. Ensuite on parle de guerre et notamment de génocide au travers de scar et de son peuple les ishval, et même au seins de l'armée qui emplois des alchemistes et donc nos personnages ont trouvent beaucoup d'histoire très touchantes et surtout très humaine. J'aime beaucoup le faite qu'on voit beaucoup la mauvaise utilisation de l'alchimie c'est très crédible pour le monde car l'homme fait toujours le meilleur et le pire avec ses créations. Sinon l'oeuvre reste très cool niveau combat et histoire(la géopolitque peut etre un peu sous exploité au niveau des autres pays) nottamment du au theme principale l'alchimie qui permet des styles de combat asser divers et très sympa à découvrire. Evidemment comme on parle d'alchimie même si cette oeuvre a son interpretation on retrouve des sujets/themes assez courant comme la pierre philosophale, l'immortalité et la creation de l'homme (avec les homonculus nottamment) et donc forcement qui dit création dit rapport a dieu. Point positif même si la fin n'est pas parfaite le manga ne tombe dans la longueur et les sous intrigues inutiles.",
+            "img":"/mainProject/public/assets/img/Fullmetal_alchemist.jpg",
+            "category":"banger",
+            "anime":"oui, ce paye le luxe d'avoir deux adaptations animé car la premiere a fait sa propre fin quand elle a rattrapé le manga. Sinon les adapations sont bonnes"
+        },
+        {
+            "id":10,
+            "title":"Vinland Saga",
+            "author":"Yukimura Makoto",
+            "description":"Wow une belle découverte un manga plutot récent et donc toujours en cours mais vraiment très prenant et très interessants. Deja l'univers nordique fin antiquitité debut Moyen-Age bien retranscrit qui nous ancre dans quelque chose de concret tout en nous faisant quand même découvrir une facette de l'époque. Ce manga est vraiment bon car même si il nous donne de l'action et des combats jouissif, il y a une reflexion qui évolue avec le héro tout le long et qui fait même prendre un gros tournant à l'histoire. Cette réflexion tourne autour de la valeur de la vie, étant dans une période de guerre notre héro en quete de vengeance va tuer énormement mais petit à petit il va voir sa reflexion d'abord de manière direct sur sa vengeance puis de manière plus globale évoluer et ça ne le concerne pas que lui mais aussi tout les personnages important qu'on va croisé, et aussi parfois de petite apparté sur des simples soldats. Je n'ai grand chose a dire de plus mis a part que voilà c'est un manga qui arrive a être plus qu'une histoire de vengeance avec des combats stylé plus qu'une oeuvre ou on nous apportes seulement des bouts de réflexion, plus qu'une simple oeuvre je pense.",
+            "img":"/mainProject/public/assets/img/Vinland.jpg",
+            "category":"banger",
+            "anime":"oui, toujours en cours (2 saison) de très bonne facture"
+        },
+        {
+            "id":11,
+            "title":"Hunter x Hunter",
+            "author":"togashi Yoshihiro",
+            "description":"Alors même si on ne peut pas mettre hunter x hunter au même niveau que les plus grands manga, je trouve que parmis les nekketsu il arrive à être unique même si concretement il ne réinvente rien et ne rajoute rien d'incroyable je trouve que passer le tout premier arc très classique et peu mou tout les autres arc sont très très cool voir exceptionels. Je trouve que les autres arc sont tous très interessants soit on est bien pris dedans ils sont intriguant soit ils sont très fort en émotion. Deplus les combats sont travailler en profondeur avec l'utilisation du nen, le nen d'ailleurs est surement un des plus gros fort du manga (pas pour rien qu'il occupe énormement d'intrigue) je trouve que la pronfondeur qu'il y a autour du nen rend la plupart des combats plus interessant ou tu du moins donne un angle une persepctive differente des autres nekketsu. à coté de ça je suis obligé de mentionner l'arc chimera ant qui est juste incroyable autant pour les combats a grand enjeu/ampleur (netero le goat) que pour le fond et l'émotion. Personnellement j'aime aussi le dernier arc (toujours en cours) car même s'il est un peu lourd en dialogue est très spéciale et encore une fois le nen permet tout une enquete/réflexion sur ce qu'il se passe alors que ce dit arc n'est que le voyage vers une terre qui semble être un endroit hyper interessant lui aussi. On espere que l'auteur finira le manga.",
+            "img":"/mainProject/public/assets/img/hunterxhunter.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":12,
+            "title":"JoJo's Bizarre Adventure",
+            "author":"Hirohiko Araki",
+            "description":"Une oeuvre qu'il est compliqué pour moi de juger car je suis pas un grand et je ne lis pas les derniers arcs (je le ferais surement à terme) je me contente des animes pour l'instant. Cependant même si les longueurs et les moments un peu incoherent me gonfle, je suis obligé de reconnaitre que le style unique de JoJo qui est peu le style ultime du 'délire' (cette oeuvre vous embarque dans son délire) est par moment juste incroyable autant du coté humouristique que du coté plus drame/sérieux. Mais voila je pense que ça résume bien l'oeuvre si on rentre dans le délire c'est une des meilleurs oeuvre qui soit sinon c'est très bon mais un peu indigeste.",
+            "img":"/mainProject/public/assets/img/Jojo.jpg",
+            "category":"banger",
+            "anime":"oui, anime de tres bonne qualité qui a vraiment fait connaitre a un nouveau public l'oeuvre culte qu'est jojo.le manga n'etant pas finis c'est toujours en cours coté animation (saison 5)"
+        },
+        {
+            "id":13,
+            "title":"Shingeki no Kyojin",
+            "author":"Isayama Hajime",
+            "description":"Ah on attaque un morceau très connue mais assez récent au final l'attaque des titans ou SNK. De mon coté j'aime beaucoup ce manga mais je n'y est aucune attache particuliere au niveau personnel rien ne ma vraiment aggripé par les émotions cependant l'histoire est vraiment bonne on est dans ce genre d'oeuvre ou le mystere et l'interrogation règne et comme c'est bien fait on veut vraiment découvrire de quoi il en retourne. A coté de ça les combats sont très sympa et plutot unique du à l'univers (pour le coup l'anime offre des scenes vraiment de pur plaisir visuels). Même si beaucoup de personne déprecie la seconde partie (quand le coeur de l'histoire a été révélé) jaime beaucoup le traitement du personnage principal qui nous offrent une vrai réflexion sur la guerre et ça porté, nottamment au niveau générationnel, ainsi qu'à la vengeance, l'appartenance a un peuple.",
+            "img":"/mainProject/public/assets/img/SNK.jpg",
+            "category":"classique",
+            "anime":"oui, beaucoup de plaisir vu la qualité des scènes d'action"
+        },
+        {
+            "id":14,
+            "title":"Kimetsu no Yaiba",
+            "author":"Gotouge koyoharu",
+            "description":"Successeur des plus grand nekketsu il arrive a apporté sa touche autant parce qu'il se passe dans un japon qui techniquement a existé(la période) mais aussi et surtout au niveau de l'atmosphere je trouve. Je m'explique même si ça va etre ardu de faire comprendre du ressenti pur. Je trouve que dès le début on ressent plus la difficulté de la vie et des épreuves du héro souvent du au thème des démons qui apporte une atmosphere pesante on ressent la lourdeur et la difficulté je trouve. A coté on trouve une progression classique du héro des équipiers avec leur caractéristique rien bien nouveau ainsi qu'un groupe de personnage coloré et super fort les 'piliers' qui servent de mentor et d'objectifs au héro. Scénaristiquement c'est très simple mais je trouve les pilliers plutot sympa et certain ont vraiment beaucoup trop de flow on prend du plaisir a découvrire les pilliers ainsi que les meilleur démons. Bref un bon manga avec quelques trucs à lui et qui reste sur les rails pour le reste.",
+            "img":"/mainProject/public/assets/img/Kimetsu.jpg",
+            "category":"classique",
+            "anime":"oui, animation exceptionnelle énormement de plaisir sur le sound design et les scenes d'action (episode 13 saison 1 et 19 saison 2 juste sur le cul)"
+        },
+        {
+            "id":15,
+            "title":"Gunmm",
+            "author":"Yukito Kishiro",
+            "description":"Bon une grand oeuvre assurement avec deux grand points, un univers post apo super qui fourmille de detail, le monde qui nous est presenté est vivant avec des supers idées comme le faite de pouvoir se connecter a la vision d'athetlete dans un sport semis inventé, la dualité certe classique entre le bidonville en bas et la ville 'rever' en haut tres symbolique. Tout cela crée un monde très pertinent et très interessant qui permet aux deuxieme grand point du manga d'être d'autant plus pertinent j'ai nommé les personnage. Car en effet on suis un personnage en recherche identitaire mais pas que car étant un robot doté de penser tout du moins de reflexion, notre personnage principal sera souvent confronté a ses interrogation intérieurs face aux humains et les conditions de vie compliqué du bidonville poussant les gens aux crimes. Compliqué de vraiment parler de ce manga et de ce qu'il fait ressentir personnellement c'est plus de la reflexion qui m'a été apporté mais je pense qu'emotionnellement on peut être très pris aussi, je parlerais vite fait des défauts enfin du défaut qui est discutable la fin. La fin de l'histoire a connue des problèmes car l'auteur du a des problemes personnel a dit qu'il ne pouvait plus continuer a dessiner du coup il s'est contenté d'une fin raccourcis et donc peut etre imcomplete sur certains aspect cependant elle reste plutot correct même si on ressent que certains point manque de détail qu'ils auraient pu avoir.",
+            "img":"/mainProject/public/assets/img/Gunmm.jpeg",
+            "category":"classique",
+            "anime":"non, seulement 2 OAV qui reprennent le tout début"
+        },
+        {
+            "id":16,
+            "title":"Ghost in the Shell",
+            "author":"Masamune Shirow",
+            "description":"J'aime beaucoup cette oeuvre pour son univers futuriste et son traitement de tout ce 'future', même si au final l'oeuvre est plutot courte (4tomes) on découvre tout le temps des nouvelles idées sur le fonctionnement des objets, de la société, j'adore le passage sur le hacking nottamment ou encore le fait que l'heroine utilise plusieurs corps car ayant un cyber cerveau elle n'est pas relié a un corps par définition. Et justement on entre dans le reste de ce qui fait de cette oeuvre ce qu'elle est, qu'est-ce qui fait de nous des humains ? Question des plus légitimes pour notre héroines mais aussi pour tout les humains qu'on rencontre ayant quasiment tous des modification cybernétique. pour faire simple je pense que comme dans toute bonne oeuvre avec un bon univers des boonnes idées et bien même sans trop le vouloir des reflexions, des pensés se créee forcement l'univers est indirectement au service des questions et des reflexions qu'on va avoir en lisant l'oeuvre. Pour finir j'aimerai juste dire que je trouve que ce manga à un univers qui me parle beaucoup et j'ai toujours senti un potentiel a la matrix dommage que le film exploite le film d'animation et non le manga, mais bon peut toujours rêver !",
+            "img":"/mainProject/public/assets/img/GhostInTheShell.jpg",
+            "category":"banger",
+            "anime":"2 adaption animé (stand alone complexe) qui sont basé sur le manga mais n'ont pas la meme histoire bien qu'il y ait des elements repris(en dehors de l'univers) ainsi que les films d'animation de Mamoru Oshii"
+        },
+        {
+            "id":17,
+            "title":"Kiseijuu",
+            "author":"Iwaaki Histoshi",
+            "description":"Alors là on est sur du lourd, Kiseijuu aka parasite fait partie de ces oeuvres qui m'ont vraiment marqué et pris émotionnellement quand j'ai finis j'ai vraiment ressenti quelque chose ça m'avait apporté quelque chose. Pour rentrer dans la partie plus concrete de la critique je vais commencer par le point le plus évident de l'oeuvre mais aussi celui crée quasi toutes les émotions: les parasite. Et oui c'est con mais ce sont qui anime l'histoire et le héro et il ya tellement de chose, premierement la cohabitation du héro du parasite et le changement du héro en terme de mentalité qui correspond au moment ou sa fusion avec le parasite est 'complete' le fait est que tout les parasites ne sont pas pareil la masse agit par rapport à ses instincts mais certains essayent de voire plus loin (mise en abime des humains nous ramenant a toute forme de vie au final). Le fait que les parasites soit très similaire(visuellement nottamment) mais qu'on en rencontre des très differents en terme de personalité est très interessant aussi. La relation du héro avec son parasite et son évolution par rapport a l'évolution de ses relations huamine est tout aussi interessante bref énormement de reflexion nous est proposé si on veut vraiment creusé. A coté le manga nous offre des scenes très grisante avec la monté en puissance du héro de plus même si les combats sont rare ils sont très crédible car la moindre erreur et c'est un coup fatal qui passe j'aime beaucoup cette crédibilité et donc la strategie du combat deviens beaucoup plus importante.",
+            "img":"/mainProject/public/assets/img/Kiseijuu.jpg",
+            "category":"banger",
+            "anime":"oui, l'anime etant beaucoup plus récent que le manga(sans compter la réédition) il se permet une petite update des personnages rien de choquant deplus les ost sont plus bonnes."
+        },
+        {
+            "id":18,
+            "title":"GTO",
+            "author":"Toru Fujisawa",
+            "description":"ah un classique qui est très different ce qu'on à tendance a trouver donc très raffraichissant par la même occasion. Un manga plutot simple sur l'enseignement mais qui au final nous donne un message très important, l'enseignement c'est avant d'etre un échange de connaissance un échange humain. Le relationnel, sans entrée sérieusement dans le privé, est au coeur de l'oeuvre comme ça devrait l'etre pour l'enseignement, enfin c'est ce que je trouve que l'oeuvre renvois, evidemment l'oeuvre est drole,triste, un peu pensive mais quoi de plus normale c'est une forme de slice of life au final on suis la vie de ce prof marginal et de ses élèves et c'est de quoi la vie est faite.",
+            "img":"/mainProject/public/assets/img/GTO.jpeg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":19,
+            "title":"Ookami to Koushinryou",
+            "author":"Hasekura Isuna",
+            "description":"Spice and wolf de son petit nom européen est manga(tiré d'un light novel) assez vieux et un peu connue grâce son adapation en animé. Pour moi ce manga est un meilleur slice of life que j'ai pu lire car au final même si on suit un personnage qui est sensé être une divinité on a plus l'impression d'un humain classique un peu pommé qui fait une rencontre et dont on va suivre leurs aventures. On pourrait discuter du fait que ce soir vraiment un slice of life car en effet leur aventure sont plutot mouvementé mais c'est ce qui fait ça particularité et toute sa saveur selon moi. Je vous encourage à la découvrire si vous l'aviez loupé à l'époque.",
+            "img":"/mainProject/public/assets/img/Spice&Wolf.jpg",
+            "category":"hiddenGem",
+            "anime":"oui"
+        },
+        {
+            "id":20,
+            "title":"Jujutsu Kaisen",
+            "author":"Akutami Gege",
+            "description":"Ahah le nekketsu du moment (bon ok yen pleins d'autre même si j'ai l'impression que celui-ci est un cran haut dessus avec chainsaw). Je pense pas qu'il y est grand chose de spécifique a dire un peu comme kimetsu no yaiba on reprend un genre connue rien de très extravagant mais c'est très bien fait ça trouve quand même son identité et son univers au travers des exorcistes et des fléaux. Voilà rien de plus a rajouté je prends beaucoup de plaisir à chaque tome qui sort et me mater l'anime on verra à la fin pour un jugement plus global, si on devais trouver un défaut ça manque un peu de sujet fort abordé même si ça pourrtait venir.",
+            "img":"/mainProject/public/assets/img/JujutsuKaisen.jpg",
+            "category":"classique",
+            "anime":"anime très récent qui bénéficie d'une animation lécher, rien que pour les scenes d'actions ça vaut le coup"
+        },
+        {
+            "id":21,
+            "title":"Death Note",
+            "author":"Tsugumi Oba et Takeshi Obata",
+            "description":"Dur de critiquer death note car le début est vraiment bon, l'enquete et la dualité L/kira est vraiment palpitante à suivre donc juste pour ça c'est un bon manga. Malheuresement au milieu l'histoire devient moins palpitante voir même très mauvaise selon les points de vue je trouve que ça reste ok mais c'est surement parce que j'aime beaucoup suivre light yagami dans son entreprise et son mépris des humains.",
+            "img":"/mainProject/public/assets/img/DeathNote.jpg",
+            "category":"classique",
+            "anime":"oui"
+        },
+        {
+            "id":22,
+            "title":"Prunus Girl",
+            "author":"Matsumoto Tomoki",
+            "description":"Alors là, un manga incroyable sortis de nulle part. Qui l'eut cru un slice of life super marrant qui ce lit comme on grignoterais un apéritif un peu trop bon, qui possede le sujet un singulier de l'apparence par rapport à l'amour (et donc indirectement de l'homosexualité et du fait d'etre transgenre). Alors calmez vous ça reste en sous texte c'est quand même là et fait de manière très indirect mais pertinente et comme dit a coté ça se lit tout seul c'est très sympa on rigole bien bref lisez le en plus c'est court.",
+            "img":"/mainProject/public/assets/img/PrunusGirl.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":23,
+            "title":"Lost Children",
+            "author":"Tomomi Sumiyama",
+            "description":"Un très bon manga récent avec un coté historique très cool. Lost children nous raconte une histoire de peuples. On suivra l'histoire de plusieurs peuples (surtout un quand même) dans un même pays et on verra leurs probleme face à un systeme de caste qui entrainera une révolution, comment des petits peuples font face au reste du pays qui s'industrialise bref un manga prenant sur une base historique inspiré des indiens nottamment. L'auteure a fait pas mal de recherche sur l'histoire de certain pays et des peuples qui l'interessaient ce qui lui a permis de donné beaucoup de crédibilité au monde qu'on voit ainsi que la géopolitique. c'est encore court une vrai petite perle.",
+            "img":"/mainProject/public/assets/img/LostChildren.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":24,
+            "title":"Magus of the Library",
+            "author":"Izumi Mitsu",
+            "description":"seulement 5 tomes mais bordel qu'est-ce que c'est bien. On voit vite venir un nekketsu classique ou on va suivre le héro grind pour son objectis sauf qu'assez vite l'univers nous ratrappe. En effet l'univers est extrement riche il est composé de pleins de peuple avec leurs coutumes leurs histoires comme on aurait dans de l'heroic fantasy sauf que cette fois on parle de peuple qu'on ne connait pas à coté on a aussi le coeur de l'histoire et l'objectif du héro qui y ait lié Les livres. Cela peut paraitre étrange a premiere vu mais les livres étant sources de connaissances et donc de technologie d'autant plus qu'on y mêle la magie une magie qui actuellement(tome 5) reste encore flou et plutot rare mais ressemble à une magie un peu ancestrale runique et peu répandu. d'ailleurs même le fonctionnement et l'utilisation de la magie a le droit à des explications. Donc dans ce monde les livres sont importants comme chez nous sauf que dans ce monde il y a un organisme mondiale(on suppose en tous cas il se veut mondiale) qui a des équipes avec des compétences très differentes(des combattants aux mecs qui répare les livres) et qui a pour but de répandre la culture et d'archiver toute la connaissance et là notre héro veut integrer ce systeme élitiste dans lequel il va en apprendre plus (avec nous) sur les enjeux du monde et rencontrer ses gars sur.",
+            "img":"/mainProject/public/assets/img/Magus_of_the_Library.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":25,
+            "title":"Ushijima, Usurier de l'Ombre",
+            "author":"Manabe Shohei",
+            "description":"Quel manga, Ushijima c'est l'histoire d'un gars qui veut grind dans un milieu bien précis le pret d'argent illégal. Sauf qu'en fait on pourrait s'attendre à un manga majoritairement ambiance gangster et voir le héro monter dans ce milieu underground qui est régit selon ses propres loi. C'est effectivement une partie du manga et notre héro est très bon dans son role de mec impassible très badass(même si par moment on nous montre d'autre partie de lui) cependant le coeur du manga au final est plus de nous montrer les gens des bas fond de la société qui se sont retrouvé a se faire preter de l'argent par un preteur illégal qui a pour seul but de soutirer le plus d'argent possible. Et oui notre héro n'est pas l'homme le plus morale et le plus droit et c'est l'histoire de ces pauvres âme errantes et de comment elles en sont arrivés a voir un usurier un 'yamikin' qui fait la majorité de l'histoire. Ce systeme permet de passer par pleins de profil du jeune qui veut seul a la capitale au salaryman accro au pachinko et bien d'autre encore tous on une histoire qui souvent finis mal car quand on en arrive là ça finis rarement bien. A coté de ça une question m'a toujours titillers dans cette oeuvre comment récupérer de l'argent de la part de personne qui n'en non pas ? et oui l'oeuvre va aussi nous montrer des strategies evidemment illégal que notre héro met en place pour récupérer son argent. On est dans un manga sale mais très humain avant tout on y trouve aussi une critique de la société et de tout ses déboires(les gens qui vont voir le héro sont directement lié a ses déboires). Bon pour revenir au coté badass action cela se fera surtout autour des chef du milieu underground j'ai nommé les yakuzas qui veulent evidemment profiter de notre héro qui palpe beaucoup d'argent. Sur ceux je vous laisse décourvrire cette oeuvre unique et incroyable.",
+            "img":"/mainProject/public/assets/img/Ushijima.jpg",
+            "category":"banger",
+            "anime":"non"
+        },
+        {
+            "id":26,
+            "title":"ONE PUNCH MAN",
+            "author":"Yusuke Murata",
+            "description":"Qu'est-ce qu'on aime dans one punch man, en soit c'est simple un héro surpuissant et le decalage entre cette puissance et son charisme/attitude auquel je rajouterai face a la determination des ennemis qu'il rencontre. Un manga assez unique dans le sens ou il arrive a jongler entre limite parodie de nekketsu et parfois on vraiment dans les combats serieusement. On profite aussi de la découverte de tout les héros et de leur different pouvoir/technique, j'ai pas grand chose à dire car le manga est très simple tout en arrivant à continuer à être cool à lire.",
+            "img":"/mainProject/public/assets/img/OnePunchMan.jpg",
+            "category":"classique",
+            "anime":"oui saison 1 insane saison 2 un peu en deçà et saison 3 qui arrive"
+        },
+        {
+            "id":27,
+            "title":"Hajime no Ippo",
+            "author":"Morikawa, George",
+            "description":"",
+            "img":"/mainProject/public/assets/img/HajimeNoHippo.jpg",
+            "category":"classique",
+            "anime":"oui, se fait un peu vieux mais reste très bon"
+        },
+        {
+            "id":28,
+            "title":"Haikyu",
+            "author":"Haruichi Furudate",
+            "description":"on part sur un classique d'une des variantes les plus populaire, à raison, du genre nekketsu: les mangas de sport. Hakyu nous propose tout ce qu'on veut dans un manga de sport un héro qui a un reve une super ambiance d'équipe avec des personnages qui accompagne super bien le perso principale (j'adore nishinoya perso) et évidemment des match palpitants. personnellement j'ai toujours trouvé qu'un genre qui pouvait vraiment gagné a etre adapté en anime c'etait les mangas de sport et bordel que c'est vrai pour hakyu. Le manga reste évidemment excellent mais ça montre a quel point les matchs sont bon je pense. Pour le coup hakyu c'est vraiment que des matchs et pourtant c'est trop bien on prend son pied.",
+            "img":"/mainProject/public/assets/img/Haikyu.jpg",
+            "category":"classique",
+            "anime":"oui, juste un super animé avec de superbes sensations si ya bien un genre qui rend bien en anime c'est les mangas de sport"
+        },
+        {
+            "id":29,
+            "title":"Ace of diamond",
+            "author":"Yuji Terajima",
+            "description":"Diamond no ace encore un manga de sport vraiment bon qui plus en tant qu'européen j'ai pris plaisir à découvrir le baseball qui était un sport plutot obscur pour moi jusqu'alors. Ce que j'apprécie beaucoup c'est que le grind du héro ce fait sur un temps plus long que la plupart des autres manga du genre ou souvent on suis qu'une seule année. Là pour le coup le héro integre une grosse équipe il doit se battre pour essayer de jouer en match et potentiellement être titularisé, deplus faire ça sur plusieurs année montre aussi le changement dans l'équipe avec les terminales qui s'en vont. Bref je pense que c'est un des mangas de sport les plus concret tout étant jouissif quand on voit le héro progresser, on est impatient de voir la suite et le resultat de ses entrainements.",
+            "img":"/mainProject/public/assets/img/DiamondNoAce.jpg",
+            "category":"classique",
+            "anime":"oui, quel plaisir les bons animé de sport, toujours en en cours d'adaptation on attend la suite !"
+        },
+        {
+            "id":30,
+            "title":"Eyeshield 21",
+            "author":"Yusuke Murata",
+            "description":"Un manga de sport que j'aime beaucoup un peu vieux sur certain point au niveau de la façon de géré l'histoire je trouve(ça reste ok hein). Ce que j'aime particulièrement c'est qu'on va vraiment s'attaché a l'équipe car on va vivre le recrutement l'équipe avec le héro. Sinon le manga fait le taff mais je trouve que le football américain a des regles plutot denses qui permettent pas mal de chose au niveau des personnages et des matchs donc plutot cool a suivre en vrai je m'y attendais pas en le lisant mais c'est vraiment cool.",
+            "img":"/mainProject/public/assets/img/Eyeshield.jpg",
+            "category":"classique",
+            "anime":"oui mais l'adaptation en animé ne couvre pas tout le manga mais bon ya l'ost 'survivor' qui est trop bien ^^"
+        },
+        {
+            "id":31,
+            "title":"Solo Leveling",
+            "author":"Chugong",
+            "description":"oui c'est un webtoon mais 1 il y a une adapation en manga tres quali et 2 c'est beaucoup trop jouissif. Dans le style du perso qui domine tout et qu'on voit quand meme progresser qu'est-ce que c'est bon, les dessins rendent particulierement bien hommage aux combats et en plus c'est en couleur.",
+            "img":"/mainProject/public/assets/img/SoloLeveling.jpg",
+            "category":"classique",
+            "anime":"bientot"
+        },
+        {
+            "id":32,
+            "title":"Kuroko's Basket",
+            "author":"Tadatoshi Fujimaki",
+            "description":"Un manga de sport qui a beaucoup fait parlé de lui lors de son adaptation en anime, il prend le partie d'avoir des persos cheater et surhumain a 100% et ceux directement c'est le pitch de base avec les 5 génies et en vrai c'est jubilatoire. Les matchs sont le coeur de l'histoire là aussi on suit une saison(enfin une année) et on kiffe les matchs avec des techniques abusés mais stylés d'autant que pour le coup le héro qui fonctionne en duo est bien trouvé et ça change d'avoir un duo comme personnage principal.",
+            "img":"/mainProject/public/assets/img/KurokonoBasket.jpg",
+            "category":"classique",
+            "anime":"oui et pour le coup mieux vaut voir l'anime on perd rien et je trouve que l'action est mieux rendu dans l'anime"
+        },
+        {
+            "id":33,
+            "title":"Overlord",
+            "author":"Maruyama Kugane et so-bin",
+            "description":"bon en vrai c'est pas le meilleur qui soit mais j'adore, je trouve que la mise en abime de la puissance du personnage principale face autres est juste géniale et hyper jouissive. Ce qui est vraiment bon c'est que pour créer cette situation, l'histoire n'hesite pas à ralentir le rythme pour mieux connaitre le monde les personnages et enfin quand on a leurs réaction face a la force du héro c'est décuplé, bref j'adore. Sachant que chaque serviteur du héro peut aussi crée cette écart de puissance ça n'en finis jamais tout en prenant la politique du monde en compte et en continuant d'avancer dans le file rouge (certe simple) de l'histoire. Je partage juste un moment que j'adore dans l'anime: quand demiurge vient sauver entoma, on a champ entoma K-O contrechamp sur les aventuriers re champ boom demiurge et son theme musicale géniale qui nous dit tout sur la situation:\"le boss de fin est là\"une scene qui me donne des frissons.",
+            "img":"/mainProject/public/assets/img/Overlord.jpg",
+            "category":"banger",
+            "anime":"oui, quel banger le theme de demiurge"
+        },
+        {
+            "id":34,
+            "title":"Darwin's Game",
+            "author":"FLIPFLOP's",
+            "description":"Un manga qui est sortis pendant la période de mode des battleroyal mais qui tire son épingle du jeu pour autant qu'on le genre un tant soit peu. ce qui fait darwin's game est un super manga de survie/battle royale c'est évidemment l'aspect battle royale et l'action qui sont très bien géré, c'est prenant avec le systeme de pouvoir unique a chaque personnage et le héro surpuissant. Mais ça on l'a dans d'autre manga du genre, ce qui fait le plus selon moi c'est d'abord l'histoire qui est plutot interessante et mysterieuse on dépasse vite le cadre du battle royale pour quelque chose de plus grande envergure et on souhaite toujours découvrir le pouquoi du comment. Ensuite la progression du héro et surtout je trouve que pour un manga d'action il arrive a trouver le temps ppur ses personnages, alors ça reste léger car l'histoire et l'action prennent une palce prédominante mais justement on juste ce qu'il faut des personnages pour vouloir les voir évoluer et apprécier l'équipe autour du héro.",
+            "img":"/mainProject/public/assets/img/DarwinsGame.jpg",
+            "category":"classique",
+            "anime":"oui seulement le 1er arc du manga est couvert"
+        },
+        {
+            "id":35,
+            "title":"Inspecteur Kurokochi",
+            "author":"Kono Koji",
+            "description":"Un très bon manga policier ? oui ça existe et inspecteur kurokochi est vraiment très bon, que ce soit les enquetes qui sont interessantes tout en restant crédible car oui on évolue dans notre monde sans fard ni artifice. A coté de ça on a evidemment le personnage principal qui fait tout le sel de l'histoire, un personnage embivalent (plutot bon quand même) mais qui a décider de se salir les mains pour pouvoir vraiment agir quitte a sacrifier son integrité et sa carriere. Du coup bonne enquetes avec une toile fond qui avance et une grande enquête qu'on découvre petit à petit en paralelle de notre personnage principal. Enquetes captivantes personnage principal très cool et stylé que demander de plus ?",
+            "img":"/mainProject/public/assets/img/InspecteurKurokochi.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":36,
+            "title":"Mahou Tsukai no Yome",
+            "author":"Yamazaki Koré",
+            "description":"que dire, un style une atmosphere tellement prenante, un manga de sensation je dirais, qui a crée une vague de manga du meme genre tellement il était inspirant.",
+            "img":"/mainProject/public/assets/img/MahouTsukainoYome.jpg",
+            "category":"classique",
+            "anime":"oui, une seule saison qui couvre les 10er tomes surement une saison 2 mais le manga avance a son rythme"
+        },
+        {
+            "id":37,
+            "title":"Birdmen",
+            "author":"Tanabe Yellow",
+            "description":"Alors je ne sais pas trop comment décrire ce manga je trouve qu'il joue beaucoup sur son atmosphere calme, pensive mais un peu oppressante (notamment via le personnage de tanaka) à coté de ça le thème principal est l'humain et contrairement aux oeuvres avec des robots ou souvent la question la plus évidente est: qu'est-ce qui fait de nous des humains? ici on pensera plus a l'évolution de l'humanité et ce qui nous caractérise en tant qu'espèce. Après au fond on retrouve qu'en même un aspect nekketsu shonen avec des jeunes héro qui découvre leurs pouvoirs mais c'est fait de manière très vague on avance sans trop savoir ou on va et petit à petit on commence à voir les acteurs de l'histoire et les possibilité se dessiner.",
+            "img":"/mainProject/public/assets/img/Birdmen.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":38,
+            "title":"Chainsaw Man",
+            "author":"Tatsuki Fujimoto",
+            "description":"personnellement ce qui me plait beaucoup ce sont les personnage, même si on peut penser que c'est un shonen neketsu classique avec un coté violent voire gore je trouve qu'au dela de ça et du coté crade et direct c'est dans leur profondeur que j'aime les personnages on est souvent dans leur tête leur perception et leur reflexion sur leur vie et la société et par ce biais les personnages principaux ne sont jamais aussi convenu que les archetypes qu'on connait.",
+            "img":"/mainProject/public/assets/img/ChainsawMan.jpg",
+            "category":"banger",
+            "anime":"oui"
+        },
+        {
+            "id":39,
+            "title":"Fire Punch",
+            "author":"Tatsuki Fujimoto",
+            "description":"Meme si c'est son 2nd manga chainsaw man qui a eut le plus de reconnaissance de la part du public, je trouve que la caracteristique de fujimoto se trouve deja dans son premier manga et le rend deja très fort. En effet ses personnages qui ne sont pas des gens \"bon\" ou sécialement \"mauvais\"mais juste des gens avec un vécu qui essayent d'avancer dans la vie avec un monde toujours attypique et une touche de fantasy le coeur du manga reste ses personnages et leurs questionnement selon moi. Cela n'empeche de l'action et du drame car quand on traite de l'homme les conflits sont tout aussi coherent que les sentiments/émotions.",
+            "img":"/mainProject/public/assets/img/FirePunch.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":40,
+            "title":"Elin la charmeuse de bete",
+            "author":"Nahoko Uehashi",
+            "description":"On est dans ce genre d'oeuvre qui vous transporte tant par son monde et sa société bien établis qu'on découvre petit à petit que par les spécificité de l'heroine de son village et du monde plus en général. un manga très touchant humainement mais aussi sur la relation avec les animaux. Si vous connaissez les enfants de la baleine je trouve que c'est le meme genre manga qui vous intrigue et vous emmene dans son monde. Style assez rare et dure a bien faire mais une vrai bouffer d'air frais je trouve.",
+            "img":"/mainProject/public/assets/img/Elincharmeusebetes.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":41,
+            "title":"The Killer Inside",
+            "author":"Hajime Inoryu et Shota Ito",
+            "description":"Dédoublement de personnalité, j'adore ce sujet je trouve que ça permet une gestion de l'intrigue captivante",
+            "img":"/mainProject/public/assets/img/TheKillerInside.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":42,
+            "title":"Gantz",
+            "author":"Hiroya Oku",
+            "description":"j'adore 2 choses avec ce manga, 1 on est pris dans une frénésie entre l'hisoire loufoque qui nous donne envie de comprendre et l'action qui ne s'arrete pas souvent tout en étant très bonnes, On est servis. 2 les dessins, même si le fait que l'utilisation de l'informatique peut géné étant surtout utiliser pour les décors et ayant des décors de ville urbaine du 21eme siècle je trouve que ça donne un coté hyper leché on sans la maitrise de l'outil. De plus ce qui est dessiné à la main reste très bon, seul bémol pour certain la fin. Forcement avec un scénario aussi loufoque il est dur de trouver une vrai bonne fin mais personnellement c'est surtout le voyage qui m'importe dans ce genre d'oeuvre et la fin reste disons correct sur certains aspect même si sur d'autre ça part en sucette et on dirait qu'on se fout de notre gueule mais vu le sujet abordé je trouve ça presque ironique et bien vu.",
+            "img":"/mainProject/public/assets/img/Gantz.jpg",
+            "category":"classique",
+            "anime":"oui, appart l'opening pas beaucoup d'interet car il ne reprend que le tout debut du manga(seulement 12 épisode pour 37 tomes) et s'improvise même une fin pas terrible après ça permet de tester pour voir si on veut lire. "
+        },
+        {
+            "id":43,
+            "title":"My Home Hero",
+            "author":"Naoki Yamakawa",
+            "description":"Super manga policier mais sous un angle un peu different car on ne suis pas quelqu'un du coté des forces de l'ordre. De part cette angle un peu different en plus de toute la tension du suspens et du scénario bien vu. On à une reflexion sur le fait de tuer l'autre, sous quelle condition on estime que c'est \"correct\" quand est ce que quelqu'un le mérite ou est-ce seulement le cas. En tous cas notre héro agis car il veut proteger les siens et c'est là tout le sel de la reflexion et la \"justification\"du meurtre, reste-on le même si on tue? bref tout un coté relflexion bien géré qui rajoute un plus a ce thriller très prenant.",
+            "img":"/mainProject/public/assets/img/MyhomeHero.jpg",
+            "category":"hiddenGem",
+            "anime":"non"
+        },
+        {
+            "id":44,
+            "title":"",
+            "author":"",
+            "description":"",
+            "img":"",
+            "category":"",
+            "anime":""
+        }
+    ]
+}

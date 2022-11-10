@@ -1,0 +1,92 @@
+body{
+    background-color:#23262f;
+}
+.logoImg{
+    width: 10rem;
+}
+
+.registerTitle{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    color: #fff;
+}
+.mainTitle{
+    display: flex;
+    justify-content: center;
+    width: 79%;
+    align-items: center;
+}
+
+.pinkDivider{
+    width: 50rem;
+    height: 4px;
+    background: hotpink;
+    margin-bottom: 2rem;
+}
+.divideContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/* -----------FORMULAIRE----------- */
+small{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #F06191;
+    font-size: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+input{
+    text-align: center;
+    display: block;
+    width: 50%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn{
+    width: 8rem;
+    height: 2rem;
+    color: #fff;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%) !important;
+    background-color: #F06191 !important;
+    border-color: #ff5860 !important;
+    box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
+    opacity: 0.85;
+    padding-bottom: 2rem;
+}
+
+a{
+    font-size: 2rem;
+    color: hotpink; 
+}
+.hyperText{
+    padding-bottom: 2rem;
+}
+@media screen and (max-width: 480px){
+    .logoImg{
+        width: 5rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .mainTitle{
+        width: 55%;
+    }
+}

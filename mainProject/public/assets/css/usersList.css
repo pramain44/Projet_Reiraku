@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+
+.userContainer{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.userContainer div{
+    width: 30%;
+    text-align: start;
+    padding-bottom: 1rem;
+}
+
+td{
+    padding-bottom: 1rem;
+}
+
+section .createdDate{
+    width: 20%;
+}
+
+section .modify{
+    width: 10%;
+}
+
+p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

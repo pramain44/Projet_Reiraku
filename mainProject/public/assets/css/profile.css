@@ -1,0 +1,88 @@
+@font-face {
+    font-family: montserrat-black;
+    src: url(../font/Montserrat-Black.ttf);
+}
+
+@font-face {
+    font-family: montserrat-medium;
+    src: url(../font/Montserrat-Medium.ttf);
+}
+body{
+    background-color:#23262f;
+    color: #fff;
+    margin: 0;
+    }
+
+img{
+     width: 10rem;
+}
+
+.registerTitle{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    color: #fff;
+}
+.mainTitle{
+    display: flex;
+    justify-content: center;
+    width: 79%;
+    align-items: center;
+}
+
+.profilImg{
+    display: inline-block;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.imgAndPseudo{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    box-sizing: border-box;
+    border-radius: 25px;
+    justify-content: space-evenly;
+}
+
+p{
+    width: 100%;
+    padding-left: 7.5rem;
+    font-weight: 700;
+}
+
+h2{
+    text-align: center;
+}
+/* contenue des infos utilisateur */
+.userInfo{
+    font-size: 1.2rem;
+}
+ul{
+    padding-bottom: 1rem;
+}
+/* ---------gestion de la WatchList---------- */
+.oeuvreItem{
+    width: 30%;
+    text-align: center;
+}
+
+/* ---------Affichage mobile---------- */
+
+@media screen and (max-width: 480px){
+    .logoImg{
+        width: 6rem;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+    div .mainTitle{
+        width: 55%;
+    }
+}
