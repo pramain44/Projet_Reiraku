@@ -20,4 +20,35 @@ class Comment{
     public function setCreated_at($created_at){
         return $this->created_at = $created_at;
     }
+
+    public function create(){
+        $sql ='INSERT into `comments` (comm_slots, created_at) VALUES (:comm_slots, :created_at);';
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':comm_slots',$this->getComm_slots());
+        $sth->bindValue(':created_at',$this->created_at());
+        return $sth->execute();
+    }
+
+    public static function readAll(){
+        $sql = 'SELECT * FROM `comments`;';
+        $sth = Database::getInstance()->query($sql);
+        return $sth->fetchAll(PDO::FETCH_OBJ);
+    }
+  
+    public function update($id){
+        $sql = "UPDATE comments SET comm_slots = :comm_slots, created_at = :created_at WHERE id = :id";
+        $pdo = Database::getInstance();
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':comm_slots',$this->getComm_slots());
+        $sth->bindValue(':created_at',$this->getCreated_at());
+        $sth->bindValue(':id',$id,PDO::PARAM_INT);
+        return $sth->execute();
+    }
+
+    public static function delete($id){
+        $sql = 'DELETE FROM `comments` WHERE id = :id;'; // comments.id = :id ?
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':id',$id);
+        return $sth->execute();
+    }
 }

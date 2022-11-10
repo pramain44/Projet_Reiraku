@@ -69,7 +69,7 @@ class User{
         $sth->bindValue(':pseudo',$this->getDescription());
         $sth->bindValue(':password',$this->getAnime());
         $sth->bindValue(':created_at',$this->getAuthor());
-        $sth->bindValue(':validated_at',$this->getCategorie());
+        $sth->bindValue(':validated_at',$this->getValidated_at());
         return $sth->execute();
     }
 
