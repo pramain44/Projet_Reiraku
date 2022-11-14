@@ -6,7 +6,7 @@ class Database{
 
     public static function getInstance(){
         $pdo = new PDO(DSN, LOGIN, PASSWORD);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,FETCH_OBJ);
+        //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,FETCH_OBJ);
         return $pdo;
     }
 }

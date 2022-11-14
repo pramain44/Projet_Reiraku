@@ -9,9 +9,9 @@ class Manga {
 
     private string $anime;
 
-    private string $author;
+    private string $idAuthors;
 
-    private string $categorie;
+    private string $idCategories;
 
     private string $image;
 
@@ -48,18 +48,18 @@ class Manga {
     }
 
     // getter setter $authors
-    public function getAuthors():string{
+    public function getIdAuthors():string{
         return $this->authors;
     }
-    public function setAuthors(string $authors){
+    public function setIdAuthors(string $authors){
         return $this->authors = $authors;
     }
 
     // getter setter $categorie
-    public function getCategorie():string{
+    public function getIdCategories():string{
         return $this->categorie;
     }
-    public function setCategorie(string $categorie){
+    public function setIdCategories(string $categorie){
         return $this->categorie = $categorie;
     }
 
@@ -78,8 +78,8 @@ class Manga {
         $sth->bindValue(':title',$this->getTitle());
         $sth->bindValue(':description',$this->getDescription());
         $sth->bindValue(':anime',$this->getAnime());
-        $sth->bindValue(':author',$this->getAuthor());
-        $sth->bindValue(':categorie',$this->getCategorie());
+        $sth->bindValue(':author',$this->getIdAuthor());
+        $sth->bindValue(':categorie',$this->getIdCategorie());
         $sth->bindValue(':image',$this->getImage());
         return $sth->execute();
     }

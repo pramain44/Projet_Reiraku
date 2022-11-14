@@ -2,6 +2,7 @@
 require(__DIR__.'/../config/data.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $error = [];
     $nameAccount = trim(filter_input(INPUT_POST, 'nameAccount', FILTER_SANITIZE_SPECIAL_CHARS));
     if(empty($nameAccount)){
         $error['inscription'] = 'ce champ est obligatoire';
@@ -32,7 +33,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $error['email'] = 'l\'email n\'est pas conforme';
             }
     }
+    if(empty($error)){
+      $nameAccount = $_POST['nameAccount'];
+      $password = $_POST['password'];
+      $confirmPassword = $_POST['confirmPassword'];
+      $emailAddress = $_POST['emailAddress'];
+    }
 }
 // appelle du front (html)
 include(__DIR__.'/../views/inscription.php');
 include(__DIR__.'/../views/templates/footer.php');
+
