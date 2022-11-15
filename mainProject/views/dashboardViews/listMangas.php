@@ -9,13 +9,10 @@
 <body>
     <?php
     foreach($mangas as $manga): ?>
+    
         <div>
-            <div>
-                <h2><?=$manga->title?></h2>
-            </div>
-            <p><?=$authors->firstname.' '.$authors->lastname?></p>
-            <textarea cols="30" rows="10"><?=$manga->description?></textarea>
-            <a href="mangasListController.php?id=<?=$mangas->id?>">DELETE</a>
+            <a href="editMangasController.php?id=<?=$manga->Id_mangas?>"><?=$manga->title?></a>
+            <a href="mangasListController.php?id=<?=$manga->Id_mangas?>">DELETE</a>
         </div>
     <?php endforeach ?>
 </body>

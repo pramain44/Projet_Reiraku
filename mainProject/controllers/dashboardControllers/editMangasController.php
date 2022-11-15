@@ -1,13 +1,15 @@
 <?php
-require_once(__DIR__.'/../../config/data.php');
-require_once(__DIR__.'/../../helpers/database.php');
-require_once(__DIR__.'/../../helpers/sessionFlash.php');
-require_once(__DIR__.'/../../models/Manga.php');
-
+require_once __DIR__.'/../../config/data.php';
+require_once __DIR__.'/../../helpers/database.php';
+require_once __DIR__.'/../../models/Manga.php';
+require_once __DIR__.'/../../models/Author.php';
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 
 try{
+    $authors = Author::AuthorsInMangas($id);
+    $mangas = Manga::readAll($id);
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $error = [];
         $title = trim(filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS));
@@ -85,9 +87,9 @@ try{
 
         if(empty($error)){
             $sql = 'BEGIN;
-            INSERT INTO `categories` (name) VALUES (:name);
-            INSERT INTO `authors` (firstname, lastname) VALUES (:firstname, :lastname);
-            INSERT INTO `mangas` (description, anime, title, image, Id_authors,Id_categories) VALUES (:description, :anime, :title, :image,@authors_id:=LAST_INSERT_ID(),LAST_INSERT_ID());
+            UPDATE `categories` SET name = :name;
+            UPDATE `authors` SET firstname = :firstname lastname = :lastname;
+            UPDATE `mangas` description = :description anime = :anime title = :title image = :image;
             COMMIT;';
             $sth = Database::getInstance()->prepare($sql);
             $sth->bindValue(':lastname',$lastname);
@@ -99,26 +101,27 @@ try{
             $sth->bindValue(':image',$image);
             $response = $sth->execute();
             if($response){
-                SessionFlash::set('Manga Ajouter');
-                header('location: /mainProject/controllers/dashboardControllers/createMangasController.php');
+                SessionFlash::set('Modification appliqué');
+                header('location: /mainProject/controllers/dashboardControllers/listMangasController.php');
                 exit();
             }
         }
     }
 
 }catch(PDOException $e){
-     die('error'.$e->getMessage());
+    die('error'.$e->getMessage());
 }
 
-include __DIR__.'/../../views/dashboardViews/createMangas.php';
 
 
 
-// BEGIN;
-//             INSERT INTO `authors` (firstname, lastname) VALUES ('kentaro', 'miura');
-//             INSERT INTO `mangas` (Id_authors) VALUES (LAST_INSERT_ID());
-//             INSERT INTO `categories` (name) VALUES ('bangers');
-//             INSERT INTO `mangas` (description, anime, title, image, Id_categories) VALUES ('test', 'oui', 'berserk', 'url',LAST_INSERT_ID());
-//             COMMIT;
 
-//http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/createMangasController.php
+
+
+
+
+
+
+
+include __DIR__.'/../../views/dashboardViews/editMangas.php';
+

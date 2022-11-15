@@ -3,9 +3,9 @@
 class User{
     private int $id;
 
-    private string $mail;
+    private string $email;
 
-    private string $pseudo;
+    private string $name_account;
 
     private string $password;
 
@@ -22,19 +22,19 @@ class User{
     }
 
      // getter et setters de $mail
-     public function getMail():string{
+     public function getEmail():string{
         return $this->mail;
     }
-    public function setMail(string $mail){
-        return $this->mail = $mail;
+    public function setEmail(string $email){
+        return $this->email = $email;
     }
 
-    // getter et setters de $pseudo
-    public function getPseudo():string{
-        return $this->pseudo;
+    // getter et setters de $name_account
+    public function getName_account():string{
+        return $this->name_account;
     }
-    public function setPseudo(string $pseudo){
-        return $this->pseudo = $pseudo;
+    public function setName_account(string $name_account){
+        return $this->name_account = $name_account;
     }
 
     // getter et setters de $password
@@ -63,23 +63,23 @@ class User{
 
     // ADD new User in the database
     public function create(){
-        $sql ='INSERT into `users` (mail, pseudo, password, created_at, validated_at) VALUES (:mail, :pseudo, :password, :created_at, :validated_at);';
+        $sql ='INSERT into `users` (email, name_account, password, created_at, validated_at) VALUES (:email, :name_account, :password, :created_at, :validated_at);';
         $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':mail',$this->getTitle());
-        $sth->bindValue(':pseudo',$this->getDescription());
-        $sth->bindValue(':password',$this->getAnime());
-        $sth->bindValue(':created_at',$this->getAuthor());
+        $sth->bindValue(':email',$this->getEmail());
+        $sth->bindValue(':name_account',$this->getName_account());
+        $sth->bindValue(':password',$this->getPassword());
+        $sth->bindValue(':created_at',$this->getCreated_at());
         $sth->bindValue(':validated_at',$this->getValidated_at());
         return $sth->execute();
     }
 
     // Update methods for Users in database
     public function update($id){
-        $sql = "UPDATE users SET mail = :mail, pseudo = :pseudo, password = :password, created_at = :created_at, validated_at = :validated_at WHERE id = :id";
+        $sql = "UPDATE users SET email = :email, name_account = :name_account, password = :password, created_at = :created_at, validated_at = :validated_at WHERE id = :id";
         $pdo = Database::getInstance();
         $sth = $pdo->prepare($sql);
-        $sth->bindValue(':mail',$this->getMail());
-        $sth->bindValue(':pseudo',$this->getPseudo());
+        $sth->bindValue(':email',$this->getEmail());
+        $sth->bindValue(':name_account',$this->getName_account());
         $sth->bindValue(':password',$this->getpassword());
         $sth->bindValue(':created_at',$this->getcreated_at());
         $sth->bindValue(':validated_at',$this->getvalidated_at());

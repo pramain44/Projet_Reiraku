@@ -100,19 +100,23 @@ class Manga {
     }
 
     // All read method of manga in the database
-    public static function readAll($search){
-        if($search == ''){
-        $sql = 'SELECT * FROM `mangas`;';
-        $sth = Database::getInstance()->query($sql);
-        return $sth->fetchAll(PDO::FETCH_OBJ);
+    public static function readAll(string $search = '', $id = ''){
+        $sql = 'SELECT * FROM `mangas` ';
+        var_dump($search != '');
+        if($search != ''){
+            $sql .= 'WHERE title LIKE :search OR authors LIKE :search OR categories LIKE :search';
+        }else if($id != ''){
+            $sql .= 'WHERE id = :id';
         }
-        else{
-        $sql ='SELECT * FROM `mangas` WHERE title = :search OR categorie = :search';
+        $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':search',$search);
+        if($search != ''){
+            $sth->bindValue(':search','%'.$search.'%');
+        }else if($id != ''){
+            $sth->bindValue(':id',$id);
+        }
         $sth->execute();
         return $sth->fetchAll(PDO::FETCH_OBJ);
-        }
     }
 
     // All delete method of manga in the database
