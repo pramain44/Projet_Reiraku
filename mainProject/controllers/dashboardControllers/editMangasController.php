@@ -3,12 +3,15 @@ require_once __DIR__.'/../../config/data.php';
 require_once __DIR__.'/../../helpers/database.php';
 require_once __DIR__.'/../../models/Manga.php';
 require_once __DIR__.'/../../models/Author.php';
+require_once __DIR__.'/../../helpers/SessionFlash.php';
+
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 
 try{
+    $authors = Author::readOne($id);
     $authors = Author::AuthorsInMangas($id);
-    $mangas = Manga::readAll($id);
+    $mangas = Manga::readAll($search = '',$id);
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $error = [];
@@ -24,12 +27,12 @@ try{
         $anime = trim(filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($anime)){
         $error['anime'] = 'ce champ est obligatoire';
-        }else{
-        $isOk = filter_var($anime,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_NO_NUMBER.'/')));
-            if($isOk == false){
-            $error['anime'] = 'la donnée n\'est pas conforme';
-            }
-        }
+         }//else{
+        // $isOk = filter_var($anime,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_NO_NUMBER.'/')));
+        //     if($isOk == false){
+        //     $error['anime'] = 'la donnée n\'est pas conforme';
+        //     }
+        // }
         $description = trim(filter_input(INPUT_POST, 'description', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($description)){
         $error['description'] = 'ce champ est obligatoire';
@@ -89,7 +92,7 @@ try{
             $sql = 'BEGIN;
             UPDATE `categories` SET name = :name;
             UPDATE `authors` SET firstname = :firstname lastname = :lastname;
-            UPDATE `mangas` description = :description anime = :anime title = :title image = :image;
+            UPDATE `mangas` SET description = :description anime = :anime title = :title image = :image;
             COMMIT;';
             $sth = Database::getInstance()->prepare($sql);
             $sth->bindValue(':lastname',$lastname);
@@ -111,16 +114,6 @@ try{
 }catch(PDOException $e){
     die('error'.$e->getMessage());
 }
-
-
-
-
-
-
-
-
-
-
 
 
 include __DIR__.'/../../views/dashboardViews/editMangas.php';

@@ -15,7 +15,7 @@
         ?>
     </div>
     <form novalidate method="post">
-        <input type="text" name="title"  placeholder="title" value="<?=$mangas->title ?? ''?>">
+        <input type="text" name="title"  placeholder="title" value="<?=$mangas->title?>">
         <small><?= $error['title'] ?? '';?></small>
 
         <input type="text" name="lastname" placeholder="lastname" value="<?=$authors->lastname ?? ''?>">

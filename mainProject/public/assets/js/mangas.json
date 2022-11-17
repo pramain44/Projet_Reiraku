@@ -49,7 +49,7 @@
             "id":6,
             "title":"Fairy tail",
             "author":"Hiro Mashima",
-            "description":"Alors ça va relativement cours, je pense que fairytail est manga tres correct dans son le genre du nekketsu mais personnellement je le met en dessous des autres grands manga de son genre. Au niveau des points positif quand meme en plus de combat très sympa c'est l'aspect 'famille' très explicite mais qui marche bien on sens le plaisir et la cohésion de nos héros et le manga nous invite dans cette famille. Cependant je trouve l'histoire plutot faible (même au début) elle traine un peu longueur aussi bref je trouve que globalement l'histoire manque un peu force.",
+            "description":"Alors ça va être relativement cours, je pense que fairytail est manga tres correct dans son le genre du nekketsu mais personnellement je le met en dessous des autres grands manga de son genre. Au niveau des points positif quand meme en plus de combat très sympa c'est l'aspect 'famille' très explicite mais qui marche bien on sens le plaisir et la cohésion de nos héros et le manga nous invite dans cette famille. Cependant je trouve l'histoire plutot faible (même au début) elle traine un peu longueur aussi bref je trouve que globalement l'histoire manque un peu force.",
             "img":"/mainProject/public/assets/img/fairytail.jpg",
             "category":"classique",
             "anime":"oui"
@@ -77,9 +77,9 @@
             "title":"Fullmetal Alchemist",
             "author":"Arakawa Hiromu",
             "description":"Si je devais dire ce qui fait de FMA une oeuvre particulièrement bonne ça serait surement à cause des thèmes abordés et de l'émotion vehiculé. En effet on commence tout de suite avec des héros qui ont perdu leur membre/corps pour essayer de retrouver leur mère décédé. Ensuite on parle de guerre et notamment de génocide au travers de scar et de son peuple les ishval, et même au seins de l'armée qui emplois des alchemistes et donc nos personnages ont trouvent beaucoup d'histoire très touchantes et surtout très humaine. J'aime beaucoup le faite qu'on voit beaucoup la mauvaise utilisation de l'alchimie c'est très crédible pour le monde car l'homme fait toujours le meilleur et le pire avec ses créations. Sinon l'oeuvre reste très cool niveau combat et histoire(la géopolitque peut etre un peu sous exploité au niveau des autres pays) nottamment du au theme principale l'alchimie qui permet des styles de combat asser divers et très sympa à découvrire. Evidemment comme on parle d'alchimie même si cette oeuvre a son interpretation on retrouve des sujets/themes assez courant comme la pierre philosophale, l'immortalité et la creation de l'homme (avec les homonculus nottamment) et donc forcement qui dit création dit rapport a dieu. Point positif même si la fin n'est pas parfaite le manga ne tombe dans la longueur et les sous intrigues inutiles.",
-            "img":"/mainProject/public/assets/img/Fullmetal_alchemist.jpg",
+            "img":"/mainProject/public/assets/img/FullmetalAlchemist.jpg",
             "category":"banger",
-            "anime":"oui, ce paye le luxe d'avoir deux adaptations animé car la premiere a fait sa propre fin quand elle a rattrapé le manga. Sinon les adapations sont bonnes"
+            "anime":"oui, ce paye le luxe d'avoir deux adaptations animé car la premiere a fait sa propre fin quand elle a rattrapé le manga Sinon les adapations sont bonnes"
         },
         {
             "id":10,

@@ -7,12 +7,11 @@ require_once __DIR__.'/../../models/Author.php';
 
 
 try{
-    $search = '';
     //$x = Manga::count();
     $pages = intval(filter_input(INPUT_GET,'pages',FILTER_SANITIZE_NUMBER_INT));
     $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
-    $mangas = Manga::readAll($search); // read with limits
-    $authors = Author::readAll($search);
+    $mangas = Manga::readAll($search = ''); // read with limits
+    $authors = Author::readAll($search = '');
 
     if(!empty($_GET['pages'])){
     $mangas = Manga::readAll($pages); // read with limits and offset (pages)
