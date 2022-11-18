@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../public/assets/css/home.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <title>logo nomsite - Accueil</title>
+    <title>logo ReiRaku - Accueil</title>
 </head>
 <body>
     <header>
@@ -52,6 +52,14 @@
             <div class="pinkDivider"></div>
         </div>
         <div class="cards">
-            
+            <?php foreach($mangas as $manga): ?>
+                <div class="card <?=$manga->name?>">
+                    <div class="textContainer">
+                        <h3 class="titleProducts"><?=$manga->title?></h3>
+                    </div>
+                    <a class="ficheLink" href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="img<?=$manga->name?>" src="<?=$manga->image?>" alt="<?=$manga->title?>"></a>
+                </div>
+            <?php endforeach ?>
+
         </div>
     </section>

@@ -43,20 +43,16 @@ class Author{
         return $sth->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public static function read($id){
-        $sql ='SELECT * FROM `authors` WHERE Id_authors = :id;';
-        $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':id',$id);
-        $sth->execute();
-        return $sth->fetch(PDO::FETCH_OBJ);
-    }
-
     public static function AuthorsInMangas($id){
-        $sql='SELECT authors.firstname, authors.lastname FROM `authors` JOIN `mangas` ON mangas.Id_authors = mangas.Id_mangas WHERE mangas.Id_mangas = :id;';
+        $sql='SELECT mangas.description, mangas.anime, mangas.title, mangas.image, authors.firstname, authors.lastname 
+        FROM `mangas` JOIN authors ON mangas.Id_authors = authors.Id_authors WHERE mangas.Id_mangas = :id';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':id',$id);
         $sth->execute();     
-        return $appointments = $sth->fetch(PDO::FETCH_OBJ);
+        return $sth->fetch(PDO::FETCH_OBJ);
     }
 
 }
+
+
+

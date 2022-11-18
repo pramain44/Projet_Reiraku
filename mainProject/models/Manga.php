@@ -102,12 +102,10 @@ class Manga {
     // All read method of manga in the database
     public static function readAll(string $search = '', $id = ''){
         $sql = 'SELECT * FROM `mangas` ';
-        var_dump($search);
         if($search != ''){
             $sql .= 'JOIN `authors` WHERE title LIKE :search OR firstname LIKE :search OR lastname LIKE :search OR categories LIKE :search';
         }else if($id != ''){
             $sql .= 'WHERE Id_mangas = :id';
-            var_dump($sql);
         }
         $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);
@@ -124,10 +122,12 @@ class Manga {
     }
 
     // All delete method of manga in the database
-    public static function delete($Id_mangas){
+    public static function delete($id){
         $sql = 'DELETE FROM `mangas` WHERE Id_mangas = :id;';
         $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':id',$Id_mangas);
+        $sth->bindValue(':id',$id);
         return $sth->execute();
     }
 }
+
+

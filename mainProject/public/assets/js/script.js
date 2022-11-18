@@ -1,7 +1,7 @@
 let htmlStructureOfCard = (manga) => {
     document.querySelector('.cards').innerHTML += 
     `
-        <div class="card ${manga.category}" data-id="${manga.id}" data-title="${manga.title}"  data-img="${manga.img}" data-author="${manga.author}" data-anime="${manga.anime}">
+        <div class="card ${manga.category}">
         <div class="textContainer">
             <h3 class="titleProducts">${manga.title}</h3>
         </div>

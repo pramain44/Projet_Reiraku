@@ -10,19 +10,19 @@ body{
     div .card{
         width: 100%;
     }
-    a .imgbanger {
+    a .imgBangers {
         width: 20rem;
         max-height:300px;
         object-fit: scale-down;
     }
     
-    a .imgclassique{
+    a .imgClassiques{
         width: 20rem;
         max-height: 300px;
         object-fit: scale-down;
     }
     
-    a .imghiddenGem{
+    a .imgHiddenGems{
         width: 20rem;
         max-height: 300px;
         object-fit: scale-down;
@@ -200,17 +200,17 @@ h1{
     text-align: center;
 }
 
-.imgbanger {
+.imgBangers {
     width: 20rem;
     max-height:440px;
 }
 
-.imgclassique{
+.imgClassiques{
     width: 20rem;
     max-height:440px ;
 }
 
-.imghiddenGem{
+.imgHidden.Gems{
     width: 20rem;
     max-height:440px ;
 }
