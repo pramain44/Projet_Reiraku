@@ -34,12 +34,13 @@ class Categorie{
         }
         $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);
-            if($id != ''){
+        if($id != ''){
             $sth->bindValue(':id',$id);
             $sth->execute();
             return $sth->fetch(PDO::FETCH_OBJ);
         }
-        $sth->execute();
-        return $sth->fetchAll(PDO::FETCH_OBJ);
+        if($sth->execute()){
+            return $sth->fetchAll(PDO::FETCH_OBJ);
+        }
     }
 }

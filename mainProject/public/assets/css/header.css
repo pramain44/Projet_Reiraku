@@ -1,0 +1,22 @@
+ul{
+    width: 50%;
+}
+
+.headerContainer{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+}
+
+.liText{
+    padding-bottom: 2rem;
+}
+
+div ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+}

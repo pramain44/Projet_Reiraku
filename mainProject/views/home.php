@@ -15,7 +15,7 @@
             <a href="homeController.php"><img class="logoImg" src="../public/assets/img/VeibaeHome.png" alt="logo"></a>
             <div class="mainNav">
                 <ul>
-                    <li"><a class="inherit" href="profileController.php">Profile</a></li>
+                    <li class="profile"><a class="inherit" href="profileController.php">Profile</a></li>
                 </ul>
                 <ul>
                     <li><a class="inherit connect" href="inscriptionController.php">Inscription</a></li>
@@ -24,19 +24,19 @@
             </div>
         </div>
         <div class="title">
-            <h1>Nom Du Site</h1>
+            <h1>Bienvenue Sur ReiRaku</h1>
         </div>
         <div class="divideContainer">
             <div class="whiteDivider"></div>
         </div>
         </div>
         <div class="formContainer">
-            <form class="" action="" method="">
-                    <div class="wrap">
-                    <input class="searchBar" type="search" placeholder="Rechercher une oeuvre" aria-label="search" name="search">
-                    <button class="searchBtn" type="submit"><img src="" alt="">GO</button>
-                    </div>
-                </form>
+            <form method="get">
+                <div class="wrap">
+                    <input class="searchBar" type="search" name="search" placeholder="Rechercher une oeuvre" aria-label="search" name="search">
+                    <button class="searchBtn" type="submit"><img src="" alt="">GO</button>    
+                </div>
+            </form>
         </div>
     </header>
     <section class="jsonFetch">
@@ -44,8 +44,10 @@
             <div class="categoriesTitle">
                 <h2>Triez par Catégorie</h2>
             </div>
-            <div class="categories">
-                <button class="btn" data-sort="banger">Bangers</button><button class="btn" data-sort="classique">Classiques</button><button class="btn" data-sort="hiddenGem">Hidden Gems</button>
+            <div class="categories">               
+                <a href="homeController.php?search=bangers"><button class="btn" value="bangers">Bangers</button></a>
+                <a href="homeController.php?search=classiques"><button class="btn" type="submit" value="Classiques" >Classiques</button></a>
+                <a href="homeController.php?search=hidden"><button class="btn" type="submit" value="Hidden" >Hidden Gems</button></a>              
             </div>
         </div>
         <div class="divideContainer">

@@ -1,19 +1,18 @@
 <?php
-require_once __DIR__.'/../../config/data.php';
 require_once __DIR__.'/../../helpers/database.php';
 require_once __DIR__.'/../../models/Manga.php';
 require_once __DIR__.'/../../models/Author.php';
-//require_once __DIR__.'/../../helpers/sessionFlash.php';
 
+$search = trim((string) filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIAL_CHARS));
+$id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 
 $title ='Mangas Liste';
 
 try{
     //$x = Manga::count();
     $pages = intval(filter_input(INPUT_GET,'pages',FILTER_SANITIZE_NUMBER_INT));
-    $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
-    $mangas = Manga::readAll($search = ''); // read with limits
-    //$authors = Author::readAll($search = '');
+    $mangas = Manga::Select($search); // read with limits
+
 
     if(!empty($_GET['pages'])){
     $mangas = Manga::readAll($pages); // read with limits and offset (pages)

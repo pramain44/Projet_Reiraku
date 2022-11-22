@@ -1,9 +1,8 @@
 <?php
-require_once(__DIR__.'/../../config/data.php');
 require_once(__DIR__.'/../../helpers/database.php');
 require_once(__DIR__.'/../../models/Manga.php');
 
-$title = 'Formulaire Ajout';
+$title = 'Formulaire D`\'ajout';
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 
 try{

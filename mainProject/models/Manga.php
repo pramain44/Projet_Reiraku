@@ -116,8 +116,8 @@ class Manga {
             $sth->execute();
            return $sth->fetch(PDO::FETCH_OBJ);
         }else{
-        $sth->execute();
-        return $sth->fetchAll(PDO::FETCH_OBJ);
+            $sth->execute();
+            return $sth->fetchAll(PDO::FETCH_OBJ);
         }
     }
 
@@ -127,6 +127,21 @@ class Manga {
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':id',$id);
         return $sth->execute();
+    }
+
+    public static function Select(string $search){
+        $sql = 'SELECT mangas.title, mangas.image, mangas.Id_mangas,categories.name 
+        FROM `mangas` JOIN `categories` ON mangas.Id_categories = categories.Id_categories';
+        if($search != ''){
+            $sql .= ' WHERE title LIKE :search OR name LIKE :search';
+        }
+        $sql .= ' ORDER BY title;';
+        $sth = Database::getInstance()->prepare($sql);
+        if($search != ''){
+            $sth->bindValue(':search','%'.$search.'%');
+        }
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_OBJ);        
     }
 }
 

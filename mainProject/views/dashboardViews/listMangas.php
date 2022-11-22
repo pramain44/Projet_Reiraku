@@ -7,6 +7,14 @@
         }
         ?>
     </div>
+    <div>
+        <form method="get">
+            <div class="wrap">
+                <input class="searchBar" type="search" name="search" placeholder="Rechercher une oeuvre" aria-label="search" name="search">
+                <button class="searchBtn" type="submit">GO</button>    
+            </div>
+        </form>
+    </div>
     <?php
     foreach($mangas as $manga): ?>
     

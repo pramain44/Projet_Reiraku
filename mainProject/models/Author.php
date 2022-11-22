@@ -32,7 +32,7 @@ class Author{
     public static function readAll(string $search = ''){
         $sql = 'SELECT * FROM `authors` ';
         if($search != ''){
-            $sql .= 'WHERE title LIKE :search OR authors LIKE :search OR categories LIKE :search';
+            $sql .= 'WHERE firstname LIKE :search OR lastname LIKE :search';
         }
         $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);

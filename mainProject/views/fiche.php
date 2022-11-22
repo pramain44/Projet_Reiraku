@@ -6,18 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/assets/css/fiche.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
-    <title>logo nomsite - nomOeuvre</title>
+    <title>logo ReiRaku - <?=$mangas->title?></title>
 </head>
 <body>
     <section class="cardForm">
         <div class="cardContent">
-        
+            <div class="imageFiche">
+                <a href="homeController.php"><img class="imgFiche" src="<?=$mangas->image?>" alt=""></a>
+            </div>
+            <div class="textFiche">
+                <div class="titleFiche">
+                    <h2><?=$mangas->title?></h2>
+                </div>
+                <div class="infoFiche">
+                    <p><strong>Auteur</strong> : <?=$mangas->firstname.' '.$mangas->lastname?></p>
+                    <p><strong>Animé </strong> : <?=$mangas->anime?></p>
+                </div>
+                <div class="descriptionFiche">
+                    <p><?=$mangas->description?></p>
+                </div>
+            </div>
         </div>
     </section>
+
     <div class="divideContainer">
         <div class="pinkDivider"></div>
     </div>
-    <section class="Commentary"></section>
+    <section class="Commentary">
         <h3>Commentaires</h3>
         <div class="divideContainer">
             <div class="pinkDivider2"></div>
