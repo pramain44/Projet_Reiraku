@@ -7,7 +7,7 @@
         ?>
     </div>
     <form novalidate method="post">
-        <input type="text" name="title"  placeholder="title" value="<?=$title ?? ''?>">
+        <input type="text" name="title"  placeholder="title" value="">
         <small><?= $error['title'] ?? '';?></small>
 
         <input type="text" name="lastname" placeholder="lastname" value="<?=$lastname ?? ''?>">

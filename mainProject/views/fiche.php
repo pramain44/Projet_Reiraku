@@ -38,11 +38,14 @@
             <div class="pinkDivider2"></div>
         </div>
             <div class="comments">
-            <form>
-                <textarea class="textArea" name="comm" id="comm"></textarea>
+
+                <!-- Text Area pour entrer un commentaire -->
+            <form method="post">
+                <textarea class="textArea" name="comm_slot" id="comm"></textarea>
                 <button class="btn" type="submit">Commenter !</button>
-                <small><?= $msg ?? '' ?></small>
+                <div><small><?= $error ?? '' ?></small></div>
             </form>
+
             <!-- zone d'un commentaire type -->
             <div class="commRow">
                 <div class="profilImg">

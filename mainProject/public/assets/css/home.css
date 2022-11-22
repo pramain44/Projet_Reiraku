@@ -31,6 +31,9 @@ body{
         position: absolute;
         top: 120px;
     }
+    .title p{
+        display: none;
+    }
     .formContainer{
         padding-top: 1.8rem;
     }
@@ -88,7 +91,7 @@ ul{
     padding-right: 1rem;
 }
 /* gestion de l'affichage mobile du header */
-@media screen and (max-width: 560px){
+@media screen and (max-width: 720px){
 header{
     height: 45vh;
 }
@@ -112,6 +115,9 @@ ul{
 header .title{
     padding-bottom: 2rem;
 }
+div .searchBtn{
+    width: 5rem;
+}
 }
 
 /* ----titre et barre de recherche---- */
@@ -124,7 +130,10 @@ h1{
     position: absolute;
     top:100px
 }
-
+.underText{
+    font-size: 1.2rem;
+    padding-bottom: 2.2rem;
+}
 .whiteDivider{
     width: 100px;
     height: 2px;

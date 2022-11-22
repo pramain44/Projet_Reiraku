@@ -2,15 +2,36 @@
 require_once (__DIR__.'/../../helpers/database.php');
 require_once(__DIR__.'/../../models/Manga.php');
 require_once(__DIR__.'/../../models/User.php');
-require_once (__DIR__.'/../../helpers/sessionFlash.php');
+require_once(__DIR__.'/../../models/Comment.php');
 
+// on récupere l'id 
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
+$Id_comments = intval(filter_input(INPUT_GET,'Id_comments',FILTER_SANITIZE_NUMBER_INT));
+$Id_users = intval(filter_input(INPUT_GET,'Id_users',FILTER_SANITIZE_NUMBER_INT));
+
+// on supprime avec la fonction statique
+
 $deleted = Manga::delete($id);
-if($deleted){
-    SessionFlash::set('Le Manga a été supprimé');
-    header('location: /controllers/dashboardControllers/listMangasController.php');
+$deletedComm = Comment::delete($Id_comments);
+$deletedUser = User::delete($Id_users);
+
+if($id){
+    SessionFlash::set('La suppression a fonctionné');
+    header('location: listMangasController.php');
     exit();
-}else{
-    SessionFlash::set('error');
 }
+
+if($Id_users){
+    SessionFlash::set('La suppression a fonctionné');
+    header('location: listUsersController.php');
+    exit();
+}
+
+if($Id_comments){
+    SessionFlash::set('La suppression a fonctionné');
+    header('location: listCommentsController.php');
+    exit();
+} 
+
+include __DIR__.'/../../views/dashboardViews/test.php';

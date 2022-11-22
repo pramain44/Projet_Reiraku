@@ -1,16 +1,15 @@
 <?php
 require_once __DIR__.'/../../helpers/database.php';
-require_once __DIR__.'/../../helpers/SessionFlash.php';
 require_once __DIR__.'/../../models/Author.php';
 require_once __DIR__.'/../../models/Categorie.php';
 
-$title ='Modifier Mangas';
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 
 try{
     $authors = Author::AuthorsInMangas($id);
     $categories = Categorie::readOne($id);
+    $title = $authors->title;
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $error = [];
@@ -79,13 +78,13 @@ try{
         //     }
         // }
         
-        $title = $_POST['title'];
-        $lastname = $_POST['lastname']; 
-        $firstname = $_POST['firstname'];
-        $name = $_POST['name'];   
-        $anime = $_POST['anime'];
-        $description = $_POST['description'];
-        $image = $_POST['image'];
+        // $title = $_POST['title'];
+        // $lastname = $_POST['lastname']; 
+        // $firstname = $_POST['firstname'];
+        // $name = $_POST['name'];   
+        // $anime = $_POST['anime'];
+        // $description = $_POST['description'];
+        // $image = $_POST['image'];
 
         if(empty($error)){
             $sql = 'BEGIN;

@@ -2,7 +2,7 @@
 require_once(__DIR__.'/../../helpers/database.php');
 require_once(__DIR__.'/../../models/Manga.php');
 
-$title = 'Formulaire D`\'ajout';
+$title = 'Formulaire D\'ajout';
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 
 try{
@@ -73,13 +73,13 @@ try{
         //     }
         // }
         
-        $title = $_POST['title'];
-        $lastname = $_POST['lastname']; 
-        $firstname = $_POST['firstname'];
-        $name = $_POST['name'];   
-        $anime = $_POST['anime'];
-        $description = $_POST['description'];
-        $image = $_POST['image'];
+        // $title = $_POST['title'];
+        // $lastname = $_POST['lastname']; 
+        // $firstname = $_POST['firstname'];
+        // $name = $_POST['name'];   
+        // $anime = $_POST['anime'];
+        // $description = $_POST['description'];
+        // $image = $_POST['image'];
 
         if(empty($error)){
             $sql = 'BEGIN;

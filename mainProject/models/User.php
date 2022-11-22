@@ -23,7 +23,7 @@ class User{
 
      // getter et setters de $mail
      public function getEmail():string{
-        return $this->mail;
+        return $this->email;
     }
     public function setEmail(string $email){
         return $this->email = $email;
@@ -63,13 +63,11 @@ class User{
 
     // ADD new User in the database
     public function create(){
-        $sql ='INSERT into `users` (email, name_account, password, created_at, validated_at) VALUES (:email, :name_account, :password, :created_at, :validated_at);';
+        $sql ='INSERT into `users` (email, name_account, password) VALUES (:email, :name_account, :password);';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':email',$this->getEmail());
         $sth->bindValue(':name_account',$this->getName_account());
         $sth->bindValue(':password',$this->getPassword());
-        $sth->bindValue(':created_at',$this->getCreated_at());
-        $sth->bindValue(':validated_at',$this->getValidated_at());
         return $sth->execute();
     }
 
@@ -95,10 +93,24 @@ class User{
     }
     
     // All delete method for Users
-    public static function delete($id){
-        $sql = 'DELETE FROM `users` WHERE id = :id;';
+    public static function delete($Id_users){
+        $sql = 'DELETE FROM `users` WHERE Id_users = :id;';
         $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':id',$id);
+        $sth->bindValue(':id',$Id_users);
         return $sth->execute();
+    }
+
+    public static function getByEmail(string $email):object|bool{ 
+        $pdo = Database::getInstance();
+        $sql = 'SELECT * FROM `users` WHERE `email` = :email;';
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':email',$email);
+        if($sth->execute()){
+            $result = $sth->fetch(PDO::FETCH_OBJ);
+            if($result){
+                return $result;
+            }
+        }
+        return false;
     }
 }

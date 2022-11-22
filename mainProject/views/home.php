@@ -18,13 +18,27 @@
                     <li class="profile"><a class="inherit" href="profileController.php">Profile</a></li>
                 </ul>
                 <ul>
-                    <li><a class="inherit connect" href="inscriptionController.php">Inscription</a></li>
+                    <?php
+                    if(isset($_SESSION['user'])){
+                        echo "<li><a class=\"inherit connect\" href=\"signOut.php\">Deconnexion</a></li>";
+                    }else{
+                        echo "<li><a class=\"inherit connect\" href=\"inscriptionController.php\">Inscription</a></li>";
+                    }
+                    ?>
                 </ul>
                 <a href="connectionController.php"><img class="connectImg" src="../public/assets/img/VeibaeConnection.png" alt="logo"></a>
             </div>
+            <?php
+                if (SessionFlash::exist()) {
+                ?>
+                    <div class="alert" style="position: absolute; left: 48rem; top: 2rem;">
+                        <strong><?= SessionFlash::get() ?></strong>
+                    </div>
+            <?php } ?>
         </div>
         <div class="title">
             <h1>Bienvenue Sur ReiRaku</h1>
+            <p class="underText">Un blog de partage d'avis et de réflexion sur nos mangas favoris</p>
         </div>
         <div class="divideContainer">
             <div class="whiteDivider"></div>

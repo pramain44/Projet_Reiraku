@@ -1,6 +1,6 @@
 
 
-<div>
+    <div>
         <?php
         if(SessionFlash::exist()){ 
             echo SessionFlash::get();

@@ -19,10 +19,11 @@
             <div class="pinkDivider"></div>
         </div>
         <form method="post">
-            <input require type="text" class="formName" placeholder="Nom de compte" name="nameAccount">
-            <small><?= $error['inscription'] ?? '' ?></small>
+            <input require type="text" class="formName" placeholder="Adresse email" name="email">
+            <small><?= $error['email'] ?? '' ?></small>
             <input require type="password" class="formPassword" placeholder="Mot de Passe" name="password">
             <small><?= $error['password'] ?? '' ?></small>
+            <small><?= $errors['password'] ?? '' ?></small>
             <input class="btn" type="submit" ="Connexion">
             <div class="hyperText">
             <p>

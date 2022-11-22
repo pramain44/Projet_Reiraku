@@ -1,16 +1,34 @@
 <?php
 
 class Comment{
-    private string $comm_slots;
+    private string $comm_slot;
+
+    private int $Id_mangas;
+
+    private int $Id_users;
 
     private $created_at;
 
-     // getter et setters de $comm_slots
-    public function getComm_slots():string{
-        return $this->comm_slots;
+     // getter et setters de $comm_slot
+    public function getComm_slot():string{
+        return $this->comm_slot;
     }
-    public function setComm_slots(string $comm_slots){
-        return $this->comm_slots = $comm_slots;
+    public function setComm_slot(string $comm_slot){
+        return $this->comm_slot = $comm_slot;
+    }
+
+    public function getId_mangas():int{
+        return $this->Id_mangas;
+    }
+    public function setId_mangas(int $id){
+        return $this->id = $id;
+    }
+
+    public function getId_users():int{
+        return $this->Id_users;
+    }
+    public function setId_users(int $Id_users){
+        return $this->Id_users = $Id_users;
     }
 
     // getter et setters de $created_at
@@ -22,10 +40,11 @@ class Comment{
     }
 
     public function create(){
-        $sql ='INSERT into `comments` (comm_slots, created_at) VALUES (:comm_slots, :created_at);';
+        $sql ='INSERT into `comments` (comm_slot, Id_mangas, Id_users) VALUES (:comm_slot, :Id_mangas, Id_users);';
         $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':comm_slots',$this->getComm_slots());
-        $sth->bindValue(':created_at',$this->created_at());
+        $sth->bindValue(':comm_slot',$this->getComm_slot());
+        $sth->bindValue(':id',$this->getId_mangas());
+        $sth->bindValue(':Id_users',$this->getId_users());
         return $sth->execute();
     }
 
@@ -35,20 +54,21 @@ class Comment{
         return $sth->fetchAll(PDO::FETCH_OBJ);
     }
   
-    public function update($id){
-        $sql = "UPDATE comments SET comm_slots = :comm_slots, created_at = :created_at WHERE id = :id";
+    public function update($Id_comments){
+        $sql = "UPDATE comments SET comm_slot = :comm_slot, Id_users = :Id_users, Id_mangas = :id WHERE Id_comments = :id";
         $pdo = Database::getInstance();
         $sth = $pdo->prepare($sql);
-        $sth->bindValue(':comm_slots',$this->getComm_slots());
-        $sth->bindValue(':created_at',$this->getCreated_at());
-        $sth->bindValue(':id',$id,PDO::PARAM_INT);
+        $sth->bindValue(':comm_slot',$this->getComm_slot());
+        $sth->bindValue(':Id_users',$this->getId_users());
+        $sth->bindValue(':Id_mangas',$this->getId_mangas());
+        $sth->bindValue(':id',$Id_comments,PDO::PARAM_INT);
         return $sth->execute();
     }
 
-    public static function delete($id){
-        $sql = 'DELETE FROM `comments` WHERE id = :id;'; // comments.id = :id ?
+    public static function delete($Id_comments){
+        $sql = 'DELETE FROM `comments` WHERE Id_comments = :id;'; 
         $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':id',$id);
+        $sth->bindValue(':id',$Id_comments);
         return $sth->execute();
     }
 }

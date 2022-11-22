@@ -1,5 +1,11 @@
 <?php
-require(__DIR__.'/../config/data.php');
+require_once(__DIR__.'/../helpers/database.php');
+require_once(__DIR__.'/../models/User.php');
+
+if(!isset($_SESSION['user'])){
+    header('location: http://projet_2.0.localhost/mainProject/controllers/connectionController.php');
+    exit;
+}
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 if(!empty($_FILES['profilPic']['tmp_name'])){

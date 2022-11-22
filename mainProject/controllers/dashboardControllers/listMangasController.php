@@ -4,7 +4,7 @@ require_once __DIR__.'/../../models/Manga.php';
 require_once __DIR__.'/../../models/Author.php';
 
 $search = trim((string) filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIAL_CHARS));
-$id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
+
 
 $title ='Mangas Liste';
 

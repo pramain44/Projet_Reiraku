@@ -9,6 +9,13 @@
     <title>logo nomsite - Enregistrement</title>
 </head>
 <body>
+        <?php
+            if (SessionFlash::exist()) {
+            ?>
+                <div class="alert" style="color: aliceblue;">
+                    <strong><?= SessionFlash::get() ?></strong>
+                </div>
+        <?php } ?>
     <section class="mainContainer">
         <div class="registerTitle">
             <div class="titleAndLogo">
@@ -23,14 +30,14 @@
             <h2>Veuillez entrez vos informations pour créer un compte</h2>
         </div>
         <form method="post">
-            <input require title="3 caractères minimum" type="text" class="formName" placeholder="Nom de compte" name="nameAccount" pattern=".{3,}">
+            <input require title="3 caractères minimum" type="text" class="formName" placeholder="Nom de compte" name="name_account" pattern=".{3,}">
             <small><?= $error['inscription'] ?? '' ?></small>
 
             <input require title="8 caractères minimum" type="password" class="formPassword" placeholder="Mot de Passe" name="password" pattern=".{8,}">
             <small><?= $error['password'] ?? '' ?></small>
             <input require type="password" class="formPassword" placeholder="Confirmer le Mot de Passe" name="confirmPassword">
             <small></small>
-            <input require type="email" class="formMail" placeholder="Adresse Mail" name="emailAddress">
+            <input require type="email" class="formMail" placeholder="Adresse Mail" name="email">
             <small><?= $error['email'] ?? '' ?></small>
 
             <input class="btn" type="submit" value="Valider">
