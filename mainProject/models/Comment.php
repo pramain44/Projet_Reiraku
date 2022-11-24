@@ -18,7 +18,7 @@ class Comment{
     }
 
     public function getId_mangas():int{
-        return $this->Id_mangas;
+        return $this->id;
     }
     public function setId_mangas(int $id){
         return $this->id = $id;
@@ -39,8 +39,8 @@ class Comment{
         return $this->created_at = $created_at;
     }
 
-    public function create(){
-        $sql ='INSERT into `comments` (comm_slot, Id_mangas, Id_users) VALUES (:comm_slot, :Id_mangas, Id_users);';
+    public function create($id, $Id_users){
+        $sql ='INSERT into `comments` (comm_slot, Id_mangas, Id_users) VALUES (:comm_slot, :id, :Id_users);';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':comm_slot',$this->getComm_slot());
         $sth->bindValue(':id',$this->getId_mangas());
@@ -70,5 +70,15 @@ class Comment{
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':id',$Id_comments);
         return $sth->execute();
+    }
+
+    public static function CommentAndUser($id){
+        $sql='SELECT comments.comm_slot, users.name_account
+        FROM `comments` JOIN `users` ON comments.Id_users = users.Id_users JOIN `mangas` ON mangas.Id_mangas = comments.Id_mangas
+        WHERE mangas.Id_mangas = :id;';
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':id',$id);
+        $sth->execute();     
+        return $sth->fetchAll(PDO::FETCH_OBJ);
     }
 }

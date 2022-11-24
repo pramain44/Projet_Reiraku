@@ -40,35 +40,36 @@
             <div class="comments">
 
                 <!-- Text Area pour entrer un commentaire -->
-            <form method="post">
-                <textarea class="textArea" name="comm_slot" id="comm"></textarea>
-                <button class="btn" type="submit">Commenter !</button>
-                <div><small><?= $error ?? '' ?></small></div>
-            </form>
+            <?php
+            if(isset($_SESSION['user'])){ ?>
+                <form method="post">
+                    <textarea class="textArea" name="comm_slot" id="comm"></textarea>
+                    <button class="btn" type="submit">Commenter !</button>
+                    <div><small><?= $error ?? '' ?></small></div>
+                </form>
+            <?php 
+            }
+            ?>
 
             <!-- zone d'un commentaire type -->
+             <?php
+            if(!empty($comments)){
+            foreach($comments as $comment): ?> 
+            
             <div class="commRow">
                 <div class="profilImg">
                     <img class="profilImage" src="../public/assets/img/albedo_14060.jpg" alt="">
-                </div>
-                <div class="commName">
-                    <h4>Pseudo</h4>
-                </div>
-                <div class="commText">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim magnam, unde reiciendis voluptatum ab recusandae quisquam, consequuntur exercitationem nobis dolorem beatae dignissimos architecto voluptate excepturi! Ad iste eveniet obcaecati!
-                </div>
-            </div>
-            <div class="commRow">
-                <div class="profilImg">
-                    <img class="profilImage" src="./assets/img/albedo_14060.jpg" alt="">
-                </div>
-                <div class="commName">
-                    <h4>Pseudo</h4>
+                    <div class="commName">
+                        <h4><?=$comment->name_account?></h4>
+                    </div>
                 </div>
                 <div class="commText">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus enim magnam, unde reiciendis voluptatum ab recusandae quisquam, consequuntur exercitationem nobis dolorem beatae dignissimos architecto voluptate excepturi! Ad iste eveniet obcaecati!
+                    <p><?=$comment->comm_slot?></p>
                 </div>
             </div>
+            <?php endforeach ?>
+            <?php } ?>
+            
         </div>
     </section>
     <script src="../public/assets/js/fiche.js"></script>

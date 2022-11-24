@@ -72,16 +72,12 @@ class User{
     }
 
     // Update methods for Users in database
-    public function update($id){
-        $sql = "UPDATE users SET email = :email, name_account = :name_account, password = :password, created_at = :created_at, validated_at = :validated_at WHERE id = :id";
+    public function update($Id_users){
+        $sql = "UPDATE `users` SET name_account = :name_account WHERE Id_users = :Id_users";
         $pdo = Database::getInstance();
         $sth = $pdo->prepare($sql);
-        $sth->bindValue(':email',$this->getEmail());
         $sth->bindValue(':name_account',$this->getName_account());
-        $sth->bindValue(':password',$this->getpassword());
-        $sth->bindValue(':created_at',$this->getcreated_at());
-        $sth->bindValue(':validated_at',$this->getvalidated_at());
-        $sth->bindValue(':id',$id,PDO::PARAM_INT);
+        $sth->bindValue(':Id_users',$Id_users,PDO::PARAM_INT);
         return $sth->execute();
     }
 

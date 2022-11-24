@@ -30,10 +30,10 @@
             <h2>Veuillez entrez vos informations pour créer un compte</h2>
         </div>
         <form method="post">
-            <input require title="3 caractères minimum" type="text" class="formName" placeholder="Nom de compte" name="name_account" pattern=".{3,}">
+            <input require title="3 caractères minimum" type="text" placeholder="Nom de compte" name="name_account" pattern=".{3,}">
             <small><?= $error['inscription'] ?? '' ?></small>
 
-            <input require title="8 caractères minimum" type="password" class="formPassword" placeholder="Mot de Passe" name="password" pattern=".{8,}">
+            <input require title="8 caractères minimum" type="password" placeholder="Mot de Passe" name="password" pattern=".{8,}">
             <small><?= $error['password'] ?? '' ?></small>
             <input require type="password" class="formPassword" placeholder="Confirmer le Mot de Passe" name="confirmPassword">
             <small></small>

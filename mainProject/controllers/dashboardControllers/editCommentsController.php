@@ -22,7 +22,7 @@ try{
         if(empty($error)){
             $comment = new Comment();
             $comment->setComm_slot($comm_slot);
-            $comment->setId_mangas($id); // Id_mangas ?
+            $comment->setId_mangas($id);
             $comment->setId_users($Id_users);
             $comment = $comment->update($Id_comments);
         }

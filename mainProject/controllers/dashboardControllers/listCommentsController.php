@@ -5,9 +5,8 @@ require_once(__DIR__.'/../../models/Comment.php');
 
 $title ='Listes des commentaires';
 try{
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-       
-    }
+    $comments = Comment::readAll();
+
 }catch(PDOException $e){
      die('error'.$e->getMessage());
 }

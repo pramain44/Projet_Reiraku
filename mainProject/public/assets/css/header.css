@@ -16,7 +16,7 @@ ul{
 
 div ul{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     font-size: 2rem;
 }

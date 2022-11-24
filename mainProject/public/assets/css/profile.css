@@ -1,22 +1,19 @@
-@font-face {
-    font-family: montserrat-black;
-    src: url(../font/Montserrat-Black.ttf);
-}
 
-@font-face {
-    font-family: montserrat-medium;
-    src: url(../font/Montserrat-Medium.ttf);
-}
 body{
     background-color:#23262f;
     color: #fff;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
     }
-
+    
 img{
      width: 10rem;
 }
 
+.messageContainer .message{
+    display: flex;
+    justify-content: center;
+}
 .registerTitle{
     display: flex;
     flex-wrap: nowrap;
@@ -60,6 +57,24 @@ p{
 h2{
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: #fff;
+}
+li input{
+    width: 55%;
+    color: #fff;
+    background-color: grey;
+    font-size: 1.5rem;
+    border-style: inherit;
+}
+button{
+    width: 60%;
+    color: #fff;
+    background-color: grey;
+    font-size: 1.5rem;
+}
+
 /* contenue des infos utilisateur */
 .userInfo{
     font-size: 1.2rem;

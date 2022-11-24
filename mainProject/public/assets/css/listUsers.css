@@ -30,3 +30,20 @@ p{
     text-overflow: ellipsis;
     font-size: 1.5rem;
 }
+
+
+/* style de la liste des commentaires */
+
+.commentsHref{
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.deleteComment{
+    color: red;
+}
+
+.tableComment{
+    text-align: left;
+}
+

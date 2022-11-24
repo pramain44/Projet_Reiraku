@@ -9,6 +9,13 @@
 </head>
 <body>
     <section class="mainContainer">
+        <?php
+        if (SessionFlash::exist()) {
+         ?>
+            <div class="alert" style="position: absolute; left: 42.5rem; top: 2rem;color: aliceblue;font-size: 1.2rem;">
+                <strong><?= SessionFlash::get() ?></strong>
+            </div>
+        <?php } ?>
         <div class="registerTitle">
                 <a href="homeController.php"><img class="logoImg" src="../public/assets/img/logoVeibae.png" alt="logo"></a>
             <div class="mainTitle">
