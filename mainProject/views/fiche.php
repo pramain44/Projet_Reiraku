@@ -13,6 +13,16 @@
         <div class="cardContent">
             <div class="imageFiche">
                 <a href="homeController.php"><img class="imgFiche" src="<?=$mangas->image?>" alt=""></a>
+
+                <!-- boutons de vote sous l'image -->
+                <?php if(isset($_SESSION['user'])){ ?>
+                    <form class="voteBtn" method="post">
+                        <input type="hidden" value="3" name="vote">
+                        <button name="up" value="1" class="upVote">Recommander(<?=$upVotes?>)</button>
+                        <button name ="down" value="1" class="downVote">Déconseiller(<?=$downVotes?>)</button>
+                    </form>
+                    <div class="errorVote"><?= $error['vote'] ?? ''?></div>
+                <?php } ?>
             </div>
             <div class="textFiche">
                 <div class="titleFiche">
@@ -43,13 +53,18 @@
             <?php
             if(isset($_SESSION['user'])){ ?>
                 <form method="post">
+                    <input type="hidden" value="2" name="vote">
                     <textarea class="textArea" name="comm_slot" id="comm"></textarea>
                     <button class="btn" type="submit">Commenter !</button>
-                    <div><small><?= $error ?? '' ?></small></div>
+                    <div><small><?= $error['comm'] ?? '' ?></small></div>
                 </form>
             <?php 
-            }
-            ?>
+            }else{?>
+                <form method="post">
+                    <textarea disabled="" class="textArea" name="comm_slot" id="comm">Il faut se connecter pour commenter</textarea>
+                    <div><small><?= $error['comm'] ?? '' ?></small></div>
+                </form>
+           <?php } ?>
 
             <!-- zone d'un commentaire type -->
              <?php

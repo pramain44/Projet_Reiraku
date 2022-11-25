@@ -25,6 +25,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($isOk == false){
             $error['email'] = 'l\'email n\'est pas conforme';
         }
+        if(Patient::isMailExists($mail)){
+            $errors['mail'] = 'Ce mail existe déjà';
+        }
     }
     
     $password = filter_input(INPUT_POST, 'password');

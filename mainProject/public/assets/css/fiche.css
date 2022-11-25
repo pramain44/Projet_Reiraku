@@ -40,6 +40,7 @@ textarea{
     margin-top: 0.5rem;
     width: 60%;
     height: 10rem;
+    margin-left: 8.5rem;
 }
 
 small{
@@ -135,6 +136,39 @@ small{
 strong{
     text-decoration: underline;
 }
+
+/* styles des boutons de votes  et msg d'erreur du vote*/
+.voteBtn{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.upVote{
+    color: aliceblue;
+    background-image: linear-gradient(90deg, forestgreen 0%, #0BAB64 100%);
+    border-color:forestgreen;
+    width: 8rem;
+    height: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.downVote{
+    color: aliceblue;
+    background-image: linear-gradient(90deg, #ff5860   0%, #fb4850  100%);
+    border-color:#ff5860;
+    width: 8rem;
+    height: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.errorVote{
+    color: aliceblue;
+    text-align: center;
+    width: 80%; 
+}
+
+
 /* -------------section display detaillé Version Mobile-------------- */
 
 @media screen and (max-width: 600px){
@@ -157,6 +191,16 @@ strong{
         align-items: center;
         justify-content: center;
         display: flex;
-      }
+    }
+    form textarea{
+        margin-left: 1rem;
+    }
+    form .btn{
+        margin-left: 1rem;
+    }
+    div .voteBtn{
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
 }
 

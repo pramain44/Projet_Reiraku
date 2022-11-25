@@ -59,9 +59,10 @@
         <div class="oeuvreItem">
             <h2>titre</h2>
             <div>
-            <img class="" src="./assets/img/albedo_14060.jpg" alt="">
+            <img class="" src="../public/assets/img/albedo_14060.jpg" alt="">
             </div>
-            <button>upvoter</button><button>downvote</button><button>delete</button>
         </div>
     </div>
+
+    <!-- faire un systeme pour modifier les votes fait avec une listes des oeuvres pour lesquels on a voté -->
 

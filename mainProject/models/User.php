@@ -109,4 +109,15 @@ class User{
         }
         return false;
     }
+    public static function isMailExists(string $email): bool|object
+    {
+
+        $sql = 'SELECT * FROM `patients` WHERE `email` = :email';
+
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':email', $email, PDO::PARAM_STR);
+        $sth->execute();
+
+        return $sth->fetch();
+    }
 }
