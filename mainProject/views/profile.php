@@ -55,14 +55,30 @@
         </div>
     </div>
     <div class="watchList">
-        <h2>Watchlist</h2>
-        <div class="oeuvreItem">
-            <h2>titre</h2>
-            <div>
-            <img class="" src="../public/assets/img/albedo_14060.jpg" alt="">
+        <h2>Nombres de commentaires : <?=$commentsNb?></h2>
+        <div class="oeuvreItemContainer">
+            <?php foreach($mangas as $manga): ?>
+            <div class="oeuvreItem">
+                <h2><?=$manga->title?></h2>
+                <div>
+                <a href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="" src="<?=$manga->image?>" alt=""></a>
+                </div>
+                <div>
+                    <?php
+                        $Id_mangas = $manga->Id_mangas;
+                        $comments = Comment::countComments($Id_users,$Id_mangas);
+                    ?>
+                    <p><?=$comments?> Commentaire</p>
+                </div>
             </div>
+            <?php endforeach ?>
         </div>
+        <?php
+                for($pages=0;$pages<= ($commentsNb/5);$pages++){ ?>
+                    <a href="http://projet_2.0.localhost/mainProject/controllers/profileController.php?pages=<?=($pages*5)?>"><button><?=$pages?></button></a>
+                    <?php
+                }
+                ?>
     </div>
 
-    <!-- faire un systeme pour modifier les votes fait avec une listes des oeuvres pour lesquels on a voté -->
 

@@ -100,25 +100,49 @@ class Manga {
     }
 
     // All read method of manga in the database
-    public static function readAll(string $search = '', $id = ''){
+    public static function readAll(string $Id_users,$pages ='',$search = '', $id = '',){
         $sql = 'SELECT * FROM `mangas` ';
         if($search != ''){
             $sql .= 'JOIN `authors` WHERE title LIKE :search OR firstname LIKE :search OR lastname LIKE :search OR categories LIKE :search';
-        }else if($id != ''){
+        }if($id != ''){
             $sql .= 'WHERE Id_mangas = :id';
-        }
+        }if(!empty($Id_users)){
+            $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas WHERE comments.Id_users = :Id_users LIMIT 5';
+        }//if(!is_null($pages)){
+        //     $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas WHERE comments.Id_users = :Id_users LIMIT :pages,5';
+        // }
         $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);
         if($search != ''){
             $sth->bindValue(':search','%'.$search.'%');
-        }else if($id != ''){
+        }if($id != ''){
             $sth->bindValue(':id',$id);
             $sth->execute();
            return $sth->fetch(PDO::FETCH_OBJ);
-        }else{
+        }
+        if(!empty($Id_users)){
+           $sth->bindValue(':Id_users',$Id_users);
+           //$sth->bindValue(':pages',$pages);
+           $sth->execute();
+           return $sth->fetchAll(PDO::FETCH_OBJ);
+        }//if(!is_null($pages)){
+        //     $sth->bindValue(':pages',$pages);
+        //     $sth->execute();
+        //     return $sth->fetchAll(PDO::FETCH_OBJ);
+        // }
+        else{
             $sth->execute();
             return $sth->fetchAll(PDO::FETCH_OBJ);
         }
+    }
+
+    public static function pagination($Id_users,$pages){
+        $sql = 'SELECT * FROM `mangas` JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas WHERE comments.Id_users = :Id_users LIMIT :pages,5;';
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':Id_users',$Id_users);
+        $sth->bindValue(':pages',$pages);
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_OBJ);
     }
 
     // All delete method of manga in the database

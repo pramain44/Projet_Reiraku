@@ -1,6 +1,10 @@
 <?php
 require_once(__DIR__.'/../helpers/database.php');
 require_once(__DIR__.'/../models/User.php');
+require_once(__DIR__.'/../models/Comment.php');
+require_once(__DIR__.'/../models/Manga.php');
+
+
 
 if(!isset($_SESSION['user'])){
     SessionFlash::set('Il faut un compte pour acceder au profile');
@@ -8,7 +12,15 @@ if(!isset($_SESSION['user'])){
     exit;
 }
 
+$pages = intval(filter_input(INPUT_GET,'pages',FILTER_SANITIZE_NUMBER_INT));
 $Id_users = $_SESSION['user']->Id_users;
+
+$mangas  = Manga::readAll($Id_users); 
+$commentsNb = Comment::countComments($Id_users);
+if(!empty($_GET['pages'])){
+    $mangas = Manga::pagination($Id_users,$pages);  
+    }
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 // if(!empty($_FILES['profilPic']['tmp_name'])){

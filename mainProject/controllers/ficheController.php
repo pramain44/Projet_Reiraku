@@ -11,12 +11,12 @@ if(!empty($_SESSION['user']->Id_users)){
     $Id_users = $_SESSION['user']->Id_users;
 }
 
-// var_dump($_POST['down']);
+
 $upVotes = Vote::countUp($id);
 $downVotes = Vote::countDown($id);
 $mangas = Author::AuthorsInMangas($id);
 $comments = Comment::CommentAndUser($id);
-// if(Id_user exist() pas de vote)
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($_POST['vote'] == 2){

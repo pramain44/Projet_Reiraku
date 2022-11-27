@@ -73,12 +73,27 @@ class Comment{
     }
 
     public static function CommentAndUser($id){
-        $sql='SELECT comments.comm_slot, users.name_account
+        $sql='SELECT comments.comm_slot, comments.created_at, users.name_account
         FROM `comments` JOIN `users` ON comments.Id_users = users.Id_users JOIN `mangas` ON mangas.Id_mangas = comments.Id_mangas
-        WHERE mangas.Id_mangas = :id;';
+        WHERE mangas.Id_mangas = :id ORDER BY Id_comments DESC;';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':id',$id);
         $sth->execute();     
         return $sth->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public static function countComments($Id_users, $Id_mangas = ''){
+        $sql = 'SELECT COUNT(*) FROM `comments` WHERE comments.Id_users = :Id_users';
+        if($Id_mangas != ''){
+            $sql .= ' AND comments.Id_mangas = :Id_mangas;';
+        }
+        $sql .= ';';
+        $sth = Database::getInstance()->prepare($sql);
+        if($Id_mangas != ''){
+            $sth->bindValue(':Id_mangas',$Id_mangas); 
+        }       
+        $sth->bindValue(':Id_users',$Id_users);
+        $sth->execute();
+        return $sth->fetchColumn();
     }
 }

@@ -24,6 +24,8 @@
                     <div class="errorVote"><?= $error['vote'] ?? ''?></div>
                 <?php } ?>
             </div>
+
+            <!-- Fiche de l'oeuvre -->
             <div class="textFiche">
                 <div class="titleFiche">
                     <h2><?=$mangas->title?></h2>
@@ -42,6 +44,9 @@
     <div class="divideContainer">
         <div class="pinkDivider"></div>
     </div>
+
+    <!--  Début des commentaires -->
+
     <section class="Commentary">
         <h3>Commentaires</h3>
         <div class="divideContainer">
@@ -79,7 +84,12 @@
                     </div>
                 </div>
                 <div class="commText">
-                    <p><?=$comment->comm_slot?></p>
+                    <div class="dateComm">
+                        <small>Le <?=date('d F Y', strtotime($comment->created_at))?></small>
+                    </div>
+                    <div>
+                        <p><?=$comment->comm_slot?></p>
+                    </div>
                 </div>
             </div>
             <?php endforeach ?>

@@ -95,10 +95,15 @@ small{
     width: 90%;
     padding-left: 0.5rem;
     padding-bottom: 1rem;
+    flex-direction: column;
 }
 .commName{
     width: 100%;
     text-align: center;
+}
+
+.dateComm{
+    height: 12%;
 }
 
 /* -------------section display detaillé d'un manga-------------- */
