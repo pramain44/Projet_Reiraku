@@ -73,13 +73,7 @@ try{
         //     }
         // }
         
-        // $title = $_POST['title'];
-        // $lastname = $_POST['lastname']; 
-        // $firstname = $_POST['firstname'];
-        // $name = $_POST['name'];   
-        // $anime = $_POST['anime'];
-        // $description = $_POST['description'];
-        // $image = $_POST['image'];
+
 
         if(empty($error)){
             $sql = 'BEGIN;
@@ -115,12 +109,5 @@ include __DIR__.'/../../views/templates/dashboardFooter.php';
 
 
 
-// BEGIN;
-//             INSERT INTO `authors` (firstname, lastname) VALUES ('kentaro', 'miura');
-//             INSERT INTO `mangas` (Id_authors) VALUES (LAST_INSERT_ID());
-//             INSERT INTO `categories` (name) VALUES ('bangers');
-//             INSERT INTO `mangas` (description, anime, title, image, Id_categories) VALUES ('test', 'oui', 'berserk', 'url',LAST_INSERT_ID());
-//             COMMIT;
 
-//http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/createMangasController.php
 

@@ -34,6 +34,52 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 //         $errormsg['upload'] ='trop lourd (2Mo max)';
 //     }
 // }
+//throw new Exception('erreur lors de l'upload')
+// if(!in_array($_Files['profile']['type'], IMAGE_TYPES)) IMAGE_TYPE = image/jpg in array test le 1er tablo appartient au deuxieme
+//
+//$filename = $_Session['user']->Id_users; mettre comme nom l'id du user (car photo  de profil)
+//$extension = pathinfo($files['profile]['name'], PATHINFO_EXTENSION) ;
+//$from = $files[profile][tmp_name];
+//$to = __DIR__.'/public/upload/users/'.$filename.'.'.$extension;
+//if(!move_uploaded_file($from,$to){
+//  throw new Exception ('probleme lors du transfert')    
+//
+//
+//          partie compression de l'image
+// voir imagecopyresampled() sur la doc php
+//
+//        int $dst_x = 0;
+//        int $dst_y = 0;
+//        int $src_x = 0;
+//        int $src_y = 0;
+//        int $dst_width = 500;
+//        int $src_width = getimagesize($to)[0];
+//        int $src_height = getimagesize($to)[1];
+//        int $dst_height = ceil($src_height*dst_width/$src_width);   
+//
+//$src_image = imagecreatefromjpeg($to);
+//$dst_image = imagecreatetruecolor($dst_width,$dst_height)
+//$size = getimagesire($to,)
+//
+// imagecopyresampled(
+//     GdImage $dst_image,
+//     GdImage $src_image,
+//     int $dst_x,
+//     int $dst_y,
+//     int $src_x,
+//     int $src_y,
+//     int $dst_width,
+//     int $dst_height,
+//     int $src_width,
+//     int $src_height
+// ): bool
+//
+// $fileresampled = '12-resampled';
+//$toresampled = __DIR__.'/public/upload/users/'.$filename.'.'.$extension;
+//imagejpeg($dst_image,$to,0);
+//}
+
+
     $name_account = trim(filter_input(INPUT_POST, 'name_account', FILTER_SANITIZE_SPECIAL_CHARS));
     if(empty($name_account)){
         $error['inscription'] = 'ce champ est obligatoire';

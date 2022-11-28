@@ -3,6 +3,8 @@
 class User{
     private int $id;
 
+    private int $role;
+
     private string $email;
 
     private string $name_account;
@@ -19,6 +21,13 @@ class User{
     }
     public function setId(string $id){
         return $this->id = $id;
+    }
+
+    public function getRole():int{
+        return $this->role;
+    }
+    public function setRole(string $role){
+        return $this->role = $role;
     }
 
      // getter et setters de $mail
@@ -63,11 +72,12 @@ class User{
 
     // ADD new User in the database
     public function create(){
-        $sql ='INSERT into `users` (email, name_account, password) VALUES (:email, :name_account, :password);';
+        $sql ='INSERT into `users` (email, name_account, password,role) VALUES (:email, :name_account, :password,:role);';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':email',$this->getEmail());
         $sth->bindValue(':name_account',$this->getName_account());
         $sth->bindValue(':password',$this->getPassword());
+        $sth->bindValue(':role',$this->getRole());
         return $sth->execute();
     }
 
@@ -82,10 +92,18 @@ class User{
     }
 
     // All read method for Users
-    public static function readAll(){
-        $sql = 'SELECT * FROM `users`;';
-        $sth = Database::getInstance()->query($sql);
-        return $sth->fetchAll(PDO::FETCH_OBJ);
+    public static function readAll($search){
+        $sql = 'SELECT * FROM `users`';
+        if($search != ''){
+            $sql .= ' WHERE name_account LIKE :search OR email LIKE :search';
+        }
+        $sql .= ' ORDER BY created_at DESC;';
+        $sth = Database::getInstance()->prepare($sql);
+        if($search != ''){
+            $sth->bindValue(':search','%'.$search.'%');
+        }
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_OBJ); 
     }
     
     // All delete method for Users
@@ -111,13 +129,10 @@ class User{
     }
     public static function isMailExists(string $email): bool|object
     {
-
-        $sql = 'SELECT * FROM `patients` WHERE `email` = :email';
-
+        $sql = 'SELECT * FROM `users` WHERE `email` = :email';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':email', $email, PDO::PARAM_STR);
         $sth->execute();
-
         return $sth->fetch();
     }
 }

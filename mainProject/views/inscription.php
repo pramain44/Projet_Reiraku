@@ -33,6 +33,8 @@
             <input require title="3 caractères minimum" type="text" placeholder="Nom de compte" name="name_account" pattern=".{3,}">
             <small><?= $error['inscription'] ?? '' ?></small>
 
+            <input require type="hidden" name="role" value="1">
+
             <input require title="8 caractères minimum" type="password" placeholder="Mot de Passe" name="password" pattern=".{8,}">
             <small><?= $error['password'] ?? '' ?></small>
             <input require type="password" class="formPassword" placeholder="Confirmer le Mot de Passe" name="confirmPassword">

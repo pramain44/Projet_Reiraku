@@ -4,6 +4,7 @@ ul{
 
 .headerContainer{
     display: flex;
+    height: 33vh;
 }
 
 ul{
@@ -16,7 +17,13 @@ ul{
 
 div ul{
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
     font-size: 2rem;
+}
+
+.imgHeader{
+    width: 15rem;
+}
+
+.spaces{
+    height: 10vh;
 }

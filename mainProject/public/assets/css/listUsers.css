@@ -2,9 +2,13 @@ h1{
     text-align: center;
 }
 
+body{
+    background-color: bisque;
+}
+
 .userContainer{
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .userContainer div{
@@ -13,8 +17,11 @@ h1{
     padding-bottom: 1rem;
 }
 
-td{
-    padding-bottom: 1rem;
+.delete{
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
 }
 
 section .createdDate{
@@ -26,10 +33,45 @@ section .modify{
 }
 
 p{
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 1.5rem;
 }
+
+.tableUsers{
+    border-style: solid;
+    border-color: black;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.searchBar{
+    width: 20rem;
+    height: 2rem;
+    padding-right: 1.5rem;
+}
+.searchBtn{
+    width: 4rem;
+}
+
+div .nameComment{
+    border-style: solid;
+    border-color: black;
+    width: 14%;
+}
+
+div .contentComment{
+    border-style: solid;
+    border-color: black;
+    width: 50%
+}
+
+div .delete{
+    width: 10%;
+}
+
 
 
 /* style de la liste des commentaires */
@@ -46,4 +88,6 @@ p{
 .tableComment{
     text-align: left;
 }
+
+
 

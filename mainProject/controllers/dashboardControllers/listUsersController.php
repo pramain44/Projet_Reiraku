@@ -5,9 +5,10 @@ require_once(__DIR__.'/../../models/User.php');
 require_once(__DIR__.'/../../models/Comment.php');
 
 $title ='Listes des utilisateurs';
+$search = trim((string) filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIAL_CHARS));
 
 try{
-    $users = User::readAll();
+    $users = User::readAll($search);
 
 }catch(PDOException $e){
      die('error'.$e->getMessage());

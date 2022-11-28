@@ -16,6 +16,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
     }
 
+    $role = trim(filter_input(INPUT_POST, 'role', FILTER_SANITIZE_SPECIAL_CHARS));
+    if(empty($role)){
+        $error['inscription'] = 'ouga bouga';
+    }else{
+        $isOk = filter_var($role,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_ROLE.'/')));
+        if($isOk == false){
+            $error['inscription'] = 'la donnée n\'est pas conforme';
+        }
+    }
     
     $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
     if(empty($email)){
@@ -25,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($isOk == false){
             $error['email'] = 'l\'email n\'est pas conforme';
         }
-        if(Patient::isMailExists($mail)){
+        if(User::isMailExists($email)){
             $errors['mail'] = 'Ce mail existe déjà';
         }
     }
@@ -49,6 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $user->setName_account($name_account);
         $user->setPassword($password);
         $user->setEmail($email);
+        $user->setRole($role);
         $user = $user->create();
         if($user){
             SessionFlash::set('Le compte a bien été crée');

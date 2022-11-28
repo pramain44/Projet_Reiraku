@@ -49,7 +49,7 @@ class Comment{
     }
 
     public static function readAll(){
-        $sql = 'SELECT * FROM `comments`;';
+        $sql = 'SELECT * FROM `comments` JOIN `users` ON users.Id_users = comments.Id_users;';
         $sth = Database::getInstance()->query($sql);
         return $sth->fetchAll(PDO::FETCH_OBJ);
     }

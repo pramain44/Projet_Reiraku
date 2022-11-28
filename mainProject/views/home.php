@@ -16,6 +16,11 @@
             <div class="mainNav">
                 <ul>
                     <li class="profile"><a class="inherit" href="profileController.php">Profile</a></li>
+                    <?php 
+                        if(isset($_SESSION['user']) && $_SESSION['user']->role == 0){
+                            echo "<li class=\"profileD\"><a class=\"inherit\" href=\"dashboardControllers/listMangasController.php\">Dashboard</a></li>";
+                        }
+                    ?>
                 </ul>
                 <ul>
                     <?php

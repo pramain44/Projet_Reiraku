@@ -137,7 +137,10 @@ class Manga {
     }
 
     public static function pagination($Id_users,$pages){
-        $sql = 'SELECT * FROM `mangas` JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas WHERE comments.Id_users = :Id_users LIMIT :pages,5;';
+        $sql = 'SELECT * FROM `mangas` 
+        JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
+        WHERE comments.Id_users = :Id_users 
+        LIMIT 5 OFFSET :pages;';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':Id_users',$Id_users);
         $sth->bindValue(':pages',$pages);

@@ -32,7 +32,7 @@
                             <li>Nom de compte :<input type="text" name="name_account" value="<?=$_SESSION['user']->name_account?>"></li>
                         </ul>
                         <ul>
-                            <button type="submit">Modifier</button>
+                            <button class="modifyBtn" type="submit">Modifier</button>
                         </ul>
                     </form>
                     <ul>
@@ -73,12 +73,14 @@
             </div>
             <?php endforeach ?>
         </div>
+        <div class="pagesBtnContainer">
         <?php
                 for($pages=0;$pages<= ($commentsNb/5);$pages++){ ?>
-                    <a href="http://projet_2.0.localhost/mainProject/controllers/profileController.php?pages=<?=($pages*5)?>"><button><?=$pages?></button></a>
-                    <?php
+                        <a href="http://projet_2.0.localhost/mainProject/controllers/profileController.php?pages=<?=($pages*5)?>"><button class="pagesBtn"><?=$pages?></button></a>
+                        <?php
                 }
                 ?>
+        </div>
     </div>
 
 

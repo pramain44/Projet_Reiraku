@@ -68,6 +68,11 @@ header{
 .profile{
     padding-left: 2rem;
 }
+
+.profileD{
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
 /* style des href  */
 a{
     color: #23262f;
@@ -133,6 +138,7 @@ h1{
 .underText{
     font-size: 1.2rem;
     padding-bottom: 2.2rem;
+    font-style: italic;
 }
 .whiteDivider{
     width: 100px;

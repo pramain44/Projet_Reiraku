@@ -10,13 +10,13 @@
 </head>
 <body>
     <div class="headerContainer" style>
+        <ul class="imgHeader">
+            <li><a href="http://projet_2.0.localhost/mainProject/controllers/homeController.php"><img style="width: 10rem;" class="logoImg" src="../../public/assets/img/VeibaeHome.png" alt="logo"></a></li> 
+        </ul>   
         <ul>
             <li class="liText"><a href="http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/createMangasController.php">Ajouter un Manga</a></li>
             <li class="liText"><a href="http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/listMangasController.php">Liste des Mangas</a></li>
             <li class="liText"><a href="http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/listUsersController.php">Liste des Utilisateurs</a></li>
-            <li class="liText"><a href="http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/listCommentsController.php">Liste des Commenraires</a></li>
+            <li class="liText"><a href="http://projet_2.0.localhost/mainProject/controllers/dashboardControllers/listCommentsController.php">Liste des Commentaires</a></li>
         </ul>
-        <ul>
-            <li><a href="http://projet_2.0.localhost/mainProject/controllers/homeController.php"><img style="width: 8rem;" class="logoImg" src="../../public/assets/img/VeibaeHome.png" alt="logo"></a></li> 
-        </ul>   
     </div>

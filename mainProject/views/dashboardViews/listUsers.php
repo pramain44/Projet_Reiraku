@@ -7,24 +7,31 @@
 <?php } ?>
 
     <h1>Users List</h1>
-    <section class="userContainer">
+
+    <form method="get">
+        <div class="wrap">
+            <input class="searchBar" type="search" name="search" placeholder="chercher par mail ou nom" aria-label="search" name="search">
+            <button class="searchBtn" type="submit">GO</button>    
+        </div>
+   </form>
+    <section>
         <?php
         foreach($users as $user): ?>
-        <div>
-            <div class="table nameAccount">
-                <h3>Name Account</h3>
+        <div class="userContainer">
+            <div class="tableUsers">
+                <h2>Name Account</h2>
                 <p><?=$user->name_account?></p>
             </div>
-            <div class="table email">
-                <h3>Email</h3>
+            <div class="tableUsers">
+                <h2>Email</h2>
                 <p><?=$user->email?></p>
             </div>
-            <div class="table createdDate">
-                <h3>Created At</h3>
+            <div class="tableUsers">
+                <h2>Created At</h2>
                 <p><?=$user->created_at?></p>
             </div>
-            <div class="modify">
-                <a href="deleteController.php?Id_users=<?=$user->Id_users?>">Supprimer</a>
+            <div class="delete">
+             <td><a class="deleteComment"href="deleteController.php?Id_users=<?=$user->Id_users?>">Supprimer</a></td>
             </div>
         </div>
         <?php endforeach ?>
