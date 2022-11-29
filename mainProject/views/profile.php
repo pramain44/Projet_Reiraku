@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/assets/css/profile.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <title>logo nomsite - nomProfil</title>
+    <title>logo nomsite - <?=$_SESSION['user']->name_account?></title>
 </head>
 <body>
     <div class="profilInfo">

@@ -4,7 +4,6 @@ ul{
 
 .headerContainer{
     display: flex;
-    height: 33vh;
 }
 
 ul{
@@ -24,6 +23,3 @@ div ul{
     width: 15rem;
 }
 
-.spaces{
-    height: 10vh;
-}

@@ -4,6 +4,7 @@ footer{
     background-color: #17202a;
     display: flex;
     flex-wrap: nowrap;
+    font-family: 'Montserrat', sans-serif;
 }
 .right{
     display: flex;
@@ -22,10 +23,12 @@ ul .left {
     font-size: 1.5rem;
 }
 
-footer a{
+footer .footerHref{
     color: aliceblue;
     text-decoration: none;
     font-weight: normal;
+    display: block;
+    width: 50%;
 }
 
 ul {

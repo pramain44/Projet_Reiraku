@@ -260,3 +260,7 @@ h1{
 .visible{
     display: none;
 }
+
+.footerHref{
+    padding-left: 2rem;
+}

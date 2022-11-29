@@ -1,0 +1,41 @@
+body{
+    background-color:#23262f;
+}
+.logoImg{
+    width: 10rem;
+}
+
+.registerTitle{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    color: #fff;
+}
+.mainTitle{
+    display: flex;
+    justify-content: center;
+    width: 79%;
+    align-items: center;
+}
+
+.pinkDivider{
+    width: 50rem;
+    height: 4px;
+    background: hotpink;
+    margin-bottom: 2rem;
+}
+.divideContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    line-height: 2.5rem;
+    text-align: justify;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+}

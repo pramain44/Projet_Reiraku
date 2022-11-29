@@ -1,5 +1,4 @@
-    <div class="spaces">
-    </div>
+
     <div>
         <?php
         if(SessionFlash::exist()){ 

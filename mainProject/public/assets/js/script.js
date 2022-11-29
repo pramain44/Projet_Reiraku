@@ -102,3 +102,13 @@ overColor.forEach(element =>{
     })
     })
 })
+
+let colorChange = document.querySelectorAll('.footerHref')
+colorChange.forEach(element =>{
+    element.addEventListener('mouseenter', (event)=>{
+        event.target.style.color = "hotpink";
+    element.addEventListener('mouseleave', (event)=>{
+        event.target.style.color = "white";
+    })
+    })
+})

@@ -25,9 +25,9 @@
                 <ul>
                     <?php
                     if(isset($_SESSION['user'])){
-                        echo "<li><a class=\"inherit connect\" href=\"signOut.php\">Deconnexion</a></li>";
+                        echo "<li class=\"connect\"><a class=\"inherit\" href=\"signOut.php\">Deconnexion</a></li>";
                     }else{
-                        echo "<li><a class=\"inherit connect\" href=\"inscriptionController.php\">Inscription</a></li>";
+                        echo "<li class=\"connect\"><a class=\"inherit\" href=\"inscriptionController.php\">Inscription</a></li>";
                     }
                     ?>
                 </ul>

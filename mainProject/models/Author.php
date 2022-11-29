@@ -52,6 +52,12 @@ class Author{
         return $sth->fetch(PDO::FETCH_OBJ);
     }
 
+    public static function AuthorsAndMangas(){
+        $sql ='SELECT mangas.title, authors.firstname, authors.lastname FROM `mangas` JOIN `authors`ON mangas.Id_authors = authors.Id_authors;';
+        $sth = Database::getInstance()->query($sql); 
+        return $sth->fetchAll(PDO::FETCH_OBJ);
+    }
+
 }
 
 
