@@ -1,21 +1,33 @@
 let modal = document.querySelector(".modal");
-let btn = document.getElementById("myBtn");
+let modalContent = document.querySelector('.modalContent');
 
-btn.onclick = function() {
-    modal.style.display = "block";
+let closeBtn = document.getElementById("closeBtn");
+closeBtn.onclick = function() {
+    modal.style.display = "none";
 }
 
-// gestion des boutons de fermeture de la modal
 
-let closeBtn = document.querySelectorAll('.close');
-closeBtn.forEach(element =>{
-    element.addEventListener('click', (event)=>{
+// fermeture si on click en dehors de la modal
+
+window.onclick = function(event) {
+    if (event.target == modal) {
         modal.style.display = "none";
+    }
+} 
+    
+  
+let btn = document.querySelectorAll('.myBtn');
+
+btn.forEach(element =>{
+    element.addEventListener('click', (event)=>{
+        modal.style.display = "block";
+        modalContent.style.display = "block";
+        let id = event.target.dataset.id
+        document.querySelector('.deleteComment').href = `deleteController.php?Id_comments=${id}`;
+
     })
 })
 
+// let className = document.getElementById("confirmDelete").className;
 
-let submit = document.querySelector(".modalBtn2");
-submit.addEventListener('click', ()=>{
-    document.querySelector('.modalForm').submit();
-})
+

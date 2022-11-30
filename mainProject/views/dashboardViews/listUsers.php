@@ -1,3 +1,10 @@
+<div class="modal">
+        <div class="modalContent">
+            <h2>Souhaitez-vous vraiment supprimer ?</h2>
+                <a class="deleteComment" href=""><button>OUI</button></a>
+                <button id="closeBtn" class="closeBtn">NON</button>
+        </div>
+</div>
 <?php
    if (SessionFlash::exist()) {
                 ?>
@@ -30,10 +37,11 @@
                 <h2>Created At</h2>
                 <p><?=$user->created_at?></p>
             </div>
-            <div class="delete">
-             <td><a class="deleteComment"href="deleteController.php?Id_users=<?=$user->Id_users?>">Supprimer</a></td>
+            <div class="delete">  
+                <button id="confirmDelete" class="myBtn" data-id="<?=$user->Id_users?>">Supprimer</button>
             </div>
         </div>
         <?php endforeach ?>
 
     </section>
+    <script src="../../public/assets/js/modal.js"></script>

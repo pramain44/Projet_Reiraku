@@ -1,4 +1,11 @@
-    <div>
+    <div class="modal">
+        <div class="modalContent">
+            <h2>Souhaitez-vous vraiment supprimer ?</h2>
+            <a class="deleteComment" href=""><button>OUI</button></a>
+                <button id="closeBtn" class="closeBtn">NON</button>
+        </div>
+    </div>
+    <div style="font-size: 2rem; display:flex; justify-content:center;">
         <?php
         if(SessionFlash::exist()){ 
             echo SessionFlash::get();
@@ -17,11 +24,14 @@
             </div>
             <div class="contentComment">
                 <h2>Commentaire</h2>
-                <td><a class="commentsHref"href="editCommentsController.php?Id_comments=<?=$comment->Id_comments?>"><h3><?=$comment->comm_slot?></h3></a></td>
+                <a class="commentsHref"href="editCommentsController.php?Id_comments=<?=$comment->Id_comments?>"><h3><?=$comment->comm_slot?></h3></a>
             </div>
-            <div class="delete">
-                <td><a class="deleteComment"href="deleteController.php?Id_comments=<?=$comment->Id_comments?>">Supprimer</a></td>
+            <div class="delete">  
+                <button id="confirmDelete" class="myBtn" data-id="<?=$comment->Id_comments?>">Supprimer</button> 
             </div>
         </div>
     <?php endforeach ?>
     </section>
+    <script src="../../public/assets/js/modal.js"></script>
+
+    

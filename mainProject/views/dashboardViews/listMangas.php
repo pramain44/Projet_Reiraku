@@ -1,5 +1,11 @@
 
-
+<div class="modal">
+        <div class="modalContent">
+            <h2>Souhaitez-vous vraiment supprimer ?</h2>
+                <a class="deleteComment" href=""><button>OUI</button></a>
+                <button id="closeBtn" class="closeBtn">NON</button>
+        </div>
+</div>
     <div>
         <?php
         if(SessionFlash::exist()){ 
@@ -20,8 +26,11 @@
     
         <div>
             <a href="editMangasController.php?id=<?=$manga->Id_mangas?>"><h3><?=$manga->title?></h3></a>
-            <a href="deleteController.php?id=<?=$manga->Id_mangas?>">Supprimer</a>
+            <div>  
+                <button id="confirmDelete" class="myBtn" data-id="<?=$manga->Id_mangas?>">Supprimer</button>
+            </div>
         </div>
     <?php endforeach ?>
+    <script src="../../public/assets/js/modal.js"></script>
 
     

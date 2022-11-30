@@ -34,4 +34,4 @@ if($Id_comments){
     exit();
 } 
 
-include __DIR__.'/../../views/dashboardViews/test.php';
+

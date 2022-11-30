@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/assets/img/logoVeibae.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/assets/css/home.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <title>logo ReiRaku - Accueil</title>
+    <title> ReiRaku - Accueil</title>
 </head>
 <body>
     <header>
@@ -42,7 +43,7 @@
             <?php } ?>
         </div>
         <div class="title">
-            <h1>Bienvenue Sur ReiRaku</h1>
+            <h1>Bienvenue Sur ReiRaku</h1> 
             <p class="underText">Un blog de partage d'avis et de réflexion sur nos mangas favoris</p>
         </div>
         <div class="divideContainer">

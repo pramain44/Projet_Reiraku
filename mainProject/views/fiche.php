@@ -59,7 +59,7 @@
             if(isset($_SESSION['user'])){ ?>
                 <form method="post">
                     <input type="hidden" value="2" name="vote">
-                    <textarea class="textArea" name="comm_slot" id="comm"></textarea>
+                    <textarea class="textArea" name="comm_slot" id="comm" maxlength="500"></textarea>
                     <button class="btn" type="submit">Commenter !</button>
                     <div><small><?= $error['comm'] ?? '' ?></small></div>
                 </form>
