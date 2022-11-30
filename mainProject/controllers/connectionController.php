@@ -5,7 +5,6 @@ require_once(__DIR__.'/../models/User.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $error = [];
-    //$errors = [];
 
     $password = filter_input(INPUT_POST,'password');
    

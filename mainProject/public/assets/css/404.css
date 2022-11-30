@@ -1,0 +1,12 @@
+body{
+    background-image:url("../../assets/img/404_fond.png") ;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: black;
+}

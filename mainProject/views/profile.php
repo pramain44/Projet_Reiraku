@@ -24,9 +24,10 @@
             <?php } ?>
         <div class="mainInfo">
             <div class="imgAndPseudo">
-                <img class="profilImg" src="../public/assets/img/albedo_14060.jpg" alt="">
+                <img class="profilImg" src="../public/upload/<?=$Id_users?>_resampled.jpg" alt="">
                 <div class="userInfo">
                     <form method="post">
+                        <input type="hidden" value="3" name="test">                     
                         <ul>
                             <li>Nom de compte :<input type="text" name="name_account" value="<?=$_SESSION['user']->name_account?>"></li>
                         </ul>
@@ -44,10 +45,13 @@
                 <div>
                     <h3>Choisir une image profile</h3>
                     <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" value="2" name="test">
                         <label for="upload"></label>
-                        <input name="profilPic" id="upload" class="file"  type="file" placeholder="Photo de profil"><br>
-                        <input name="uploadButton" type="submit" value="Upload">
+                        <input name="profile" id="profile" class="file" type="file"><br>
+                        <input type="submit" value="Upload">
                    </form>
+                   <small><?=$error ?? '';?></small>
+                   <br>
                    <a href="">Supprimer mon compte</a>
                 </div>
             </div>

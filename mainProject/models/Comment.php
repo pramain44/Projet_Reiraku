@@ -73,7 +73,7 @@ class Comment{
     }
 
     public static function CommentAndUser($id){
-        $sql='SELECT comments.comm_slot, comments.created_at, users.name_account
+        $sql='SELECT comments.comm_slot, comments.created_at, comments.Id_users, users.name_account
         FROM `comments` JOIN `users` ON comments.Id_users = users.Id_users JOIN `mangas` ON mangas.Id_mangas = comments.Id_mangas
         WHERE mangas.Id_mangas = :id ORDER BY Id_comments DESC;';
         $sth = Database::getInstance()->prepare($sql);

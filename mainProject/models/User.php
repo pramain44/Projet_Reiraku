@@ -135,4 +135,36 @@ class User{
         $sth->execute();
         return $sth->fetch();
     }
+
+    public static function upload($from,$filename,$extension,$to){
+        $dst_x = 0;
+        $dst_y = 0;
+        $src_x = 0;
+        $src_y = 0;
+        $dst_width = 500;
+        $src_width = getimagesize($to)[0];
+        $src_height = getimagesize($to)[1];
+        $dst_height = round(($dst_width * $src_height) / $src_width);
+        $dst_image = imagecreatetruecolor($dst_width, $dst_height);
+        $src_image = imagecreatefromjpeg($to);
+
+        // Redimensionne
+        imagecopyresampled(
+            $dst_image,
+            $src_image,
+            $dst_x,
+            $dst_y,
+            $src_x,
+            $src_y,
+            $dst_width,
+            $dst_height,
+            $src_width,
+            $src_height
+        );
+
+        // redimensionne l'image
+        $resampledDestination = UPLOAD_USER_PROFILE . '/'.$filename.'_resampled.jpg';
+        imagejpeg($dst_image, $resampledDestination, 75);
+
+    }
 }

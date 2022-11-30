@@ -7,10 +7,13 @@ require_once __DIR__.'/../models/Vote.php';
 // géré le get pour que si on change ça fasse pas d'erreur
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
+if($id == 0){
+    header('location:http://projet_2.0.localhost/mainProject/404.php');
+    exit();
+}
 if(!empty($_SESSION['user']->Id_users)){
     $Id_users = $_SESSION['user']->Id_users;
 }
-
 
 $upVotes = Vote::countUp($id);
 $downVotes = Vote::countDown($id);

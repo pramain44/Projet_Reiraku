@@ -78,7 +78,7 @@
             
             <div class="commRow">
                 <div class="profilImg">
-                    <img class="profilImage" src="../public/assets/img/albedo_14060.jpg" alt="">
+                    <img class="profilImage" src="../public/upload/<?=$comment->Id_users?>_resampled.jpg" alt="">
                     <div class="commName">
                         <h4><?=$comment->name_account?></h4>
                     </div>
