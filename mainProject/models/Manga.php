@@ -73,7 +73,8 @@ class Manga {
 
     // ADD new manga in the database
     public function create(){
-        $sql ='INSERT into `mangas` (title, description, anime, author, categorie, image) VALUES (:title, :description, :anime, :author, :categorie, :image);';
+        $sql ='INSERT into `mangas` (title, description, anime, author, categorie, image) 
+        VALUES (:title, :description, :anime, :author, :categorie, :image);';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':title',$this->getTitle());
         $sth->bindValue(':description',$this->getDescription());
@@ -86,7 +87,9 @@ class Manga {
 
     // UPDATE a manga in the database
     public function update($id){
-        $sql = "UPDATE `mangas` SET title = :title, description = :description, anime = :anime, author = :author, categorie = :categorie, image = :image WHERE id = :id";
+        $sql = "UPDATE `mangas` 
+        SET title = :title, description = :description, anime = :anime, author = :author, 
+        categorie = :categorie, image = :image WHERE id = :id";
         $pdo = Database::getInstance();
         $sth = $pdo->prepare($sql);
         $sth->bindValue(':lastname',$this->getLastname());
@@ -100,17 +103,17 @@ class Manga {
     }
 
     // All read method of manga in the database
-    public static function readAll(string $Id_users,$pages ='',$search = '', $id = '',){
+    public static function readAll(string $Id_users ='',$pages ='',$search = '', $id = '',){
         $sql = 'SELECT * FROM `mangas` ';
         if($search != ''){
-            $sql .= 'JOIN `authors` WHERE title LIKE :search OR firstname LIKE :search OR lastname LIKE :search OR categories LIKE :search';
+            $sql .= 'JOIN `authors` 
+            WHERE title LIKE :search OR firstname LIKE :search OR lastname LIKE :search OR categories LIKE :search';
         }if($id != ''){
             $sql .= 'WHERE Id_mangas = :id';
         }if(!empty($Id_users)){
-            $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas WHERE comments.Id_users = :Id_users LIMIT 5';
-        }//if(!is_null($pages)){
-        //     $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas WHERE comments.Id_users = :Id_users LIMIT :pages,5';
-        // }
+            $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
+            WHERE comments.Id_users = :Id_users LIMIT 5';
+        }   
         $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);
         if($search != ''){
@@ -125,11 +128,8 @@ class Manga {
            //$sth->bindValue(':pages',$pages);
            $sth->execute();
            return $sth->fetchAll(PDO::FETCH_OBJ);
-        }//if(!is_null($pages)){
-        //     $sth->bindValue(':pages',$pages);
-        //     $sth->execute();
-        //     return $sth->fetchAll(PDO::FETCH_OBJ);
-        // }
+        }
+        
         else{
             $sth->execute();
             return $sth->fetchAll(PDO::FETCH_OBJ);
@@ -170,6 +170,62 @@ class Manga {
         $sth->execute();
         return $sth->fetchAll(PDO::FETCH_OBJ);        
     }
+
+
+    // public static function count(){
+    //     $sql = 'SELECT COUNT(*) FROM `mangas`;';
+    //     $sth = Database::getInstance()->query($sql);
+    //     return $sth->fetchColumn();
+    // }
+
+
+    public static function getAll(?string $search = '', int $limit = null, int $offset = 0): array // Méthode statique car il est inutile d'instancier, car pas d'hydratation
+    {
+
+        // On stocke une instance de la classe PDO dans une variable
+        $pdo = Database::getInstance();
+
+        // On créé la requête
+        $sql = 'SELECT * FROM `mangas` 
+                    WHERE `title` LIKE :search';
+
+        if (!is_null($limit)) {
+            $sql .= ' LIMIT :limit OFFSET :offset';
+        }
+
+        $sql .= ';';
+
+        // On prépare la requête
+        $sth = Database::getInstance()->prepare($sql);
+
+        // On associe le marqueur nominatif à la valeur de search
+        $sth->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+
+        // On associe les marqueurs nominatifs aux valeurs de offset et limit
+        if (!is_null($limit)) {
+            $sth->bindValue(':offset', $offset, PDO::PARAM_INT);
+            $sth->bindValue(':limit', $limit, PDO::PARAM_INT);
+        }
+
+        if ($sth->execute()) {
+            return ($sth->fetchAll(PDO::FETCH_OBJ));
+        } else {
+            return [];
+        }
+    }
+        public static function count(string $s): int
+    {
+        $sql = 'SELECT COUNT(`Id_mangas`) as `nbMangas` FROM `mangas`
+                    WHERE `title` LIKE :search';
+
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':search', '%' . $s . '%', PDO::PARAM_STR);
+        $sth->execute();
+        return $sth->fetchColumn();
+
+    }
+    
+  
 }
 
 

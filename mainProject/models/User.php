@@ -167,4 +167,11 @@ class User{
         imagejpeg($dst_image, $resampledDestination, 75);
 
     }
+
+    public static function check(){
+        if($_SESSION['user']->role != 0 || !isset($_SESSION['user'])){
+            header('location:http://projet_2.0.localhost/mainProject/404.php');
+            exit();
+        }
+    }
 }

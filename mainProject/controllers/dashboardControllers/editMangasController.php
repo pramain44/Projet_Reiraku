@@ -2,6 +2,10 @@
 require_once __DIR__.'/../../helpers/database.php';
 require_once __DIR__.'/../../models/Author.php';
 require_once __DIR__.'/../../models/Categorie.php';
+require_once __DIR__.'/../../models/User.php';
+
+
+User::check();
 
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));

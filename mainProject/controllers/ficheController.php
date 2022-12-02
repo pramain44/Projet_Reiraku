@@ -22,6 +22,15 @@ $comments = Comment::CommentAndUser($id);
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $vote = trim(filter_input(INPUT_POST, 'vote', FILTER_SANITIZE_SPECIAL_CHARS));
+    if(empty($vote)){
+        $error['inscription'] = 'ouga bouga';
+    }else{
+        $isOk = filter_var($vote,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_VOTE.'/')));
+        if($isOk == false){
+            $error['inscription'] = 'la donnée n\'est pas conforme';
+        }
+    }
     if($_POST['vote'] == 2){
         $comm_slot = trim(filter_input(INPUT_POST, 'comm_slot', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($comm_slot)){
@@ -33,6 +42,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $comment->setId_mangas($id);
             $comment->setId_users($Id_users);
             $comment = $comment->create($id, $Id_users);
+            $_SESSION['idManga'] = $id;
+            SessionFlash::set('Commentaire Ajouter');
+            header('location:http://projet_2.0.localhost/mainProject/controllers/refreshController.php?id=<?=$id?>');
+            exit();
         }
     }
     if($_POST['vote'] == 3){
@@ -64,10 +77,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $votes->setId_mangas($id);
                 $votes->setId_users($Id_users);
                 $votes = $votes->create($id, $Id_users);
+                $_SESSION['idManga'] = $id;
+                SessionFlash::set('Vous avez voté !');
+                header('location:http://projet_2.0.localhost/mainProject/controllers/refreshController.php?id=<?=$id?>');
+                exit();
             }
         }
     }
-
 }
 
 // appelle du front (html)

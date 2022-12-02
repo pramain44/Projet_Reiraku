@@ -19,12 +19,13 @@
     foreach($comments as $comment): ?>
         <div class="userContainer">
             <div class="nameComment">
-                <h2>Posted by</h2>
+                <h2>Posté par</h2>
                 <p><?=$comment->name_account?></p>
+                <p>Le <?=$comment->created_at?></p>
             </div>
             <div class="contentComment">
                 <h2>Commentaire</h2>
-                <a class="commentsHref"href="editCommentsController.php?Id_comments=<?=$comment->Id_comments?>"><h3><?=$comment->comm_slot?></h3></a>
+                <a class="commentsHref"href="editCommentsController.php?Id_comments=<?=$comment->Id_comments?>"><p><?=$comment->comm_slot?></p></a>
             </div>
             <div class="delete">  
                 <button id="confirmDelete" class="myBtn" data-id="<?=$comment->Id_comments?>">Supprimer</button> 

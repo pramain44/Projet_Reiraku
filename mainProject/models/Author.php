@@ -44,7 +44,7 @@ class Author{
     }
 
     public static function AuthorsInMangas($id){
-        $sql='SELECT mangas.description, mangas.anime, mangas.title, mangas.image, authors.firstname, authors.lastname 
+        $sql='SELECT mangas.description, mangas.anime, mangas.title, mangas.image, mangas.Id_mangas, authors.firstname, authors.lastname 
         FROM `mangas` JOIN authors ON mangas.Id_authors = authors.Id_authors WHERE mangas.Id_mangas = :id';
         $sth = Database::getInstance()->prepare($sql);
         $sth->bindValue(':id',$id);

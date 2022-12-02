@@ -9,6 +9,12 @@
     <title>logo ReiRaku - <?=$mangas->title?></title>
 </head>
 <body>
+        <?php
+            if (SessionFlash::exist()) {
+        ?>
+            <?php $message = SessionFlash::get('message') ?>
+            <?= ($message == '') ? '' : '<div class="messageContainer"><div class="message">'.$message.'</div></div>'; ?>
+            <?php } ?>
     <section class="cardForm">
         <div class="cardContent">
             <div class="imageFiche">
@@ -18,8 +24,8 @@
                 <?php if(isset($_SESSION['user'])){ ?>
                     <form class="voteBtn" method="post">
                         <input type="hidden" value="3" name="vote">
-                        <button name="up" value="1" class="upVote">Recommander(<?=$upVotes?>)</button>
-                        <button name ="down" value="1" class="downVote">Déconseiller(<?=$downVotes?>)</button>
+                        <a href="refreshController.php?id=<?=$mangas->Id_mangas?>"><button name="up" value="1" class="upVote">Recommander(<?=$upVotes?>)</button></a>
+                        <a href="refreshController.php?id=<?=$mangas->Id_mangas?>"><button name ="down" value="1" class="downVote">Déconseiller(<?=$downVotes?>)</button></a>
                     </form>
                     <div class="errorVote"><?= $error['vote'] ?? ''?></div>
                 <?php } ?>
@@ -59,8 +65,10 @@
             if(isset($_SESSION['user'])){ ?>
                 <form method="post">
                     <input type="hidden" value="2" name="vote">
-                    <textarea class="textArea" name="comm_slot" id="comm" maxlength="500"></textarea>
-                    <button class="btn" type="submit">Commenter !</button>
+                    <textarea class="textArea" name="comm_slot" id="comm" maxlength="1000"></textarea>
+                    <div class="textareaBtn">
+                        <button class="btn" type="submit">Commenter !</button>
+                    </div>
                     <div><small><?= $error['comm'] ?? '' ?></small></div>
                 </form>
             <?php 

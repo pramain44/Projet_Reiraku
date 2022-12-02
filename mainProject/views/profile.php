@@ -43,14 +43,16 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>Choisir une image profile</h3>
+                    <h2>Choisir une image profile</h2>
                     <form method="post" enctype="multipart/form-data">
                     <input type="hidden" value="2" name="test">
                         <label for="upload"></label>
-                        <input name="profile" id="profile" class="file" type="file"><br>
-                        <input type="submit" value="Upload">
+                        <input class="profileUpload" name="profile" class="file" type="file"><br>
+                        <div class="uploadBtn">
+                            <input class="profileUpload" type="submit" value="Upload">
+                        </div>
                    </form>
-                   <small><?=$error ?? '';?></small>
+                   <small><?=$errors ?? '';?></small>
                    <br>
                    <a href="">Supprimer mon compte</a>
                 </div>

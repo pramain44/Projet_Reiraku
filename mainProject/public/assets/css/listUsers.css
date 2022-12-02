@@ -34,6 +34,9 @@ section .modify{
 
 p{
     font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #632e87;
 }
 
 .tableUsers{
@@ -115,3 +118,61 @@ div .delete{
     left: 35rem;
 }
 
+/*  list mangas */
+
+.oeuvreItem{
+    width: 20%;
+    text-align: center;
+}
+
+.oeuvreItemContainer{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+a .listMangas{
+    width: 10rem;
+}
+
+.page-link{
+    width: 4rem;
+    height: 2rem;
+    text-align: center;
+
+}
+
+.page-links{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+/* mise en form du formulaire create and edit mangas*/
+
+form{
+    text-align: center;
+}
+
+.createForm{
+    width: 11rem;
+    height: 1.2rem;
+    border-radius: 2px;
+}
+
+.textareaBtnCreateForm{
+    padding-top: 1rem;
+}
+
+.textareaBtnCreateForm .btn{
+    width: 5rem;
+    height: 1.4rem;
+}
+
+.textareaCreateForm{
+    border-radius: 5px;
+    height: 21rem;
+}

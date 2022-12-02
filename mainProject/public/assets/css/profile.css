@@ -65,13 +65,20 @@ li input{
     color: #fff;
     background-color: grey;
     font-size: 1.5rem;
-    border-style: inherit;
 }
 .modifyBtn{
     width: 60%;
     color: #fff;
     background-color: grey;
     font-size: 1.5rem;
+}
+
+.uploadBtn{
+    padding-top: 1.5rem;
+}
+
+.profileUpload{
+    font-size: 1.2rem;
 }
 
 /* contenue des infos utilisateur */

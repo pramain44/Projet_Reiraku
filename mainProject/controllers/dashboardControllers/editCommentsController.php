@@ -3,6 +3,8 @@ require_once __DIR__.'/../../helpers/database.php';
 require_once __DIR__.'/../../models/Comment.php';
 require_once __DIR__.'/../../models/User.php';
 
+User::check();
+
 
 $title ='Modifier Commentaire';
 

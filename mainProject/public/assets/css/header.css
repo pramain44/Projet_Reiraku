@@ -12,11 +12,15 @@ ul{
 
 .liText{
     padding-bottom: 2rem;
+    padding-right: 2rem;
 }
 
 div ul{
     display: flex;
     font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
 }
 
 .imgHeader{

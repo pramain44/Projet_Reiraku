@@ -27,6 +27,17 @@ if(!empty($_GET['pages'])){
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+    $vote = intval(filter_input(INPUT_POST, 'vote', FILTER_SANITIZE_SPECIAL_CHARS));
+    if(empty($vote)){
+        $error['vote'] = 'ouga bouga';
+    }else{
+        $isOk = filter_var($vote,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_VOTE.'/')));
+        if($isOk == false){
+            $error['vote'] = 'la donnée n\'est pas conforme';
+        }
+    }
+
     if($_POST['test'] == 2){
         try {
             if (!isset($_FILES['profile'])) {
@@ -59,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
 
         } catch (\Exception $e) {
-            $error = $e->getMessage();
+            $errors = $e->getMessage();
         }
     }
 

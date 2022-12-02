@@ -3,6 +3,8 @@ require_once(__DIR__.'/../../helpers/database.php');
 require_once(__DIR__.'/../../models/User.php');
 require_once(__DIR__.'/../../models/Comment.php');
 
+User::check();
+
 $title ='Listes des commentaires';
 try{
     $comments = Comment::readAll();

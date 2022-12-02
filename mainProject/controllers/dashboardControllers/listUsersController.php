@@ -4,6 +4,8 @@ require_once(__DIR__.'/../../helpers/database.php');
 require_once(__DIR__.'/../../models/User.php');
 require_once(__DIR__.'/../../models/Comment.php');
 
+User::check();
+
 $title ='Listes des utilisateurs';
 $search = trim((string) filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIAL_CHARS));
 
