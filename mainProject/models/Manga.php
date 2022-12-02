@@ -103,37 +103,36 @@ class Manga {
     }
 
     // All read method of manga in the database
-    public static function readAll(string $Id_users ='',$pages ='',$search = '', $id = '',){
+    public static function readAll(string $Id_users ='',$pages ='',$search = ''){
         $sql = 'SELECT * FROM `mangas` ';
         if($search != ''){
             $sql .= 'JOIN `authors` 
             WHERE title LIKE :search OR firstname LIKE :search OR lastname LIKE :search OR categories LIKE :search';
-        }if($id != ''){
-            $sql .= 'WHERE Id_mangas = :id';
-        }if(!empty($Id_users)){
+        }
+        if(!empty($Id_users)){
             $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
-            WHERE comments.Id_users = :Id_users LIMIT 5';
-        }   
+            WHERE comments.Id_users = :Id_users';
+        }
+        if(!empty($pages)){
+            $sql .= ' LIMIT 5';
+        }
+
         $sql .= ';';
         $sth = Database::getInstance()->prepare($sql);
+
         if($search != ''){
             $sth->bindValue(':search','%'.$search.'%');
-        }if($id != ''){
-            $sth->bindValue(':id',$id);
-            $sth->execute();
-           return $sth->fetch(PDO::FETCH_OBJ);
         }
         if(!empty($Id_users)){
            $sth->bindValue(':Id_users',$Id_users);
-           //$sth->bindValue(':pages',$pages);
-           $sth->execute();
-           return $sth->fetchAll(PDO::FETCH_OBJ);
         }
+        if(!empty($pages)){
+            $sth->bindValue(':pages',$pages);
+        }
+
+        $sth->execute();
+        return $sth->fetchAll(PDO::FETCH_OBJ);
         
-        else{
-            $sth->execute();
-            return $sth->fetchAll(PDO::FETCH_OBJ);
-        }
     }
 
     public static function pagination($Id_users,$pages){
@@ -181,27 +180,16 @@ class Manga {
 
     public static function getAll(?string $search = '', int $limit = null, int $offset = 0): array // Méthode statique car il est inutile d'instancier, car pas d'hydratation
     {
-
-        // On stocke une instance de la classe PDO dans une variable
         $pdo = Database::getInstance();
-
-        // On créé la requête
-        $sql = 'SELECT * FROM `mangas` 
-                    WHERE `title` LIKE :search';
+        $sql = 'SELECT * FROM `mangas` WHERE `title` LIKE :search';
 
         if (!is_null($limit)) {
             $sql .= ' LIMIT :limit OFFSET :offset';
         }
-
         $sql .= ';';
-
-        // On prépare la requête
         $sth = Database::getInstance()->prepare($sql);
-
-        // On associe le marqueur nominatif à la valeur de search
         $sth->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
 
-        // On associe les marqueurs nominatifs aux valeurs de offset et limit
         if (!is_null($limit)) {
             $sth->bindValue(':offset', $offset, PDO::PARAM_INT);
             $sth->bindValue(':limit', $limit, PDO::PARAM_INT);

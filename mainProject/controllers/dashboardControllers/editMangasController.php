@@ -9,7 +9,10 @@ User::check();
 
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
-
+if($id == 0){
+    header('location:http://projet_2.0.localhost/mainProject/404.php');
+    exit();
+}
 try{
     $authors = Author::AuthorsInMangas($id);
     $categories = Categorie::readOne($id);

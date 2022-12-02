@@ -45,6 +45,11 @@ small{
     color: #F06191;
     font-size: 1rem;
 }
+span{
+    margin-bottom: 1rem;
+    color: #F06191;
+    font-size: 1rem;
+}
 form{
     display: flex;
     flex-direction: column;
@@ -82,6 +87,22 @@ padding-bottom: 2rem;
 
 .padding{
     padding-bottom: 2rem;
+}
+
+.divCGU{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+}
+.consentLabel{
+    color: aliceblue;
+    font-size: 1.3rem;
+}
+
+.consentInput{
+    width: 4rem;
+    height: 1.3rem;
 }
 
 /* ajustement mobile */

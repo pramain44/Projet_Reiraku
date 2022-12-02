@@ -14,10 +14,6 @@ $title ='Mangas Liste';
 
 try{
 
-
-
-
-
     $s = trim((string) filter_input(INPUT_GET, 's', FILTER_SANITIZE_SPECIAL_CHARS));
 
     // On définit le nombre d'éléments par page grâce à une constante déclarée dans config.php

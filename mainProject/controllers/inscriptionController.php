@@ -16,13 +16,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
     }
 
-    $role = trim(filter_input(INPUT_POST, 'role', FILTER_SANITIZE_SPECIAL_CHARS));
+    $role = intval(filter_input(INPUT_POST, 'role', FILTER_SANITIZE_SPECIAL_CHARS));
     if(empty($role)){
         $error['inscription'] = 'ouga bouga';
     }else{
         $isOk = filter_var($role,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_ROLE.'/')));
         if($isOk == false){
             $error['inscription'] = 'la donnée n\'est pas conforme';
+        }
+    }
+
+    $consent = intval(filter_input(INPUT_POST, 'consent', FILTER_SANITIZE_SPECIAL_CHARS));
+    if(empty($consent)){
+        $error['CGU'] = 'les CGU doivent être lu et acceptés';
+    }else{
+        $isOk = filter_var($consent,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_ROLE.'/')));
+        if($isOk == false){
+            $error['CGU'] = 'la donnée n\'est pas conforme';
         }
     }
     

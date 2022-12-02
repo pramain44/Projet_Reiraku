@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap');
 h1{
     text-align: center;
 }
@@ -14,7 +15,6 @@ body{
 .userContainer div{
     width: 30%;
     text-align: start;
-    padding-bottom: 1rem;
 }
 
 .delete{
@@ -22,6 +22,13 @@ body{
     align-items: center;
     border-style: solid;
     border-color: black;
+    justify-content: center;
+}
+
+#confirmDelete{
+    height: 2rem;
+    color: red;
+    font-family: 'Roboto', sans-serif;
 }
 
 section .createdDate{

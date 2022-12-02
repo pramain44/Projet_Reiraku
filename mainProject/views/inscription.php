@@ -42,6 +42,11 @@
             <input require type="email" class="formMail" placeholder="Adresse Mail" name="email">
             <small><?= $error['email'] ?? '' ?></small>
 
+            <div class="divCGU">
+                <input class="consentInput" value="1" name="consent" type="checkbox">
+                <label class="consentLabel" for="consent">J'accepte les conditions générales d'utilisation</label>
+            </div>
+            <span><?=$error['CGU'] ?? ''?></span>
             <input class="btn" type="submit" value="Valider">
         </form>
         <div class="padding"></div>

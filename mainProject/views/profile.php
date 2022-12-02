@@ -30,6 +30,7 @@
                         <input type="hidden" value="3" name="test">                     
                         <ul>
                             <li>Nom de compte :<input type="text" name="name_account" value="<?=$_SESSION['user']->name_account?>"></li>
+                            <small><?=$error['inscription'] ?? ''?></small>
                         </ul>
                         <ul>
                             <button class="modifyBtn" type="submit">Modifier</button>
@@ -42,7 +43,9 @@
                         <li><a href=""></a>Compte crée depuis le <?=date('d/m/Y', strtotime($_SESSION['user']->created_at))?></li>
                     </ul>
                 </div>
-                <div>
+
+                <!-- zone du form pour changer d'img de profile -->
+                <div class="changeImg">
                     <h2>Choisir une image profile</h2>
                     <form method="post" enctype="multipart/form-data">
                     <input type="hidden" value="2" name="test">

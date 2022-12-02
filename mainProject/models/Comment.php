@@ -49,7 +49,8 @@ class Comment{
     }
 
     public static function readAll(){
-        $sql = 'SELECT * FROM `comments` JOIN `users` ON users.Id_users = comments.Id_users ORDER BY Id_comments DESC;';
+        $sql = 'SELECT comments.comm_slot, comments.Id_comments, comments.Id_users,comments.created_at, users.name_account
+         FROM `comments` JOIN `users` ON users.Id_users = comments.Id_users ORDER BY Id_comments DESC;';
         $sth = Database::getInstance()->query($sql);
         return $sth->fetchAll(PDO::FETCH_OBJ);
     }

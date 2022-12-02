@@ -12,7 +12,7 @@
         }
         ?>
     </div>
-    <h1>Listes des Commentaires</h1>
+    <h1>Liste des Commentaires</h1>
 
     <section>
     <?php
@@ -21,11 +21,11 @@
             <div class="nameComment">
                 <h2>Posté par</h2>
                 <p><?=$comment->name_account?></p>
-                <p>Le <?=$comment->created_at?></p>
+                <p>Le <?=date('d/m/Y',strtotime($comment->created_at))?></p>
             </div>
             <div class="contentComment">
                 <h2>Commentaire</h2>
-                <a class="commentsHref"href="editCommentsController.php?Id_comments=<?=$comment->Id_comments?>"><p><?=$comment->comm_slot?></p></a>
+                <p><?=$comment->comm_slot?></p>
             </div>
             <div class="delete">  
                 <button id="confirmDelete" class="myBtn" data-id="<?=$comment->Id_comments?>">Supprimer</button> 

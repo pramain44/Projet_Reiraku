@@ -18,12 +18,11 @@ $pages = intval(filter_input(INPUT_GET,'pages',FILTER_SANITIZE_NUMBER_INT));
 //     exit();
 // }
 $Id_users = $_SESSION['user']->Id_users;
-
-$mangas  = Manga::readAll($Id_users); 
 $commentsNb = Comment::countComments($Id_users);
-if(!empty($_GET['pages'])){
-    $mangas = Manga::pagination($Id_users,$pages);  
-    }
+
+
+$mangas = Manga::pagination($Id_users,$pages);  
+//$mangas  = Manga::readAll($Id_users,$pages);
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -41,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($_POST['test'] == 2){
         try {
             if (!isset($_FILES['profile'])) {
-                throw new Exception('Erreur !');
+                throw new Exception('Fichier vide');
             }
 
             if ($_FILES['profile']['error'] != 0) {

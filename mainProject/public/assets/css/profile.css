@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 body{
     background-color:#23262f;
@@ -119,7 +121,7 @@ ul{
 
 /* ---------Affichage mobile---------- */
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 800px){
     .logoImg{
         width: 6rem;
     }
@@ -138,4 +140,16 @@ ul{
     div h2{
         padding-left: 1.8rem;
     }
+
+    div .profilImg{
+        width: 10rem;
+        height: 10rem;
+    }
+    div .userInfo{
+        text-align: center;
+    }
+    .changeImg{
+        width: 95%;
+    }
+
 }

@@ -66,7 +66,7 @@
             </div>
             <div class="categories">               
                 <a href="homeController.php?search=bangers"><button class="btn" value="bangers">Bangers</button></a>
-                <a href="homeController.php?search=classiques"><button class="btn" type="submit" value="Classiques" >Classiques</button></a>
+                <a href="homeController.php?search=classiques"><button class="btn" type="submit" value="Classiques">Classiques</button></a>
                 <a href="homeController.php?search=hidden"><button class="btn" type="submit" value="Hidden" >Hidden Gems</button></a>              
             </div>
         </div>
