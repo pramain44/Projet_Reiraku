@@ -22,7 +22,7 @@ $commentsNb = Comment::countComments($Id_users);
 
 
 //$mangas = Manga::pagination($Id_users,$pages);  
-$mangas  = Manga::readAll($Id_users,$pages);
+//$mangas  = Manga::readAll($Id_users,$pages);
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

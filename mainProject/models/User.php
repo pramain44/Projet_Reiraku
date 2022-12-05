@@ -125,7 +125,7 @@ class User{
 
     public static function getByEmail(string $email):object|bool{ 
         $pdo = Database::getInstance();
-        $sql = 'SELECT * FROM `users` WHERE `email` = :email;';
+        $sql = 'SELECT * FROM `users` WHERE `email` = :email and `validated_at` IS NOT NULL;';
         $sth = $pdo->prepare($sql);
         $sth->bindValue(':email',$email);
         if($sth->execute()){

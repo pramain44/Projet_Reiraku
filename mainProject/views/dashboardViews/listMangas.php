@@ -6,7 +6,7 @@
                 <button id="closeBtn" class="closeBtn">NON</button>
         </div>
 </div>
-    <div>
+    <div style="display:flex;justify-content:center;font-size: 2rem;padding-bottom:2rem;>
         <?php
         if(SessionFlash::exist()){ 
             echo SessionFlash::get();

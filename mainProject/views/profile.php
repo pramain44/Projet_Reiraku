@@ -25,7 +25,9 @@
             <?php } ?>
         <div class="mainInfo">
             <div class="imgAndPseudo">
-                <img class="profilImg" src="../public/upload/<?=$Id_users?>_resampled.jpg" alt="">
+                <div class="imgDiv">
+                    <img class="profilImg" src="../public/upload/<?=$Id_users?>_resampled.jpg" alt="">
+                </div>
                 <div class="userInfo">
                     <form method="post">
                         <input type="hidden" value="3" name="test">                     

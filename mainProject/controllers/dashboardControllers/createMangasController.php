@@ -25,21 +25,13 @@ try{
         $anime = trim(filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($anime)){
         $error['anime'] = 'ce champ est obligatoire';
-        }//else{
-        // $isOk = filter_var($anime,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_NO_NUMBER.'/')));
-        //     if($isOk == false){
-        //     $error['anime'] = 'la donnée n\'est pas conforme';
-        //     }
-        // }
+        }
+        
         $description = trim(filter_input(INPUT_POST, 'description', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($description)){
         $error['description'] = 'ce champ est obligatoire';
-        }//else{
-        // $isOk = filter_var($description,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_WHATEVER.'/')));
-        //     if($isOk == false){
-        //     $error['description'] = 'la donnée n\'est pas conforme';
-        //     }
-        // }
+        }
+        
         $lastname = trim(filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($lastname)){
             $error['lastname'] = 'ce champ est obligatoire';
@@ -71,13 +63,6 @@ try{
         if(empty($image)){
             $error['image'] = 'ce champ est obligatoire';
         }
-        //else{
-        //     $isOk = filter_var($image,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_WHATEVER.'/')));
-        //     if($isOk == false){
-        //         $error['image'] = 'la donnée n\'est pas conforme';
-        //     }
-        // }
-        
 
 
         if(empty($error)){

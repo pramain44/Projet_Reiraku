@@ -64,7 +64,7 @@
                 <!-- Text Area pour entrer un commentaire -->
             <?php
             if(isset($_SESSION['user'])){ ?>
-                <form method="post">
+                <form class="textareaForm" method="post">
                     <input type="hidden" value="2" name="vote">
                     <textarea class="textArea" name="comm_slot" id="comm" maxlength="1000"></textarea>
                     <div class="textareaBtn">

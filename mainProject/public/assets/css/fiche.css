@@ -49,10 +49,11 @@ form{
     padding-bottom: 0.5rem;
 }
 textarea{
-    margin-top: 0.5rem;
+    margin: auto;
+    margin-top: 1rem;
     width: 60%;
     height: 10rem;
-    margin-left: 8.5rem;
+
 }
 
 small{
@@ -217,6 +218,7 @@ strong{
     }
     form textarea{
         margin-left: 1rem;
+        width: 88%;
     }
     form .btn{
         margin-left: 1rem;
@@ -224,6 +226,15 @@ strong{
     div .voteBtn{
         padding-left: 2rem;
         padding-top: 2rem;
+    }
+    div .textareaForm{
+        flex-direction: column;
+    }
+    form .textareaBtn{
+        justify-content: center;
+        padding-left: 0rem;
+        padding-right: 1rem;
+        padding-top: 1.4rem;
     }
 }
 

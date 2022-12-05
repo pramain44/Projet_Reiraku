@@ -20,7 +20,7 @@ try{
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $error = [];
-        $title = trim(filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS));
+        $title = trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($title)){
             $error['title'] = 'ce champ est obligatoire';
         }else{
