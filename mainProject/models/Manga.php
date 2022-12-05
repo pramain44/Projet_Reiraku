@@ -111,7 +111,8 @@ class Manga {
         }
         if(!empty($Id_users)){
             $sql .= 'JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
-            WHERE comments.Id_users = :Id_users';
+            WHERE comments.Id_users = :Id_users
+            LIMIT 5';
         }
         if(!empty($pages)){
             $sql .= ' LIMIT 5';

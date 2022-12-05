@@ -15,7 +15,9 @@ $Id_users = intval(filter_input(INPUT_GET,'Id_users',FILTER_SANITIZE_NUMBER_INT)
 $deleted = Manga::delete($id);
 $deletedComm = Comment::delete($Id_comments);
 $deletedUser = User::delete($Id_users);
-
+var_dump($id);
+var_dump($Id_users);
+var_dump($Id_comments);
 if($id){
     SessionFlash::set('La suppression a fonctionné');
     header('location: listMangasController.php');

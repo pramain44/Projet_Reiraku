@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //$user->setPassword(null);
         $user->password = null;
         $_SESSION['user'] = $user;
-        header('Location: homeController.php');
+        header('Location:homeController.php');
         exit;
     }
 }

@@ -55,6 +55,6 @@
     </div>
         
         
-    <script src="../../public/assets/js/modal.js"></script>
+    <script src="../../public/assets/js/modalMangas.js"></script>
 
     

@@ -5,16 +5,16 @@
                 <button id="closeBtn" class="closeBtn">NON</button>
         </div>
 </div>
+
+<h1>Users List</h1>
+
 <?php
    if (SessionFlash::exist()) {
                 ?>
-        <div class="alert" style="position: absolute; left: 48rem; top: 2rem;">
+        <div class="alert" style="font-size: 2rem; display:flex; justify-content:center;">
             <strong><?= SessionFlash::get() ?></strong>
         </div>
 <?php } ?>
-
-    <h1>Users List</h1>
-
     <form method="get">
         <div class="wrap">
             <input class="searchBar" type="search" name="search" placeholder="chercher par mail ou nom" aria-label="search" name="search">
@@ -44,4 +44,4 @@
         <?php endforeach ?>
 
     </section>
-    <script src="../../public/assets/js/modal.js"></script>
+    <script src="../../public/assets/js/modalUser.js"></script>
