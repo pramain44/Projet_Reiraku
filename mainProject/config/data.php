@@ -6,10 +6,14 @@ define('REGEX_WHATEVER', "^[0-9A-Za-zÀ-ÿ' +._-]+$");
 define('REGEX_NO_NUMBER', "^[A-Za-zÀ-ÿ' ._-]+$");
 define('REGEX_ROLE', "^[1]$");
 define('REGEX_VOTE', "^[2-3]$");
+
+// img const
 define('SUPPORTED_FORMATS', array('image/jpeg'));
 define('MAX_SIZE', 5*1024*1024);
-
 define('UPLOAD_USER_PROFILE', 'C:/laragon/www/Projet_2.0/mainProject/public/upload/');
+
+//JWT
+define ('SECRET_KEY', 'fsdh&éé"&"&éff444dsf54q6fs`dsffsdqhg:::!dsq');
 
 
 

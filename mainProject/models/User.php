@@ -71,14 +71,23 @@ class User{
     }
 
     // ADD new User in the database
-    public function create(){
+    public function create(int $id = null){
         $sql ='INSERT into `users` (email, name_account, password,role) VALUES (:email, :name_account, :password,:role);';
-        $sth = Database::getInstance()->prepare($sql);
-        $sth->bindValue(':email',$this->getEmail());
-        $sth->bindValue(':name_account',$this->getName_account());
-        $sth->bindValue(':password',$this->getPassword());
-        $sth->bindValue(':role',$this->getRole());
-        return $sth->execute();
+        $this->pdo = Database::getInstance();
+        $sth = $this->pdo->prepare($sql);
+        $sth->bindValue(':email',$this->email);
+        $sth->bindValue(':name_account',$this->name_account);
+        $sth->bindValue(':password',$this->password);
+        $sth->bindValue(':role',$this->role);
+        if($sth->execute()){
+            if(is_null($id)){
+                $this->setId($this->pdo->lastInsertId());
+            }
+            if($sth->rowCount()==1 || !is_null($id)){
+                return $this;
+            }
+        }
+        return false;
     }
 
     // Update methods for Users in database
@@ -170,8 +179,22 @@ class User{
 
     public static function check(){
         if($_SESSION['user']->role != 0 || !isset($_SESSION['user'])){
-            header('location:http://projet_2.0.localhost/mainProject/404.php');
+            header('location:../../404.php');
             exit();
         }
+    }
+
+    public static function validateAccount(int $id):bool{
+
+        $pdo = Database::getInstance();
+        $sql = "UPDATE users SET `validated_at` = NOW() WHERE `Id_users` = :id;";
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':id', $id, PDO::PARAM_INT);
+        if($sth->execute()){
+            if($sth->rowCount()==1){
+                return true;
+            }
+        }
+        return false;
     }
 }

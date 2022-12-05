@@ -27,13 +27,13 @@ $mangas  = Manga::readAll($Id_users,$pages);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $vote = intval(filter_input(INPUT_POST, 'vote', FILTER_SANITIZE_SPECIAL_CHARS));
-    if(empty($vote)){
-        $error['vote'] = 'ouga bouga';
+    $test = intval(filter_input(INPUT_POST, 'test', FILTER_SANITIZE_SPECIAL_CHARS));
+    if(empty($test)){
+        $error['test'] = 'ouga bouga';
     }else{
-        $isOk = filter_var($vote,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_VOTE.'/')));
+        $isOk = filter_var($test,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_VOTE.'/')));
         if($isOk == false){
-            $error['vote'] = 'la donnée n\'est pas conforme';
+            $error['test'] = 'la donnée n\'est pas conforme';
         }
     }
 
@@ -83,6 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $error['inscription'] = 'la donnée n\'est pas conforme';
             }
         }
+        var_dump($error);
         if(empty($error)){
             $user = new User();
             $user->setName_account($name_account);

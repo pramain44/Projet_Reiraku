@@ -37,7 +37,7 @@
             <?php
                 if (SessionFlash::exist()) {
                 ?>
-                    <div class="alert" style="position: absolute; left: 48rem; top: 2rem;">
+                    <div class="alert" style="display:flex; justify-content:center;">
                         <strong><?= SessionFlash::get() ?></strong>
                     </div>
             <?php } ?>

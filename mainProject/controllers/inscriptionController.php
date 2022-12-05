@@ -1,6 +1,8 @@
 <?php
 require_once(__DIR__.'/../helpers/database.php');
 require_once(__DIR__.'/../models/User.php');
+require_once(__DIR__.'/../helpers/JWT.php');
+
 
 
 
@@ -70,7 +72,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $user->setEmail($email);
         $user->setRole($role);
         $user = $user->create();
+        $id_user = $user->getId();
+        $element = ['id'=> $id_user, 'email'=> $email];
+        $element['valid'] = time() + 60*10;
+        $token = JWT::set($element);
         if($user){
+            $to = $email;
+            $subject = 'Inscription à ReiRaku !';
+            $message = 'Veuillez cliquer pour vous connecter : <a href="'.$_SERVER['HTTP_ORIGIN'].'/mainProject/controllers/validateAccountController.php.php?token='.$token.'">Cliquez-ici</a>';
+            mail($to,$subject,$message);
             SessionFlash::set('Le compte a bien été crée, vous pouvez vous connectez');
             header('Location:homeController.php');
             exit;
