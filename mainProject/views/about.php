@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../public/assets/css/about.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
 
-    <title>logo ReiRaku - A propos</title>
+    <title>ReiRaku - A propos</title>
 </head>
 <body>
 <div class="registerTitle">

@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../public/assets/img/Reiraku_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/assets/css/profile.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
-    <title>logo nomsite - <?=$_SESSION['user']->name_account?></title>
+    <title>ReiRaku - <?=$_SESSION['user']->name_account?></title>
 </head>
 <body>
     <div class="profilInfo">

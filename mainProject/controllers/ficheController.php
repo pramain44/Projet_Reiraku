@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $comment = $comment->create($id, $Id_users);
             $_SESSION['idManga'] = $id;
             SessionFlash::set('Commentaire Ajouter');
-            header('location:http://projet_2.0.localhost/mainProject/controllers/refreshController.php?id=<?=$id?>');
+            header('location:refreshController.php?id=<?=$id?>');
             exit();
         }
     }
@@ -79,7 +79,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $votes = $votes->create($id, $Id_users);
                 $_SESSION['idManga'] = $id;
                 SessionFlash::set('Vous avez voté !');
-                header('location:http://projet_2.0.localhost/mainProject/controllers/refreshController.php?id=<?=$id?>');
+                header('location:refreshController.php?id=<?=$id?>');
                 exit();
             }
         }

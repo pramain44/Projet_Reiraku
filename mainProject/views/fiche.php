@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../public/assets/img/Reiraku_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/assets/css/fiche.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
-    <title>logo ReiRaku - <?=$mangas->title?></title>
+    <title>ReiRaku - <?=$mangas->title?></title>
 </head>
 <body>
         <?php

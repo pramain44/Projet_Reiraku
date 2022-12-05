@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../public/assets/css/about.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
 
-    <title>logo ReiRaku - CGU</title>
+    <title>ReiRaku - CGU</title>
 </head>
 <body>
 <div class="registerTitle">

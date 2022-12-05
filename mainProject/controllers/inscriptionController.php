@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $user = $user->create();
         if($user){
             SessionFlash::set('Le compte a bien été crée, vous pouvez vous connectez');
-            header('Location: http://projet_2.0.localhost/mainProject/controllers/homeController.php');
+            header('Location:homeController.php');
             exit;
         }
     }

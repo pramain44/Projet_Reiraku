@@ -8,7 +8,7 @@ require_once(__DIR__.'/../models/Manga.php');
 
 if(!isset($_SESSION['user'])){
     SessionFlash::set('Il faut un compte pour acceder au profile');
-    header('location: http://projet_2.0.localhost/mainProject/controllers/connectionController.php');
+    header('location:connectionController.php');
     exit;
 }
 
@@ -21,8 +21,8 @@ $Id_users = $_SESSION['user']->Id_users;
 $commentsNb = Comment::countComments($Id_users);
 
 
-$mangas = Manga::pagination($Id_users,$pages);  
-//$mangas  = Manga::readAll($Id_users,$pages);
+//$mangas = Manga::pagination($Id_users,$pages);  
+$mangas  = Manga::readAll($Id_users,$pages);
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -89,7 +89,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $user = $user->update($Id_users);
             if($user){
                 SessionFlash::set('Modification prise en compte, Il faut se deconnecter/reconnecter pour finaliser la procedure');
-                header('Location: http://projet_2.0.localhost/mainProject/controllers/profileController.php');
+                header('Location:profileController.php');
                 exit;
             }
         }

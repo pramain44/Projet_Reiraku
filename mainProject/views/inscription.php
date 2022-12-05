@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="../public/assets/img/Reiraku_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/assets/css/inscription.css">
     <link rel="stylesheet" href="../public/assets/css/footer.css">
-    <title>logo nomsite - Enregistrement</title>
+    <title>ReiRaku - Enregistrement</title>
 </head>
 <body>
         <?php

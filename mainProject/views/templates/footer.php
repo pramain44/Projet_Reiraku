@@ -1,9 +1,9 @@
     <footer>
         <div class="left">
             <ul>
-                <a class="footerHref" href="http://projet_2.0.localhost/mainProject/controllers/legalController.php"><li class="footerList">Mentions Légales</li></a>
-                <a class="footerHref" href="http://projet_2.0.localhost/mainProject/controllers/CGUController.php"><li class="footerList">Conditions d'utilisations</li></a>
-                <a class="footerHref" href="http://projet_2.0.localhost/mainProject/controllers/aboutController.php"><li class="footerList">A propos</li></a>
+                <a class="footerHref" href="legalController.php"><li class="footerList">Mentions Légales</li></a>
+                <a class="footerHref" href="CGUController.php"><li class="footerList">Conditions d'utilisations</li></a>
+                <a class="footerHref" href="aboutController.php"><li class="footerList">A propos</li></a>
             </ul>
         </div>
                 <div class="right">

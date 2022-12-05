@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //$user->setPassword(null);
         $user->password = null;
         $_SESSION['user'] = $user;
-        header('Location: http://projet_2.0.localhost/mainProject/controllers/homeController.php');
+        header('Location: homeController.php');
         exit;
     }
 }
