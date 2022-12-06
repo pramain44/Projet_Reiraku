@@ -4,11 +4,10 @@ require_once __DIR__.'/../models/Author.php';
 require_once __DIR__.'/../models/Comment.php';
 require_once __DIR__.'/../models/Vote.php';
 
-// géré le get pour que si on change ça fasse pas d'erreur
 
 $id = intval(filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT));
 if($id == 0){
-    header('location:http://projet_2.0.localhost/mainProject/404.php');
+    header('location:/../mainProject/404.php');
     exit();
 }
 if(!empty($_SESSION['user']->Id_users)){

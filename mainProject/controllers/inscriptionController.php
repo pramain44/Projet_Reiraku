@@ -47,7 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $error['email'] = 'l\'email n\'est pas conforme';
         }
         if(User::isMailExists($email)){
-            $errors['mail'] = 'Ce mail existe déjà';
+            $error['email'] = 'Ce mail existe déjà';
         }
     }
     
@@ -61,7 +61,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $error['password'] = 'Le mot de passe est obligatoire';
         }
     }
-
     $password = password_hash($password, PASSWORD_DEFAULT);
 
 
@@ -82,8 +81,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $message = 'Veuillez cliquer pour vous connecter : <a href="'.$_SERVER['HTTP_ORIGIN'].'/mainProject/controllers/validateAccountController.php.php?token='.$token.'">Cliquez-ici</a>';
             mail($to,$subject,$message);
             SessionFlash::set('Le compte a bien été crée, vous pouvez vous connectez');
-            header('Location:homeController.php');
-            exit;
+            // header('Location:homeController.php');
+            // exit;
         }
     }
 }

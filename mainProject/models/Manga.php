@@ -115,7 +115,7 @@ class Manga {
             LIMIT 5';
         }
         if(!empty($pages)){
-            $sql .= ' LIMIT 5';
+            $sql .= '  OFFSET :pages';
         }
 
         $sql .= ';';
@@ -136,7 +136,7 @@ class Manga {
         
     }
 
-    public static function pagination($Id_users,$pages){
+    public static function xoxo($Id_users,$pages){
         $sql = 'SELECT * FROM `mangas` 
         JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
         WHERE comments.Id_users = :Id_users 
@@ -170,14 +170,6 @@ class Manga {
         $sth->execute();
         return $sth->fetchAll(PDO::FETCH_OBJ);        
     }
-
-
-    // public static function count(){
-    //     $sql = 'SELECT COUNT(*) FROM `mangas`;';
-    //     $sth = Database::getInstance()->query($sql);
-    //     return $sth->fetchColumn();
-    // }
-
 
     public static function getAll(?string $search = '', int $limit = null, int $offset = 0): array // Méthode statique car il est inutile d'instancier, car pas d'hydratation
     {
@@ -213,8 +205,31 @@ class Manga {
         return $sth->fetchColumn();
 
     }
-    
-  
+
+    public static function pagination(?string $Id_users, int $limit = null, int $offset = 0): array // Méthode statique car il est inutile d'instancier, car pas d'hydratation
+    {
+        $pdo = Database::getInstance();
+        $sql = 'SELECT * FROM `mangas` 
+        JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
+        WHERE comments.Id_users = :Id_users ';
+
+        if (!is_null($limit)) {
+            $sql .= 'LIMIT :limit OFFSET :offset';
+        }
+        $sql .= ';';
+        $sth = Database::getInstance()->prepare($sql);
+        $sth->bindValue(':Id_users', $Id_users, PDO::PARAM_INT);
+        if (!is_null($limit)) {
+            $sth->bindValue(':offset', $offset, PDO::PARAM_INT);
+            $sth->bindValue(':limit', $limit, PDO::PARAM_INT);
+        }
+
+        if ($sth->execute()) {
+            return ($sth->fetchAll(PDO::FETCH_OBJ));
+        } else {
+            return [];
+        }
+    }
 }
 
 

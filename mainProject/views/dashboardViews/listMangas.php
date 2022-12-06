@@ -23,6 +23,7 @@
             </div>
         </form>
     </div>
+    
     <!-- pagination -->
     <div class="pagination">
             <?php

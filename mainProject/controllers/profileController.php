@@ -12,17 +12,24 @@ if(!isset($_SESSION['user'])){
     exit;
 }
 
-$pages = intval(filter_input(INPUT_GET,'pages',FILTER_SANITIZE_NUMBER_INT));
-// if($pages == 0){
-//     header('location:http://projet_2.0.localhost/mainProject/404.php');
-//     exit();
-// }
+
 $Id_users = $_SESSION['user']->Id_users;
-$commentsNb = Comment::countComments($Id_users);
 
+// try{
 
-//$mangas = Manga::pagination($Id_users,$pages);  
-//$mangas  = Manga::readAll($Id_users,$pages);
+    $limit = 5;
+    $commentsNb = Comment::countComments($Id_users);
+    $nbPages = ceil($commentsNb / $limit);
+    $currentPage = intval(filter_input(INPUT_GET, 'currentPage', FILTER_SANITIZE_NUMBER_INT));
+    if ($currentPage <= 0 || $currentPage > $nbPages) {
+        $currentPage = 1;
+    }
+    $offset = $limit * ($currentPage - 1);
+
+    $mangas = Manga::pagination($Id_users, $limit, $offset,);
+// } catch (\Throwable $th) {
+   
+// }
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

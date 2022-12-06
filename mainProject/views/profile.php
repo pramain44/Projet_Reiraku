@@ -86,10 +86,12 @@
         </div>
         <div class="pagesBtnContainer">
         <?php
-                for($pages=0;$pages<= ($commentsNb/5);$pages++){ ?>
-                        <a href="http://projet_2.0.localhost/mainProject/controllers/profileController.php?pages=<?=($pages*5)?>"><button class="pagesBtn"><?=$pages?></button></a>
-                        <?php
-                }
+                for ($i = 1; $i <= $nbPages; $i++) {
+                     ?>
+                        <a href="profileController.php?currentPage=<?=$i?>"><button class="pagesBtn"><?=$i?></button></a>
+            <?php
+                    }
+                
                 ?>
         </div>
     </div>
