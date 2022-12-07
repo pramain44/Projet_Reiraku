@@ -4,8 +4,6 @@ require_once(__DIR__.'/../models/User.php');
 require_once(__DIR__.'/../helpers/JWT.php');
 
 
-
-
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $error = [];
     $name_account = trim(filter_input(INPUT_POST, 'name_account', FILTER_SANITIZE_SPECIAL_CHARS));
@@ -78,11 +76,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($user){
             $to = $email;
             $subject = 'Inscription à ReiRaku !';
-            $message = 'Veuillez cliquer pour vous connecter : <a href="'.$_SERVER['HTTP_ORIGIN'].'/mainProject/controllers/validateAccountController.php.php?token='.$token.'">Cliquez-ici</a>';
+            $message = 'Veuillez cliquer pour vous connecter : <a href="'.$_SERVER['HTTP_ORIGIN'].'/mainProject/controllers/validateAccountController.php?token='.$token.'">Cliquez-ici</a>';
             mail($to,$subject,$message);
             SessionFlash::set('Le compte a bien été crée, vous pouvez vous connectez');
-            // header('Location:homeController.php');
-            // exit;
+            header('Location:homeController.php');
+            exit;
         }
     }
 }

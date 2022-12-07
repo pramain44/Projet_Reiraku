@@ -16,12 +16,12 @@
     <!-- searchbar -->
 
     <div>
-        <form method="get">
-            <div class="wrap">
-                <input class="searchBar" type="search" name="s" placeholder="Rechercher une oeuvre" aria-label="search" name="search">
-                <button class="searchBtn" type="submit">GO</button>    
+        <div class="wrap">
+                <form method="get">
+                    <input class="searchBar" type="search" name="s" placeholder="Rechercher une oeuvre" aria-label="search" name="search">
+                    <button class="searchBtn" type="submit">GO</button>    
+                </form>
             </div>
-        </form>
     </div>
     
     <!-- pagination -->

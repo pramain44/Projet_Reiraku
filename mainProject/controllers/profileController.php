@@ -15,7 +15,7 @@ if(!isset($_SESSION['user'])){
 
 $Id_users = $_SESSION['user']->Id_users;
 
-// try{
+try{
 
     $limit = 5;
     $commentsNb = Comment::countComments($Id_users);
@@ -27,9 +27,9 @@ $Id_users = $_SESSION['user']->Id_users;
     $offset = $limit * ($currentPage - 1);
 
     $mangas = Manga::pagination($Id_users, $limit, $offset,);
-// } catch (\Throwable $th) {
-   
-// }
+}catch(PDOException $e){
+    die('error'.$e->getMessage());
+}
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

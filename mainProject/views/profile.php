@@ -60,7 +60,6 @@
                    </form>
                    <small><?=$errors ?? '';?></small>
                    <br>
-                   <a href="">Supprimer mon compte</a>
                 </div>
             </div>
         </div>
@@ -79,7 +78,7 @@
                         $Id_mangas = $manga->Id_mangas;
                         $comments = Comment::countComments($Id_users,$Id_mangas);
                     ?>
-                    <p><?=$comments?> Commentaire</p>
+                    <p><?=$comments?> <?= $comments > 1 ? 'Commentaires' : 'Commentaire'; ?></p>
                 </div>
             </div>
             <?php endforeach ?>

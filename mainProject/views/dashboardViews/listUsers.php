@@ -15,12 +15,12 @@
             <strong><?= SessionFlash::get() ?></strong>
         </div>
 <?php } ?>
-    <form method="get">
-        <div class="wrap">
+    <div class="wrap">
+        <form method="get">
             <input class="searchBar" type="search" name="search" placeholder="chercher par mail ou nom" aria-label="search" name="search">
             <button class="searchBtn" type="submit">GO</button>    
-        </div>
-   </form>
+        </form>
+    </div>
     <section>
         <?php
         foreach($users as $user): ?>

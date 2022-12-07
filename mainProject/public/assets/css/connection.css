@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 body{
     background-color:#23262f;
+    font-family: 'Montserrat', sans-serif;
+
 }
 .logoImg{
     width: 10rem;
@@ -81,7 +86,7 @@ a{
     padding-top: 2rem;
 
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 800px){
     .logoImg{
         width: 5rem;
     }
@@ -89,6 +94,6 @@ a{
         font-size: 2rem;
     }
     .mainTitle{
-        width: 55%;
+        width: 60%;
     }
 }
