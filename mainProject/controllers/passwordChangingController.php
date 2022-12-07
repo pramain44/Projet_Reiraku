@@ -19,10 +19,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $error['password'] = 'Le mot de passe est obligatoire';
         }
     }
+    if(empty($error)){
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    $user = User::update($Id_users); // a modifié methode du profile en non static
-
+    $user = User::update($Id_users,$password); // a modifié methode du profile en non static
+    }
 }
 
 

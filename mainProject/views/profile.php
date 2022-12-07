@@ -10,6 +10,13 @@
     <title>ReiRaku - <?=$_SESSION['user']->name_account?></title>
 </head>
 <body>
+    <div class="modal">
+            <div class="modalContent">
+                <h2>Souhaitez-vous vraiment supprimer ?</h2>
+                    <a class="deleteComment" href=""><button>OUI</button></a>
+                    <button id="closeBtn" class="closeBtn">NON</button>
+            </div>
+    </div>
     <div class="profilInfo">
         <div class="registerTitle">
                     <a href="homeController.php"><img class="logoImg" src="../public/assets/img/logoVeibae.png" alt="logo"></a>
@@ -60,6 +67,9 @@
                    </form>
                    <small><?=$errors ?? '';?></small>
                    <br>
+ 
+                <button id="confirmDelete" class="myBtn" data-id="<?=$Id_users?>">Supprimer Mon compte</button>
+            
                 </div>
             </div>
         </div>
@@ -94,5 +104,6 @@
                 ?>
         </div>
     </div>
+    <script src="../public/assets/js/profileModal.js"></script>
 
 
