@@ -33,7 +33,7 @@
         <div class="mainInfo">
             <div class="imgAndPseudo">
                 <div class="imgDiv">
-                    <img class="profilImg" src="../public/upload/<?=$Id_users?>_resampled.jpg" alt="">
+                    <img class="profilImg" src="../public/upload/<?=$Id_users?>_resampled.jpg?r=<?=$random?>" alt="">
                 </div>
                 <div class="userInfo">
                     <form method="post">

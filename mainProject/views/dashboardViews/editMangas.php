@@ -16,7 +16,11 @@
         <input class="createForm" type="text" name="firstname" placeholder="firstname" value="<?=$authors->firstname ?? ''?>">
         <small><?= $error['firstname'] ?? '';?></small>
 
-        <input class="createForm" type="text" name="name" value="<?=$categories->name ?? ''?>">
+        <select name="name">
+            <option value="Bangers">Bangers</option>
+            <option value="Hidden Gems">Hidden Gems</option>
+            <option value="Classiques">Classiques</option>
+        </select>
 
 
         <input class="createForm" type="text" name="anime" placeholder="anime" value="<?=$authors->anime ?? ''?>">

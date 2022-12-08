@@ -6,6 +6,7 @@
                 <button id="closeBtn" class="closeBtn">NON</button>
         </div>
 </div>
+<h1>Liste des Mangas</h1>
     <div style="display:flex;justify-content:center;font-size: 2rem;padding-bottom:2rem;>
         <?php
         if(SessionFlash::exist()){ 
@@ -13,8 +14,10 @@
         }
         ?>
     </div>
-    <!-- searchbar -->
+    
 
+
+    <!-- searchbar -->
     <div>
         <div class="wrap">
                 <form method="get">
@@ -23,7 +26,6 @@
                 </form>
             </div>
     </div>
-    
     <!-- pagination -->
     <div class="pagination">
             <?php

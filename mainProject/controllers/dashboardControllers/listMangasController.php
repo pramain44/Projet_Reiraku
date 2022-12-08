@@ -6,10 +6,6 @@ require_once(__DIR__.'/../../models/User.php');
 
 User::check();
 
-
-//$search = trim((string) filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIAL_CHARS));
-
-
 $title ='Mangas Liste';
 
 try{

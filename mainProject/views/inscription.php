@@ -28,7 +28,7 @@
             <div class="divideContainer">
                 <div class="pinkDivider"></div>
             </div>
-            <h2>Veuillez entrez vos informations pour créer un compte</h2>
+            <h2>Veuillez entrer vos informations pour créer un compte</h2>
         </div>
         <form method="post">
             <input require title="3 caractères minimum" type="text" placeholder="Nom de compte" name="name_account" pattern=".{3,}">

@@ -6,7 +6,7 @@
         </div>
 </div>
 
-<h1>Users List</h1>
+<h1>Liste des Utilisateurs</h1>
 
 <?php
    if (SessionFlash::exist()) {
