@@ -10,8 +10,8 @@ define('REGEX_VOTE', "^[2-3]$");
 // img const
 define('SUPPORTED_FORMATS', array('image/jpeg'));
 define('MAX_SIZE', 5*1024*1024);
-define('UPLOAD_USER_PROFILE', 'C:/laragon/www/Projet_2.0/mainProject/public/upload/');
-define('UPLOAD_MANGAS_IMAGE', 'C:/laragon/www/Projet_2.0/mainProject/public/assets/img');
+define('UPLOAD_USER_PROFILE', __DIR__.'/../public/upload/');
+define('UPLOAD_MANGAS_IMAGE', __DIR__.'/../public/assets/img');
 
 
 //JWT

@@ -32,21 +32,13 @@ try{
         $anime = trim(filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($anime)){
         $error['anime'] = 'ce champ est obligatoire';
-         }//else{
-        // $isOk = filter_var($anime,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_NO_NUMBER.'/')));
-        //     if($isOk == false){
-        //     $error['anime'] = 'la donnée n\'est pas conforme';
-        //     }
-        // }
+        }
+
         $description = trim(filter_input(INPUT_POST, 'description', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($description)){
         $error['description'] = 'ce champ est obligatoire';
-        }//else{
-        // $isOk = filter_var($description,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_WHATEVER.'/')));
-        //     if($isOk == false){
-        //     $error['description'] = 'la donnée n\'est pas conforme';
-        //     }
-        // }
+        }
+        
         $lastname = trim(filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS));
         if(empty($lastname)){
             $error['lastname'] = 'ce champ est obligatoire';
@@ -74,30 +66,68 @@ try{
                 $error['name'] = 'la donnée n\'est pas conforme';
             }
         }
-        $image = trim(filter_input(INPUT_POST, 'image', FILTER_SANITIZE_SPECIAL_CHARS));
-        if(empty($image)){
-            $error['image'] = 'ce champ est obligatoire';
+
+        // gestion de l'image
+        if (!isset($_FILES['image'])) {
+            throw new Exception('Fichier vide');
         }
-        //else{
-        //     $isOk = filter_var($image,FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>'/'.REGEX_WHATEVER.'/')));
-        //     if($isOk == false){
-        //         $error['image'] = 'la donnée n\'est pas conforme';
-        //     }
-        // }
-        
-        // $title = $_POST['title'];
-        // $lastname = $_POST['lastname']; 
-        // $firstname = $_POST['firstname'];
-        // $name = $_POST['name'];   
-        // $anime = $_POST['anime'];
-        // $description = $_POST['description'];
-        // $image = $_POST['image'];
+
+        if ($_FILES['image']['error'] != 0) {
+            throw new Exception('Erreur :'.$_FILES['image']['error']);
+        }
+
+        if (!in_array($_FILES['image']['type'], SUPPORTED_FORMATS)) {
+            throw new Exception('Format non autorisé (jpeg seulement)');
+        }
+
+        if ($_FILES['image']['size'] > MAX_SIZE) {
+            throw new Exception('Poids supérieur à la limite (5Mo)');
+        }
+
+        $from = $_FILES['image']['tmp_name'];
+        $filename = $title; 
+        $extension = $extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+        $to = UPLOAD_MANGAS_IMAGE . $filename . '.' . $extension;
+
+        if (!move_uploaded_file($from, $to)) {
+            throw new Exception('problème lors du transfert');
+        }
+
+    $dst_x = 0;
+    $dst_y = 0;
+    $src_x = 0;
+    $src_y = 0;
+    $dst_width = 500;
+    $src_width = getimagesize($to)[0];
+    $src_height = getimagesize($to)[1];
+    $dst_height = round(($dst_width * $src_height) / $src_width);
+    $dst_image = imagecreatetruecolor($dst_width, $dst_height);
+    $src_image = imagecreatefromjpeg($to);
+
+    // Redimensionne
+    imagecopyresampled(
+        $dst_image,
+        $src_image,
+        $dst_x,
+        $dst_y,
+        $src_x,
+        $src_y,
+        $dst_width,
+        $dst_height,
+        $src_width,
+        $src_height
+    );
+
+    // redimensionne l'image
+    $resampledDestination = UPLOAD_MANGAS_IMAGE . '/'.$filename.'_resampled.jpg';
+    imagejpeg($dst_image, $resampledDestination, 85); 
+
 
         if(empty($error)){
             $sql = 'BEGIN;
             UPDATE `categories` JOIN `mangas` ON mangas.Id_categories = categories.Id_categories SET name = :name WHERE Id_mangas = :id;
             UPDATE `authors` JOIN `mangas` ON mangas.Id_authors = authors.Id_authors SET firstname = :firstname, lastname = :lastname WHERE Id_mangas = :id;
-            UPDATE `mangas` SET description = :description, anime = :anime, title = :title, image = :image WHERE Id_mangas = :id;
+            UPDATE `mangas` SET description = :description, anime = :anime, title = :title, image = :resampledDestination WHERE Id_mangas = :id;
             COMMIT;';
             $sth = Database::getInstance()->prepare($sql);
             $sth->bindValue(':lastname',$lastname);
@@ -106,7 +136,7 @@ try{
             $sth->bindValue(':description',$description);
             $sth->bindValue(':anime',$anime);
             $sth->bindValue(':title',$title);
-            $sth->bindValue(':image',$image);
+            $sth->bindValue(':resampledDestination',$resampledDestination);
             $sth->bindValue(':id',$id);
             $response = $sth->execute();
             if($response){

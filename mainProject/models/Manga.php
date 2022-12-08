@@ -197,10 +197,9 @@ class Manga {
     public static function pagination(?string $Id_users, int $limit = null, int $offset = 0): array // Méthode statique car il est inutile d'instancier, car pas d'hydratation
     {
         $pdo = Database::getInstance();
-        $sql = 'SELECT * FROM `mangas`
+        $sql = 'SELECT DISTINCT `title`,image,mangas.Id_mangas FROM `mangas`
         JOIN `comments` ON comments.Id_mangas = mangas.Id_mangas 
-        WHERE comments.Id_users = :Id_users 
-        GROUP BY `title` ';
+        WHERE comments.Id_users = :Id_users ';
 
         if (!is_null($limit)) {
             $sql .= 'LIMIT :limit OFFSET :offset';

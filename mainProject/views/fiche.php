@@ -19,7 +19,7 @@
     <section class="cardForm">
         <div class="cardContent">
             <div class="imageFiche">
-                <a href="homeController.php"><img class="imgFiche" src="<?=$mangas->image?>" alt=""></a>
+                <a href="homeController.php"><img class="imgFiche" src="../public/assets/img/<?=$mangas->title?>_resampled.jpg" alt=""></a>
 
                 <!-- boutons de vote sous l'image -->
                 <?php if(isset($_SESSION['user'])){ ?>

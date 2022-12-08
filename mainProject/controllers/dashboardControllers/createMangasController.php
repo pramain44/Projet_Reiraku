@@ -112,11 +112,8 @@ try{
 
         // redimensionne l'image
         $resampledDestination = UPLOAD_MANGAS_IMAGE . '/'.$filename.'_resampled.jpg';
-        imagejpeg($dst_image, $resampledDestination, 80);             
+        imagejpeg($dst_image, $resampledDestination, 85);             
 
-       
-        
-        // var_dump($error);
 
         if(empty($error)){
             $sql = 'BEGIN;
