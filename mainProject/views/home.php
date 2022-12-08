@@ -79,7 +79,7 @@
                     <div class="textContainer">
                         <h3 class="titleProducts"><?=$manga->title?></h3>
                     </div>
-                    <a class="ficheLink" href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="img<?=$manga->name?>" src="<?=$manga->image?>" alt="<?=$manga->title?>"></a>
+                    <a class="ficheLink" href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="img<?=$manga->name?>" src="../public/assets/img/<?=$manga->title?>_resampled.jpg?>" alt="<?=$manga->title?>"></a>
                 </div>
             <?php endforeach ?>
 

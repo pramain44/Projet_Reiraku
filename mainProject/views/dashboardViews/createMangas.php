@@ -6,7 +6,8 @@
         }
         ?>
     </div>
-    <form novalidate method="post">
+    <form method="post" enctype="multipart/form-data">
+
         <input class="createForm" type="text" name="title"  placeholder="title" value="">
         <small><?= $error['title'] ?? '';?></small>
 
@@ -25,8 +26,10 @@
         <input class="createForm" type="text" name="anime" placeholder="anime" value="<?=$anime ?? ''?>">
         <small><?= $error['anime'] ?? '';?></small>
         
-        <input class="createForm" type="text" name="image" placeholder="Url img" value="<?=$image ?? ''?>">
-        <small><?= $error['image'] ?? '';?></small>
+
+            <label for="upload"></label>
+            <input class="profileUpload" name="image" type="file">
+            <small><?= $error['image'] ?? '';?></small>
 
         <div>
             <h3>Description</h3>

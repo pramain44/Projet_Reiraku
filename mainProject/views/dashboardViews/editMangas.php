@@ -6,7 +6,7 @@
         }
         ?>
     </div>
-    <form novalidate method="post">
+    <form method="post">
         <input class="createForm" type="text" name="title"  placeholder="title" value="<?=$authors->title?>">
         <small><?= $error['title'] ?? '';?></small>
 

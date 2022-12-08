@@ -11,6 +11,8 @@ define('REGEX_VOTE', "^[2-3]$");
 define('SUPPORTED_FORMATS', array('image/jpeg'));
 define('MAX_SIZE', 5*1024*1024);
 define('UPLOAD_USER_PROFILE', 'C:/laragon/www/Projet_2.0/mainProject/public/upload/');
+define('UPLOAD_MANGAS_IMAGE', 'C:/laragon/www/Projet_2.0/mainProject/public/assets/img');
+
 
 //JWT
 define ('SECRET_KEY', 'fsdh&éé"&"&éff444dsf54q6fs`dsffsdqhg:::!dsq');

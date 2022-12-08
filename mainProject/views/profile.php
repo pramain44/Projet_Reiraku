@@ -58,7 +58,7 @@
                 <div class="changeImg">
                     <h2>Choisir une image profile</h2>
                     <form method="post" enctype="multipart/form-data">
-                    <input type="hidden" value="2" name="test">
+                        <input type="hidden" value="2" name="test">
                         <label for="upload"></label>
                         <input class="profileUpload" name="profile" class="file" type="file"><br>
                         <div class="uploadBtn">

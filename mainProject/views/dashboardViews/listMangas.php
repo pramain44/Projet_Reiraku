@@ -49,7 +49,7 @@
             <div class="oeuvreItem">
                 <h2><?=$manga->title?></h2>
                 <div>
-                <a href="editMangasController.php?id=<?=$manga->Id_mangas?>"><img class="listMangas" src="<?=$manga->image?>" alt=""></a>
+                <a href="editMangasController.php?id=<?=$manga->Id_mangas?>"><img class="listMangas" src="../../public/assets/img/<?=$manga->title?>_resampled.jpg?>" alt=""></a>
                 </div>
                 <button id="confirmDelete" class="myBtn" data-id="<?=$manga->Id_mangas?>">Supprimer</button>
             </div>
