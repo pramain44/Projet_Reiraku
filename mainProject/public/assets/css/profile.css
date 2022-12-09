@@ -123,6 +123,10 @@ ul{
     padding: 5px 6px;
     cursor: pointer;
 }
+
+.myBtn{
+    font-size: 1.2rem;
+}
  /* ********  Modal de suppression  ******* */
 
  .modal{

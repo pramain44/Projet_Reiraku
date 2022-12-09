@@ -94,6 +94,7 @@ small{
     box-sizing: border-box;
     box-shadow: 8px 4px 4px black;
     margin-top: 1rem;
+    font-weight: 800;
 }
 
 .profilImg{

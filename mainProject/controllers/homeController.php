@@ -9,8 +9,7 @@ $search = trim((string) filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIA
 
 
 $mangas = Manga::Select($search);
-// $votes = Vote::countUp($Id_mangas);
-// $votes = Vote::countDown($Id_mangas);
+
 
 
 

@@ -10,3 +10,5 @@ $mangas = Author::AuthorsAndMangas();
 
 
 include(__DIR__.'/../views/legal.php');
+include(__DIR__.'/../views/templates/footer.php');
+

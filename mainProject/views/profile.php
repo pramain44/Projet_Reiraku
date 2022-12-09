@@ -81,7 +81,7 @@
             <div class="oeuvreItem">
                 <h2><?=$manga->title?></h2>
                 <div>
-                <a href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="" src="<?=$manga->image?>" alt=""></a>
+                <a href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="" src="../public/assets/img/<?=$manga->title?>_resampled.jpg" alt=""></a>
                 </div>
                 <div>
                     <?php

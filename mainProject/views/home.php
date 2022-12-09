@@ -32,7 +32,13 @@
                     }
                     ?>
                 </ul>
+                <?php
+                if(!isset($_SESSION['user'])){ ?>
                 <a href="connectionController.php"><img class="connectImg" src="../public/assets/img/VeibaeConnection.png" alt="logo"></a>
+                <?php } else{ ?>
+                <img class="connectImg" src="../public/assets/img/VeibaeConnection.png" alt="logo">
+                <?php } ?>
+
             </div>
             <?php
                 if (SessionFlash::exist()) {
