@@ -4,7 +4,7 @@ require_once(__DIR__.'/../models/User.php');
 require_once(__DIR__.'/../helpers/JWT.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-$email = trim(filter_input(INPUT_POST, 'emailAddress', FILTER_SANITIZE_EMAIL));
+$email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
         if(empty($email)){
             $error['email'] = 'ce champ est obligatoire';
         }else{
@@ -14,8 +14,7 @@ $email = trim(filter_input(INPUT_POST, 'emailAddress', FILTER_SANITIZE_EMAIL));
             }
     }
     if(empty($error)){
-        $id_user = $user->getId();
-        $element = ['id'=> $id_user, 'email'=> $email];
+        $element = ['email'=> $email];
         $element['valid'] = time() + 60*10;
         $token = JWT::set($element);
         $to = $email;

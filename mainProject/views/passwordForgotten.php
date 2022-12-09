@@ -13,17 +13,17 @@
         <div class="registerTitle">
                 <a href="homeController.php"><img class="logoImg" src="../public/assets/img/logoVeibae.png" alt="logo"></a>
             <div class="mainTitle">
-                <h1>Récupérer votre login et votre mot de passe</h1>
+                <h1>Récupérez votre mot de passe</h1>
             </div>
         </div>
         <div class="divideContainer">
             <div class="pinkDivider"></div>
         </div>
         <div>
-            <h2>Entrez votre email pour recevoir votre login et un lien pour modifier votre mot de passe</h2>
+            <h2>Entrez votre email pour recevoir un lien pour modifier votre mot de passe</h2>
         </div>
         <form method="post">
-            <input require type="email" class="formMail" placeholder="Adresse Mail" name="emailAddress">
+            <input require type="email" class="formMail" placeholder="Adresse Mail" name="email">
             <small><?= $error['email'] ?? '' ?></small>
 
             <input class="btn" type="submit" ="Connexion">

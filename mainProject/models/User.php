@@ -197,4 +197,12 @@ class User{
         }
         return false;
     }
+    public static function updated($Id_users,$password){
+        $sql = "UPDATE `users` SET password = :password WHERE Id_users = :Id_users";
+        $pdo = Database::getInstance();
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':Id_users',$Id_users,PDO::PARAM_INT);
+        $sth->bindValue(':password',$password);
+        return $sth->execute();
+    }
 }

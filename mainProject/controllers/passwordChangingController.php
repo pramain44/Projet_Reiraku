@@ -8,6 +8,11 @@ require_once(__DIR__.'/../helpers/JWT.php');
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $token = filter_input(INPUT_GET, 'token');
     $element = JWT::get($token);
+    $email = $element->email;
+
+    $Id_users = User::getByEmail($email)->Id_users;
+
+
     
     $password = filter_input(INPUT_POST, 'password');
     $confirmPassword = filter_input(INPUT_POST, 'confirmPassword');
@@ -22,7 +27,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(empty($error)){
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    $user = User::update($Id_users,$password); // a modifié methode du profile en non static
+    $user = User::updated($Id_users,$password);
+    if($user){
+        SessionFlash::set('Votre Mot de passe a bien été modifié');
+        header('Location:connectionController.php');
+        exit;
+    }
     }
 }
 
