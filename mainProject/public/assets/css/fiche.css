@@ -52,7 +52,10 @@ textarea{
     margin-top: 1rem;
     width: 60%;
     height: 10rem;
+}
 
+.textareaForm{
+    padding-left: 8%;
 }
 
 small{
@@ -123,6 +126,12 @@ small{
 
 .dateComm{
     height: 12%;
+}
+
+.centerComm{
+    display: flex;
+    justify-content: center;
+    padding-left: 8%;
 }
 
 /* -------------section display detaillé d'un manga-------------- */
@@ -229,6 +238,7 @@ strong{
     }
     div .textareaForm{
         flex-direction: column;
+        padding-left: 0;
     }
     form .textareaBtn{
         justify-content: center;

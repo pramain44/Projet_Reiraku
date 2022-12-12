@@ -166,9 +166,11 @@ form{
 }
 
 .createForm{
-    width: 11rem;
-    height: 1.2rem;
+    width: 20rem;
+    height: 1.8rem;
     border-radius: 2px;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .textareaBtnCreateForm{
@@ -183,4 +185,25 @@ form{
 .textareaCreateForm{
     border-radius: 5px;
     height: 21rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+label{
+    display: block;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.oneInput{
+    padding-bottom: 1rem;
+}
+
+.editSelect{
+    width: 20rem;
+    height: 1.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #fff;
 }

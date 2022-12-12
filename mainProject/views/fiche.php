@@ -74,10 +74,13 @@
                 </form>
             <?php 
             }else{?>
-                <form method="post">
+                <div class="centerComm">
                     <textarea disabled="" class="textArea" name="comm_slot" id="comm">Il faut se connecter pour commenter</textarea>
                     <div><small><?= $error['comm'] ?? '' ?></small></div>
-                </form>
+                    <div class="textareaBtn">
+                            <button class="btn" type="submit">Commenter !</button>
+                    </div>
+                </div>
            <?php } ?>
 
             <!-- zone d'un commentaire type -->

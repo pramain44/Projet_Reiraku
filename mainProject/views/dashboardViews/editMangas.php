@@ -7,31 +7,48 @@
         ?>
     </div>
     <form method="post" enctype="multipart/form-data">
-        <input class="createForm" type="text" name="title"  placeholder="title" value="<?=$authors->title?>">
-        <small><?= $error['title'] ?? '';?></small>
+        <div class="inputContainer">
+            <div class="oneInput">
+                    <label for="title">Titre</label>
+                    <input class="createForm" type="text" name="title"  placeholder="title" value="<?=$authors->title?>">
+                    <small><?= $error['title'] ?? '';?></small>         
+            </div>
 
-        <input class="createForm" type="text" name="lastname" placeholder="lastname" value="<?=$authors->lastname ?? ''?>">
-        <small><?= $error['lastname'] ?? '';?></small>
+            <div class="oneInput">
+                <label for="lastname">Nom de l'auteur</label>
+                <input class="createForm" type="text" name="lastname" placeholder="lastname" value="<?=$authors->lastname ?? ''?>">
+                <small><?= $error['lastname'] ?? '';?></small>
+            </div>
 
-        <input class="createForm" type="text" name="firstname" placeholder="firstname" value="<?=$authors->firstname ?? ''?>">
-        <small><?= $error['firstname'] ?? '';?></small>
+            <div class="oneInput">
+                <label for="firstname">Prénom de l'auteur</label>
+                <input class="createForm" type="text" name="firstname" placeholder="firstname" value="<?=$authors->firstname ?? ''?>">
+                <small><?= $error['firstname'] ?? '';?></small>
+            </div>
 
-        <select name="name">
-            <option value="Bangers">Bangers</option>
-            <option value="Hidden Gems">Hidden Gems</option>
-            <option value="Classiques">Classiques</option>
-        </select>
+            <div class="oneInput">
+                <label for="name">Catégorie</label>
+                <select class="editSelect" name="name">
+                    <option value="Bangers">Bangers</option>
+                    <option value="Hidden Gems">Hidden Gems</option>
+                    <option value="Classiques">Classiques</option>
+                </select>
+            </div>
 
-
-        <input class="createForm" type="text" name="anime" placeholder="anime" value="<?=$authors->anime ?? ''?>">
-        <small><?= $error['anime'] ?? '';?></small>
-        
-        <label for="upload"></label>
-            <input class="profileUpload" name="image" type="file">
-            <small><?= $error['image'] ?? '';?></small>
-
+            <div class="oneInput">
+                <label for="anime">Animé</label>
+                <input class="createForm" type="text" name="anime" placeholder="anime" value="<?=$authors->anime ?? ''?>">
+                <small><?= $error['anime'] ?? '';?></small>
+            </div>
+            
+            <div class="oneInput">
+                <label for="upload">Choisir une image</label>
+                <input class="profileUpload" name="image" type="file">
+                <small><?= $error['image'] ?? '';?></small>
+            </div>
+        </div>
         <div>
-            <h3>Description</h3>
+            <h2>Description</h2>
             <textarea class="textareaCreateForm" name="description" cols="100" rows="10"><?=$authors->description ?? ''?></textarea>
             <small><?= $error['description'] ?? '';?></small>
         </div>
