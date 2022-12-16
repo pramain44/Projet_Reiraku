@@ -74,7 +74,7 @@
                 </form>
             <?php 
             }else{?>
-                <div class="centerComm">
+                <div class="textareaForm">
                     <textarea disabled="" class="textArea" name="comm_slot" id="comm">Il faut se connecter pour commenter</textarea>
                     <div><small><?= $error['comm'] ?? '' ?></small></div>
                     <div class="textareaBtn">

@@ -88,7 +88,6 @@
                     <a class="ficheLink" href="ficheController.php?id=<?=$manga->Id_mangas?>"><img class="img<?=$manga->name?>" src="../public/assets/img/<?=$manga->title?>_resampled.jpg" alt="<?=$manga->title?>"></a>
                 </div>
             <?php endforeach ?>
-
         </div>
     </section>
 
