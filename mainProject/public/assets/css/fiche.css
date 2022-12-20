@@ -55,7 +55,9 @@ textarea{
 }
 
 .textareaForm{
-    padding-left: 8%;
+    padding-left: 12%;
+    display: flex;
+    justify-content: center;
 }
 
 small{
